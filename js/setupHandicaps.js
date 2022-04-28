@@ -26,6 +26,7 @@ function setupHandicaps() {
         input.className = 'input_hcp';
         input.value = player.hcp;
         input.required = true;
+        input.readOnly = true
 
         var add = document.createElement('span');
         add.innerText = "＋";
