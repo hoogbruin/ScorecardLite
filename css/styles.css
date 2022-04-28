@@ -77,13 +77,8 @@ body {
     background-color: rgb(0, 92, 200);
     color: white;
 }
-.scorecard_item div {
-    flex: 2;
-    /* margin-right: 2em; */
-}
 .scorecard_item div:first-of-type {
-    flex: 1;
-    /* margin-right: 2em; */
+    margin-right: 2em;
 }
 
 
