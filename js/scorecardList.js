@@ -23,7 +23,7 @@ function scorecardList() {
             scorecard_item.id = scorecard.date
             
             var div = document.createElement('div')
-            div.innerText = new Date(scorecard.date).toLocaleString()
+            div.innerText = new Date(scorecard.date).toLocaleDateString()
             scorecard_item.appendChild(div)
 
             var div = document.createElement('div')
