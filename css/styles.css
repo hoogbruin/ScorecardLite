@@ -10,6 +10,7 @@
 body {
     margin: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    color: #333;
 }
 
 #app {
@@ -26,7 +27,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    background-color: black;
+    background-color: #333;
     color: white;
     font-size: 2em;
     font-weight: bold;
@@ -50,7 +51,7 @@ body {
 .footer {
     flex: 1;
 
-    background-color: black;
+    background-color: #333;
     color: white;
     font-size: 1.75em;
 
@@ -80,7 +81,7 @@ body {
 
     padding: 0 0.5em;
 
-    border-bottom: 1px dotted #0b6556;
+    border-bottom: 1px dotted #333;
     font-size: 1.25em;
 }
 .scorecard_item:active {
@@ -173,13 +174,14 @@ body {
 }
 
 .btn {
-    font-size: 0.5em;
-    background-color: black;
+    flex: 1;
+
     border: none;
+    background-color: #333;
     color: white;
+
+    font-size: 0.5em;
     font-weight: bold;
-    width: 100%;
-    /* hei ght: 65%; */
     text-decoration: underline;
 }
 
