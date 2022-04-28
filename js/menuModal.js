@@ -30,6 +30,9 @@ function menuModal() {
     var div = document.createElement('div')
     div.className = 'menu-modal-item'
     div.innerText = 'Hantera Spelare'
+    div.addEventListener('click', function() {
+        userList()
+    })
     modalWindow.appendChild(div)
 
     var div = document.createElement('div')

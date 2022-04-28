@@ -11,6 +11,13 @@ function getUsers() {
     return users
 }
 
+function getUser(id) { // Kanske borde lägga till kontroll
+    var users = getUsers()
+    var user = users.find(u => u.id == id)
+
+    return user
+}
+
 function createUser(fname, lname, gender, hcp) {
     var newUser = new User(Date.now())
     
