@@ -1,0 +1,35 @@
+TODO
+====================================================
+
+- Single Page Application - One request of html document
+
+
+Skapa en lista på banor och möjligheten att välja 1.para valet i ett Round object
+
+Lista tees för vald bana och möjligheten att välja 1
+Skapa ett Course ojbt baserad på valet
+Skapa ett 
+Lista all spelare och möjligheten att välja 4.
+Spara val i Players obj.
+
+Lista valda spelare och inmatning av hcp.
+Iterera, beräkna shcp och spara i Players.
+
+Lägg till Player objecten i Round obj.
+
+
+Återstående krav innan release 1
+====================================================================
+- Vettig kontroll för inmatning av antal slag. SKAPLIG GRUND GJORD
+
+- Resultatsida innehållandes 1. Poäng 2. Antal slag för samtliga spelare.
+
+- Möjlighet att spara/ladda runda från Localstorage.
+- Startsida med alternativen 1. Skapa runda 2. Hämta runda.
+
+
+
+
+
+
+

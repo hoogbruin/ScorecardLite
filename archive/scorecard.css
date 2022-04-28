@@ -1,0 +1,22 @@
+#scorecard_content {
+    flex: 10;
+    over flow: scroll;
+    font-size: 1em;
+
+}
+
+#scorecard_content table{
+    width: 100%;
+    height: 100%;
+    border: 1px solid grey;    
+    text-align: center;
+    padding: 0.5em;
+}
+
+#scorecard_content table{
+    width: 100%;
+    height: 100%;
+    bord er: 1px solid grey;    
+    text-align: center;
+    padding: 0.5em;
+}

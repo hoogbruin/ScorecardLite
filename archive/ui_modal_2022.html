@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Modal 2022</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            display : flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        input[type=text] {
+            border: none;
+            background-color: white;
+            box-shadow: 0px 0px 10px grey;
+            border-radius: 50%;
+            font-size: 2em;
+            font-weight: 700;
+            text-align: center;
+            width: 2em;
+            height: 2em;
+        }
+
+        #modal {
+            position: fixed;
+
+            display: none;
+            align-items: center;
+            justify-content: center;
+
+            width: 100%;
+            height: 100%;
+            
+            background-color: rgba(64, 64, 128, 0.25);
+        }
+
+        #modal_box {
+            box-shadow: 0px 0px 50px black;
+
+            height:  40%;
+            width: 60%;
+            background-color: white;
+        }
+
+        #modal_title {
+            display: flex;
+            height: 20%;
+
+            color: white;
+            background-color: black;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        #modal_numpad {
+            display: flex ;
+            flex-flow: column;
+
+            height: 60%;
+        }
+
+        #modal_numpad > div {
+            flex:1;
+
+            display: flex;
+        }
+
+        #modal_numpad > div > div {
+            flex: 1;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #modal_actions {
+            display: flex ;
+            
+            height: 20%;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        #modal_actions > div {
+            flex:1;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+ 
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <input type="text" id="input_text" value="-" readonly>
+
+    <div id="modal">
+        <div id="modal_box">
+            <div id="modal_title">
+                Nils-Jakob Olsson
+            </div>
+            <div id="modal_numpad">
+                <div>   
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                </div>
+                <div> 
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>
+                </div>
+                <div> 
+                    <div>7</div>
+                    <div>8</div>
+                    <div>9</div>
+                </div>
+            </div>
+            <div id="modal_actions">
+                <div>Rensa</div>
+                <div>Strecka</div>
+                <div>Tillbaka</div>
+            </div>   
+        </div>
+    </div>
+
+    <script>
+        var modal = document.getElementById('modal')
+        
+        var input = document.getElementById('input_text')
+        input.addEventListener('click', openModal)
+                 
+        function openModal() {
+            var modal = document.getElementById('modal')
+            var modal_numpad = document.getElementById('modal_numpad')
+            
+            modal.style.display = 'flex'
+            
+            modal_numpad.addEventListener('click', (e) => {
+                this.value = e.target.innerText
+                modal.style.display = 'none'
+
+                // console.log(this)
+                // console.log(e)
+                // console.log(e.target)
+            })
+
+            window.onclick = function(e) {
+                if (e.target == modal) {
+                    modal.style.display = 'none'
+                }
+            } 
+        }
+    </script>
+</body>
+</html>

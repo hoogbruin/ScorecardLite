@@ -1,0 +1,210 @@
+/* body {
+    height: 100vh;
+    margin: 0;
+    display : flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+#strokes-modal {
+    position: fixed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+#strokes-modal-window {
+    /* box-shadow: 0px 0px 50px black; */
+
+    height: 40%;
+    width: 60%;
+    background-color: white;
+}
+
+#strokes-modal-title {
+    display: flex;
+    height: 20%;
+
+    color: white;
+    background-color: black;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#strokes-modal-numpad {
+    display: flex ;
+    flex-flow: column;
+    height: 60%;
+}
+
+#strokes-modal-numpad > div {
+    flex: 1;
+    display: flex;
+}
+
+#strokes-modal-numpad > div > div {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#strokes-modal-actions {
+    display: flex ;
+    height: 20%;
+}
+
+#strokes-modal-actions > div {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Card */
+#modal-card {
+    position: fixed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+#modal-card-window {
+    /* box-shadow: 0px 0px 50px black; */
+
+    /* height: 60%; */
+    width: 90%;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+/* .card {
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid green;
+    margin-bottom: 1em;
+} */
+
+.modal-card-header {
+    font-weight: bold;
+    font-size: 1.5em;
+    /* color: white; */
+    /* background-color: rgb(16, 20, 13); */
+    padding-bottom: 1rem;
+
+    text-align: center;
+
+
+}
+
+.modal-card-row {
+    display: flex;
+    flex-direction: row;
+
+    /* font-weight: bold; */
+}
+
+.modal-card-row > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    align-items: stretch;
+    text-align: center;
+}
+
+.modal-card-row > div:first-of-type {
+    flex: 2;
+    text-align: initial;
+    align-ite ms: initial;
+}
+
+.modal-card-row > div:first-of-type > div{
+    padding-left: 1rem;
+}
+
+.modal-card-row > div:last-of-type > div{
+    padding-right: 1rem;
+}
+
+/* .modal-card-row > div:last-of-type {
+    text-align: center;
+} */
+
+
+.modal-card-row > div > div {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgb(43, 53, 35);
+}
+
+.modal-card-row > div > div:first-of-type {
+    background-color: rgb(43, 53, 35);
+    color: white;
+    font-weight: bold;
+}
+
+.modal-card-row > div > div:nth-of-type(4) {
+    font-weight: bold;
+}
+
+
+/* OLD SHIT */
+
+/* #modal {
+    height:  100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    
+    position:absolute;
+
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#numpad {
+    display: flex ;
+    flex-direction: column;
+    height: 50%;
+    width: 80%;
+    font-size: 1.3em;
+    margin-bottom: 4.5em;
+}
+
+#numpad > div {
+    flex:2;
+    display: flex;
+    bor der: 1px solid yellow;
+}
+
+#numpad > div > div {
+    flex: 1;
+    bord er:1px solid black;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */

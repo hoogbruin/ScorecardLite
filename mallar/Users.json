@@ -1,0 +1,12 @@
+[
+    {
+        "fname" : "Nils-Jakob Olsson",
+        "gender" : "male",
+        "hcp" : 7.7
+    },
+    {
+        "fname" : "Martin Persson",
+        "gender" : "male",
+        "hcp" : 10.4
+    }
+]

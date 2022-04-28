@@ -1,0 +1,89 @@
+// Users
+function getUsers() {
+    var users
+
+    if(localStorage.hasOwnProperty('Users'))
+        users = JSON.parse(localStorage.getItem('Users'))
+    else
+        users = baseUsers
+        localStorage.setItem('Users', JSON.stringify(users))
+
+    return users
+}
+
+function createUser(fname, lname, gender, hcp) {
+    var newUser = new User(Date.now())
+    
+    newUser.fname = fname
+    newUser.lname = lname
+    newUser.gender = gender
+    newUser.hcp = hcp
+
+    var users
+
+    if(localStorage.hasOwnProperty('Users'))
+        users = JSON.parse(localStorage.getItem('Users'))
+    else
+        users = []
+
+    users.push(newUser)
+    localStorage.setItem('Users', JSON.stringify(users))
+}
+
+function deleteUser(user) {
+    if(localStorage.hasOwnProperty('Users')) {
+        var users = JSON.parse(localStorage.getItem('Users'))
+        var index =  users.indexOf(user)
+
+        if(index > -1)
+            users.splice(index, 1)
+    }
+}
+
+function updatePlayersHcp(players) {
+    var users = JSON.parse(localStorage.getItem('Users'))
+
+    players.forEach(player => {
+        var user = users.find(u => u.id == player.id)
+        user.hcp = player.hcp
+    })
+
+    localStorage.setItem('Users', JSON.stringify(users))
+}
+
+// Scorecards
+function saveScorecard(scorecard) {
+    var scorecards
+
+    if(localStorage.hasOwnProperty('Scorecards'))
+        scorecards = JSON.parse(localStorage.getItem('Scorecards'))
+    else
+        scorecards = []    
+
+    // Kolla om den redan existerar annars lägg till
+    var current = scorecards.find(s => s.date == scorecard.date)
+
+    if(current !== undefined) {
+        current = scorecard
+    } else {
+        scorecards.push(scorecard)
+    }
+
+    // Spara på nytt i localStorage
+    localStorage.setItem('Scorecards', JSON.stringify(scorecards))     
+}
+
+function getScorecard(date) { // Kanske borde lägga till kontroll
+    var scorecards = getScorecards()
+    var scorecard = scorecards.find(s => s.date == date)
+
+    return scorecard
+}
+
+function getScorecards() {
+    if(localStorage.hasOwnProperty('Scorecards'))
+        return JSON.parse(localStorage.getItem('Scorecards'))
+}
+
+function deleteScorecard(date) {
+}

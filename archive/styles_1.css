@@ -1,0 +1,97 @@
+/* body {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+} */
+
+/* #wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+} */
+
+/* #header {
+    flex: 1;
+
+    font-size: 2em;
+    font-weight: 900;
+    color: white;
+    background-color: rgb(0, 0, 0);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* #setup_header {
+    flex: 1;
+
+    background-color: grey;
+    color: white;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#setup_header > span {
+    font-size: 1.5em;margin: 0.5em; font-weight: 900;
+} */
+
+/* 
+
+#course :nth-child(2) {
+    fl ex:2;
+}
+
+#hole {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+} */
+
+/* #courseList {
+    flex: 10;
+} */
+
+/* .playa {
+    background-color: white;
+    display: flex;
+    flex-direction: column;    
+    
+    margin: 0.5em; */
+    /* bor der-radius: 5px;
+    bor der: 2px solid black; */
+
+    /* fl ex-wrap: wrap;
+    jus tify-content: space-between;
+    alig n-content: center;
+
+    box-sha dow: 5px #777; */
+
+}
+
+/* .p_header {
+    padding: 0.5em 0.5em;
+    /* background -color: black;
+    col or: white; */
+    /* font-weight: 900;
+    bo rder-radius: 2px 2px 0 0;
+    display: flex;
+    border-bottom: 1px solid grey;
+} */
+/* 
+.p_content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+} */
+
+/* #course_form {
+
+font-size: 1.5em;
+
+} */
+
+

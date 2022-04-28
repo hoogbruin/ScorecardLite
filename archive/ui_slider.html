@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Spinner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <style>
+
+
+        body {
+            height: 100vh;
+            display : flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #output {
+            font-size: 10em;
+            font-weight: 900;
+        }
+
+        input[type=range] {
+            bor der: none;
+            box-sh adow: 0px 0px 50px black;
+ 
+            font-size: 15em;
+            font-weight: 900;
+            te xt-align: center;
+            width: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div id="output">-</div><br>
+    <input type="range" id="strokes" name="strokes" min="0" max="12" step="1" value="0">
+    
+    
+    <script>
+        var input = document.getElementById('strokes');
+        var output = document.getElementById('output');
+
+        input.addEventListener('input', function() {
+            if(this.value == 0)
+                output.innerHTML = '-';
+            else    
+                output.innerHTML = this.value;
+        });
+
+
+
+
+    </script>
+</body>
+</html>

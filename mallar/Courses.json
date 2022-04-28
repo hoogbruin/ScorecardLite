@@ -1,0 +1,30 @@
+[
+    {
+        "name" : "Lilla Vik",
+        "par" : 72,
+        "tees" : [
+            {
+                "name" : "58",
+                "male" : {
+                    "course_rating" : 120, "slope_rating" : 70.3
+                },
+                "female" : {
+                    "course_rating" : 120, "slope_rating" : 70.3
+                }
+            },
+            {
+                "name" : "54",
+                "male" : {
+                    "course_rating" : 120, "slope_rating" : 70.3
+                },
+                "female" : {
+                    "course_rating" : 120, "slope_rating" : 70.3
+                }
+            }
+        ],
+        "holes" : [
+            {"hole" : 1, "par" : 4, "index" : 10},
+            {"hole" : 1, "par" : 4, "index" : 10}
+        ]
+    }
+]

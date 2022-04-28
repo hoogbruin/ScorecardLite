@@ -1,0 +1,21 @@
+{
+    "course" : "Lilla Vik",
+    "date" : "datestring",
+    "players" : [
+        {
+            "id" : 45345345345,
+            "name" : "Nils-Jakob Olsson",
+            "tee" : "58",
+            "hcp" : 7.7,
+            "shcp" : 9,
+            "total_strokes" : 84,     
+            "total_stableford" : 34,
+            "score" : [
+                {"hole" : 1, "strokes" : 4, "points" : 2},
+                {"hole" : 2, "strokes" : 4, "points" : 2}
+            ]
+        },
+        {
+        }
+    ]
+}

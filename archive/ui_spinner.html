@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Spinner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <style>
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        body {
+            height: 100vh;
+            display : flex;
+            align-items: center;
+            justify-content: center;
+
+            
+        }
+
+        input[type=text] {
+            border: none;
+            box-sh adow: 0px 0px 50px black;
+ 
+            font-size: 15em;
+            font-weight: 900;
+            text-align: center;
+            width: 2em;
+        }
+        input[type=text]:disabled {
+            background-color: white;
+            color: black;
+        }
+
+        .btn {
+            font-size: 10em;
+            bor der: 1px solid black;
+            bor der-radius: 50%;
+        }
+
+
+    </style>
+</head>
+<body>
+    <span id="sub_a" class="btn" onclick="sub()">⮜</span>
+    <input type="text" id="btn" class="spinner" value="1.5" disabled ">
+    <span id="add_a" class="btn" onclick="add()">⮞</span>
+    
+    
+    <script>
+
+        function add() {
+            // Parese to float
+            var spinner = document.getElementById(event.target.className);
+            var value = parseFloat(spinner.value);
+            console.log(value);
+            spinner.value = (parseFloat(spinner.value) + 0.1).toFixed(1);
+        }
+
+        function sub() {
+            // Parese to float
+            var spinner = document.getElementById(event.target.className);
+            var value = parseFloat(spinner.value);
+            console.log(value);
+            spinner.value = (parseFloat(spinner.value) - 0.1).toFixed(1);
+        }
+
+
+    </script>
+</body>
+</html>

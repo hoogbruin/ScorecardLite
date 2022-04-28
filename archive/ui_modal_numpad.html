@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Modal Keypad</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+        body {
+            height: 100vh;
+            display : flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #numpad {
+            display: flex ;
+            flex-flow: column;
+            height: 50%;
+            width: 50%;
+        }
+
+        #numpad > div {
+            flex:1;
+            display: flex;
+            border: 1px solid yellow;
+        }
+
+        #numpad > div > div {
+            flex: 1;
+            border:1px solid black;
+            background-color: white;
+        }
+
+        input[type=text] {
+            border: none;
+            box-shadow: 0px 0px 300px black;
+            border-radius: 50%;
+            font-size: 10em;
+            font-weight: 700;
+            text-align: center;
+            width: 1.5em;
+
+            
+        }
+
+        #modal {
+            height:  100vh;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            
+            position:absolute;
+
+            top: 0;
+            left: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="conatainer">
+        <input type="text" id="inpA" value="-">
+        <input type="text" id="inpB" value="-">
+    </div>
+
+    <script>
+        // var modal = document.getElementById('modal');
+        
+        var inpA = document.getElementById('inpA');
+        inpA.addEventListener('click', test);
+        var inpB = document.getElementById('inpB');
+        inpB.addEventListener('click', test);
+
+
+        function createInputModal() {
+            var modal = document.createElement('div');
+            modal.id = 'modal';
+            var numpad = document.createElement('div');
+            numpad.id = 'numpad';
+
+            var r = document.createElement('div');
+            var b = document.createElement('div');
+            b.innerText = 1;
+            r.appendChild(b);
+            var b = document.createElement('div');
+            b.innerText = 2;
+            r.appendChild(b);
+            var b = document.createElement('div');
+            b.innerText = 3;
+            r.appendChild(b);
+            numpad.appendChild(r);
+            
+            var r = document.createElement('div');
+            var b = document.createElement('div');
+            b.innerText = 4;
+            r.appendChild(b);
+            var b = document.createElement('div');
+            b.innerText = 5;
+            r.appendChild(b);
+            var b = document.createElement('div');
+            b.innerText = 6;
+            r.appendChild(b);
+            numpad.appendChild(r);
+            
+            var r = document.createElement('div');
+            var b = document.createElement('div');
+            b.innerText = 7;
+            r.appendChild(b);
+            var b = document.createElement('div');
+            b.innerText = 8;
+            r.appendChild(b);
+            var b = document.createElement('div');
+            b.innerText = 9;
+            r.appendChild(b);
+            numpad.appendChild(r);
+
+            var r = document.createElement('div');
+            var b = document.createElement('div');
+            b.innerText = '10';
+            r.appendChild(b);
+            var b = document.createElement('div');
+            b.innerText = 'input';
+            r.appendChild(b);
+            var b = document.createElement('div');
+            b.innerText = 'Avbryt';
+            r.appendChild(b);
+            numpad.appendChild(r);
+
+            modal.appendChild(numpad);
+            document.body.appendChild(modal);
+        }
+
+
+
+
+        // function getInput(el) {
+        //     // console.log(el.innerText);
+        //     // console.log(inp.value);
+        //     inp.value = el.innerText;
+        //     modal.style.visibility = 'hidden';
+        // }
+
+        // function getInput() {
+        //     console.log(this);
+        //     modal.style.visibility = 'visible';
+        // }
+                 
+        function numpad() {
+            // Spara länke till input
+            var inp = this;
+        
+            // Koppla en envenhanterare till modalen
+            createInputModal();
+
+            var numpad = document.getElementById('numpad');
+
+            numpad.addEventListener('click', function () {
+                console.log(event.target);
+                inp.value = event.target.innerText;
+
+                document.body.removeChild(document.getElementById('modal'));
+            });
+            
+        }
+
+        // function eventNumpad() {
+        //     console.log(event.target);
+        //     inp.value = event.target.innerText;
+        //     modal.style.display = 'none';
+        // }    
+
+    </script>
+</body>
+</html>
