@@ -50,11 +50,9 @@ function scorecardList() {
     btn_cancel.className = 'btn'
     btn_cancel.id = 'btn_cancel'
     btn_cancel.innerText = 'Avbryt'
-
     btn_cancel.addEventListener('click', function () {
         startPage()
     })
-
     footer.appendChild(btn_cancel)
 
     // Koppla samman

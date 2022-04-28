@@ -61,6 +61,25 @@ body {
     display: flex;
 }
 
+
+/* Home View / startApp */
+#home-hero {
+    flex: 5;
+
+    background-image: url('../media/djupadal.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+#home-content {
+    flex: 5;
+}
+
+#home-content .scorecard_item {
+    height: 20%;
+}
+
 /* Scorecard list item */
 .scorecard_item {
     height: 10%;
