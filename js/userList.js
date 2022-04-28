@@ -34,7 +34,7 @@ function userList() {
                 // console.log(this)
                 var selected_user = getUser(this.id)
                 alert('Bingo')
-                // userView(selected_user)
+                //   userView(selected_user)
             })
 
             content.appendChild(user_item)
