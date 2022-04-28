@@ -73,7 +73,7 @@ body {
     background-size: cover;
     background-position: center;
 }
-#home-hero {
+/* #home-hero {
     flex: 4;
 
     background-image: url('../media/djupadal.jpg');
@@ -81,7 +81,7 @@ body {
     background-size: cover;
     background-position: top;
     
-}
+} */
 #home-content {
     flex: 5;
 }
