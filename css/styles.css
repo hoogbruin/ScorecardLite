@@ -3,9 +3,9 @@
     box-sizing: border-box;
 }
 
-p {
+/* p {
     margin: 0;
-}
+} */
 
 body {
     margin: 0;
@@ -19,6 +19,62 @@ body {
     height: 100vh;
     /* margin: 0; */
 }
+
+.header {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: black;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.title {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #484848;
+    color: white;
+
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.content {
+    flex: 10;
+}
+
+.footer {
+    flex: 1;
+
+    background-color:#484848;
+    color: white;
+    font-size: 1.75em;
+
+    display: flex;
+}
+
+.scorecard_item {
+    height: 10%;
+    
+    display: flex;
+    align-items: center;
+}
+
+.scorecard_item div {
+    flex: 1;
+}
+
+
+
+
 
 #start_header {
     flex: 4;
@@ -118,11 +174,11 @@ body {
 
 .btn {
     font-size: 0.5em;
-    border: none;
-    color: grey;
+    /* border: none; */
+    color: #484848;
     font-weight: bold;
-    width: 30%;
-    height: 65%;
+    width: 100%;
+    /* hei ght: 65%; */
 }
 
 #form_setupCourse {

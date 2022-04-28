@@ -65,6 +65,18 @@ function startPage() {
     var footer = document.createElement('div');
     footer.id = 'footer';
 
+    // Meny knapp
+    var btn_menu = document.createElement('button');
+    btn_menu.className = "btn"
+    btn_menu.id = 'btn_menu'
+    btn_menu.innerText = 'Meny'
+    btn_menu.type = 'button'
+
+    btn_menu.addEventListener('click', function() {
+        menuModal()
+    })
+    footer.appendChild(btn_menu);
+
     // Ny runda-knapp
     var btn_new = document.createElement('button');
     btn_new.className = "btn"
