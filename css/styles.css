@@ -17,7 +17,6 @@ body {
     flex-direction: column;
     
     height: 100vh;
-    /* margin: 0; */
 }
 
 .header {
@@ -32,7 +31,6 @@ body {
     font-size: 2em;
     font-weight: bold;
 }
-
 .title {
     flex: 1;
 
@@ -46,47 +44,29 @@ body {
     font-size: 1.4em;
     font-weight: bold;
 }
-
 .content {
     flex: 10;
 }
-
 .footer {
     flex: 1;
 
-    display: flex;
-
+    background-color: black;
+    color: white;
     font-size: 1.75em;
+
+    display: flex;
 }
 
 
 /* Home View / startApp */
 #home-header {
-    flex: 7;
+    flex: 6;
 
     font-size: 3rem;
-color: #0b6556;
-background-color: white;
-
-
-    /* background-image: url('../media/djupadal.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; */
 }
-/* #home-hero {
-    flex: 4;
-
-    background-image: url('../media/djupadal.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
-    
-} */
 #home-content {
     flex: 5;
 }
-
 #home-content .scorecard_item {
     height: 20%;
 }
@@ -113,25 +93,6 @@ background-color: white;
 
 
 
-
-
-#start_header {
-    flex: 4;
-    /* padding: 0.25em; */
-    /* background-color: rgb(0, 0, 0); */
-    color: white;
-    font-size: 4em;
-    font-weight: 900;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-image: url('../media/djupadal.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
 
 #setup_header {
     flex: 1;
@@ -212,15 +173,14 @@ background-color: white;
 }
 
 .btn {
-    font-size: 0.65em;
-    /* border: none; */
-    color: #0b6556;
-    background-color: white;
-    border: 2px solid #0b6556;
-    border-top: 3px solid #0b6556;
+    font-size: 0.5em;
+    background-color: black;
+    border: none;
+    color: white;
     font-weight: bold;
     width: 100%;
     /* hei ght: 65%; */
+    text-decoration: underline;
 }
 
 #form_setupCourse {
