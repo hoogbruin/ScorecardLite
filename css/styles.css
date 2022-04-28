@@ -63,8 +63,18 @@ body {
 
 
 /* Home View / startApp */
+#home-header {
+    flex: 7;
+
+    font-size: 3rem;
+
+    background-image: url('../media/djupadal.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 #home-hero {
-    flex: 5;
+    flex: 4;
 
     background-image: url('../media/djupadal.jpg');
     background-repeat: no-repeat;

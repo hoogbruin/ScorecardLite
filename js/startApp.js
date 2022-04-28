@@ -6,13 +6,13 @@ function startPage() {
     // Headern
     var header = document.createElement('div')
     header.className = 'header'
-    // header.id = 'start_header'
+    header.id = 'home-header'
     header.innerText = 'ScorecardLite'
 
     // Hero
-    var hero = document.createElement('div')
-    hero.id = 'home-hero'
-    // hero.innerText = 'fddsf'
+    // var hero = document.createElement('div')
+    // hero.id = 'home-hero'
+    // // hero.innerText = 'fddsf'
 
     // Title
     var title = document.createElement('div')
@@ -84,7 +84,7 @@ function startPage() {
     app.innerHTML = ''
 
     app.appendChild(header)
-    app.appendChild(hero)
+    // app.appendChild(hero)
     app.appendChild(title)
     app.appendChild(content)
     app.appendChild(footer)
