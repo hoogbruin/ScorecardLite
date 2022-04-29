@@ -58,6 +58,30 @@ body {
 
     display: flex;
 }
+                                                                                                    /* //////////////// */
+/* courseView */
+/* #form_setupCourse {
+    display: flex;
+    flex-direction: column;
+} */
+.course_item {
+    /* margin: 0 0.5em; */
+    /* padd ing: 0.5em;                                                                                              Fortsätt här */
+
+    display: flex;                                                              
+    align-items: center;
+    border-bottom: 1px dotted #777;
+}
+
+.course_item > label {
+    width: 100%;
+    padding: 0.5em;
+}
+                                                                                                    /* //////////////// */
+
+
+
+
 
 
 /* Home View / startApp */
@@ -86,7 +110,7 @@ body {
     font-size: 1.25em;
 }
 .scorecard_item:active {
-    background-color: rgb(0, 92, 200);
+    background-color: #658ebc;
     color: white;
 }
 .scorecard_item div:first-of-type {
@@ -107,7 +131,7 @@ body {
     font-size: 1.25em;
 }
 .user_item:active {
-    background-color: rgb(0, 92, 200);
+    background-color: #658ebc;
     color: white;
 }
 
@@ -185,10 +209,7 @@ body {
     text-decoration: underline;
 }
 
-#form_setupCourse {
-    display: flex;
-    flex-direction: column;
-}
+
 
 #form_setupHcp, #form_setupTees {
     display: flex;
@@ -236,7 +257,7 @@ body {
 
 /* List items */
 
-.course_item, .tee_item, .player_item {
+.tee_item, .player_item {
     /* margin: 0 0.5em; */
     /* padd ing: 0.5em; */
 
@@ -245,7 +266,7 @@ body {
     border-bottom: 1px dotted #777;
 }
 
-.course_item > label, .tee_item > label, .player_item > label {
+.tee_item > label, .player_item > label {
     width: 100%;
     padding: 0.5em;
 }
@@ -277,13 +298,13 @@ input[type=radio], input[type=checkbox], inp ut[type=text] {
     align-items: center;
 
 
-    background-image: url('../media/djupadal.jpg');
+    /* background-image: url('../media/djupadal.jpg');
     background-repeat: no-repeat;
     backgr ound-size: cover;
-    background-position: center;
+    background-position: center; */
 
-    /* background-color: rgb(24, 172, 103); */
-    color: white;
+    background-color: #0b6556;
+    /* color: #eee; */
 }
 
 #hole_section > div, #course_section > p {
