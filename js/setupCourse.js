@@ -46,7 +46,7 @@ function setupCourse() {
     btn_cancel.addEventListener('click', function () {
         startPage()
     })
-    footer.appendChild(btn_cancel)
+    // footer.appendChild(btn_cancel)
 
     var btn_next = document.createElement('button')
     btn_next.type = 'submit'

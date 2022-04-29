@@ -88,6 +88,42 @@ body {
     width: 100%;
 }
 
+
+/* handicapView */
+.handicap-item {
+    height: 25%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    padding: 0 0.5em;
+    border-bottom: 1px dotted #333;
+
+    font-size: 1.25em;
+}
+.handicap-spinner {
+    display: flex;
+}
+
+.handicap-spinner > div {
+    width: 5em;
+    text-align: center;
+}
+
+.handicap-input {
+    font-size: 1em;
+    width: 5em;
+    text-align: center;
+}
+
+
+
+
+
+
+
 /* homeView */
 #home-header {
     flex: 6;
@@ -100,6 +136,15 @@ body {
 #home-content .scorecard_item {
     height: 20%;
 }
+
+
+
+
+
+
+
+
+
 
 /* Scorecard list item */
 .scorecard_item {
@@ -211,35 +256,12 @@ body {
 
 
 
-#form_setupHcp, #form_setupTees {
+#form_setupTees {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
-.hcp_item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
 
-    height: 25%;
-    padding: 0.5em;
-    box-sizing: border-box;
-
-}
-.hcp_spinner {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    font-size: 2em;
-    width: 100%;
-}
-.input_hcp {
-    font-size: 0.75em;
-    width: 3em;
-    text-align: center;
-    bord er: none;
-}
 
 .tee_item {
     display: flex;
