@@ -1,12 +1,4 @@
 function setupHandicaps() {
-
-
-
-
-
-
-
-    
     // Skapa grundlayouten
     createSetupLayout()
 

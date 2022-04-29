@@ -1,0 +1,56 @@
+{
+    "name" : "",
+    "par"  : ,
+    "tees" : [
+        {
+            "name" : "",
+            "male" : {"slope_rating" : , "course_rating" : },
+            "female" : {"slope_rating" : , "course_rating" : }
+        },
+        {
+            "name" : "",
+            "male" : {"slope_rating" : , "course_rating" : },
+            "female" : {"slope_rating" : , "course_rating" : }
+        },
+        {
+            "name" : "",
+            "male" : {"slope_rating" : , "course_rating" : },
+            "female" : {"slope_rating" : , "course_rating" : }
+        },
+        {
+            "name" : "",
+            "male" : {"slope_rating" : , "course_rating" : },
+            "female" : {"slope_rating" : , "course_rating" : }
+        },
+        {
+            "name" : "",
+            "male" : {"slope_rating" : , "course_rating" : },
+            "female" : {"slope_rating" : , "course_rating" : }
+        },
+        {
+            "name" : "",
+            "male" : {"slope_rating" : , "course_rating" : },
+            "female" : {"slope_rating" : , "course_rating" : }
+        }
+    ],
+    "holes" : [
+        {"number" : 1, "par" : , "index" : },
+        {"number" : 2, "par" : , "index" : },
+        {"number" : 3, "par" : , "index" : },
+        {"number" : 4, "par" : , "index" : },
+        {"number" : 5, "par" : , "index" : },
+        {"number" : 6, "par" : , "index" : },
+        {"number" : 7, "par" : , "index" : },
+        {"number" : 8, "par" : , "index" : },
+        {"number" : 9, "par" : , "index" : },
+        {"number" : 10, "par" : , "index" : },
+        {"number" : 11, "par" : , "index" : },
+        {"number" : 12, "par" : , "index" : },
+        {"number" : 13, "par" : , "index" : },
+        {"number" : 14, "par" : , "index" : },
+        {"number" : 15, "par" : , "index" : },
+        {"number" : 16, "par" : , "index" : },
+        {"number" : 17, "par" : , "index" : },
+        {"number" : 18, "par" : , "index" : }
+    ]
+}

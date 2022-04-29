@@ -3,10 +3,6 @@
     box-sizing: border-box;
 }
 
-/* p {
-    margin: 0;
-} */
-
 body {
     margin: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
@@ -21,6 +17,7 @@ body {
     height: 100vh;
 }
 
+/* Base layout */
 .header {
     flex: 1;
 
@@ -91,7 +88,7 @@ body {
     width: 100%;
 }
 
-/* Home View / startApp */
+/* homeView */
 #home-header {
     flex: 6;
 
@@ -142,18 +139,19 @@ body {
     color: white;
 }
 
+.btn {
+    flex: 1;
 
+    border: none;
+    background-color: #333;
+    color: #eee;
 
+    font-size: 0.5em;
+    font-weight: bold;
+    text-decoration: underline;
+}
 
-
-
-
-
-
-
-
-
-#setup_header {
+/* #setup_header {
     flex: 1;
 
     font-size: 2em;
@@ -164,9 +162,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
-#start_title, #setup_title {
+/* #start_title, #setup_title {
     flex: 1;
 
     background-color: #777;
@@ -178,9 +176,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-
+} */
 
 
 /* overflow: auto; */
@@ -193,7 +189,7 @@ body {
     flex: 1;
 } */
 
-#setup_content {
+/* #setup_content {
     flex: 10;
     font-size: 1.5em;
     overflow: auto;
@@ -209,19 +205,9 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-}
+} */
 
-.btn {
-    flex: 1;
 
-    border: none;
-    background-color: #333;
-    color: #eee;
-
-    font-size: 0.5em;
-    font-weight: bold;
-    text-decoration: underline;
-}
 
 
 
@@ -294,7 +280,6 @@ input[type=radio], input[type=checkbox], inp ut[type=text] {
 
 
 /* holeInput views */
-
 #course_section {
     flex: 1;
 
