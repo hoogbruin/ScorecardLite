@@ -58,7 +58,7 @@ body {
 
     display: flex;
 }
-                                                                                                    /* //////////////// */
+
 /* courseView */
 .course-item {
     height: 10%;
@@ -74,12 +74,22 @@ body {
 .course-item > label {
     width: 100%;
 }
-                                                                                                    /* //////////////// */
 
+/* playersView */
+.player-item {
+    height: 10%;
 
+    display: flex;
+    align-items: center;
 
+    padding: 0 0.5em;
+    border-bottom: 1px dotted #333;
 
-
+    font-size: 1.25em;
+}
+.player-item > label {
+    width: 100%;
+}
 
 /* Home View / startApp */
 #home-header {
@@ -131,6 +141,13 @@ body {
     background-color: #658ebc;
     color: white;
 }
+
+
+
+
+
+
+
 
 
 
@@ -254,7 +271,7 @@ body {
 
 /* List items */
 
-.tee_item, .player_item {
+.tee_item {
     /* margin: 0 0.5em; */
     /* padd ing: 0.5em; */
 
@@ -263,7 +280,7 @@ body {
     border-bottom: 1px dotted #777;
 }
 
-.tee_item > label, .player_item > label {
+.tee_item > label {
     width: 100%;
     padding: 0.5em;
 }
