@@ -8,15 +8,12 @@ function holeView(hole_number) {
     header.id = 'hole-header'
     // course_section.id = 'course_section'
 
-    var date = document.createElement('div')
     var course_name = document.createElement('div')
     var par = document.createElement('div')
 
-    date.innerText = new Date(scorecard.date).toLocaleDateString()
     course_name.innerText = course.name
     par.innerText = 'Par ' + course.par
 
-    header.appendChild(date)
     header.appendChild(course_name)
     header.appendChild(par)
 

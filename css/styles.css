@@ -52,7 +52,7 @@ form {
     flex: 10;
 }
 .footer {
-    flex: 1;
+    flex: 2;
 
     background-color: #333;
     color: #eee;
@@ -286,7 +286,7 @@ input[type=radio], input[type=checkbox] {
 }
 
 #hole-content {
-    flex: 7;    
+    flex: 8;    
 }
 #hole-footer {
     flex: 2;
