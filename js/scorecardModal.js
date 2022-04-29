@@ -1,4 +1,4 @@
-function cardModal(player) {
+function scorecardModal(player) {
     var app = document.getElementById('app')
 
     // Modal

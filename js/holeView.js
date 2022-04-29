@@ -88,7 +88,7 @@ function holeView(hole_number) {
         p_b_hcp.innerText = 'Slag ' + (hcp == 0 ? '-' : hcp)
         div1.appendChild(p_b_hcp)
         div1.addEventListener('click', function(e) {
-            cardModal(player)
+            scorecardModal(player)
         })
         p_b_content.appendChild(div1)
 
