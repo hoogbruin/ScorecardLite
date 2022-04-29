@@ -10,6 +10,11 @@ body {
     color: #333;
 }
 
+/* TEMP */
+form {                      
+    margin: 0;
+}
+
 #app {
     display: flex;
     flex-direction: column;
@@ -17,7 +22,7 @@ body {
     height: 100vh;
 }
 
-/* Base layout */
+/*********************************************** Base layout */
 .header {
     flex: 1;
 
@@ -56,7 +61,7 @@ body {
     display: flex;
 }
 
-/* courseView */
+/*************************************************** courseView */
 .course-item {
     height: 10%;
     
@@ -72,7 +77,7 @@ body {
     width: 100%;
 }
 
-/* playersView */
+/*************************************************** playersView */
 .player-item {
     height: 10%;
 
@@ -89,7 +94,7 @@ body {
 }
 
 
-/* handicapView */
+/*************************************************** handicapView */
 .handicap-item {
     height: 25%;
 
@@ -103,33 +108,53 @@ body {
 
     font-size: 1.25em;
 }
+.handicap-item:last-child {
+    border-bottom: none;
+}
 .handicap-spinner {
     display: flex;
 }
-
 .handicap-spinner > div {
     width: 5em;
     text-align: center;
+    color: #333;
 }
-
 .handicap-input {
-    font-size: 1em;
     width: 5em;
     text-align: center;
+    font-size: 1em;
+    color: #333;
 }
 
-.handicap-input.input[type=text] {
-    border-color: #333;
-    color: 2px solid #333
+/*************************************************** teeView */
+.tee-item {
+    height: 25%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    border-bottom: 1px dotted #333;
+    padding: 0 0.5em;
+
+    font-size: 1.25em;
+}
+.tee-item:last-child {
+    border-bottom: none;
+}
+.tee-list {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+.tee-list > div {
+    display: flex;
+    align-items: center;
 }
 
-
-
-
-
-
-
-/* homeView */
+/*************************************************** homeView */
 #home-header {
     flex: 6;
 
@@ -151,7 +176,7 @@ body {
 
 
 
-/* Scorecard list item */
+/*************************************************** Scorecard list item */
 .scorecard_item {
     height: 10%;
     
@@ -171,7 +196,7 @@ body {
     margin-right: 2em;
 }
 
-/* User list item */
+/*************************************************** User list item */
 .user_item {
     height: 10%;
     
@@ -261,44 +286,16 @@ body {
 
 
 
-#form_setupTees {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
 
-
-.tee_item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-
-    height: 25%;
-    padding: 0.5em;
-    box-sizing: border-box;
-}
 
 
 
 
 /* List items */
 
-.tee_item {
-    /* margin: 0 0.5em; */
-    /* padd ing: 0.5em; */
 
-    display: flex;
-    align-items: center;
-    border-bottom: 1px dotted #777;
-}
 
-.tee_item > label {
-    width: 100%;
-    padding: 0.5em;
-}
-
-input[type=radio], input[type=checkbox], inp ut[type=text] {
+input[type=radio], input[type=checkbox], in put[type=text] {
     margin: 0 0.5em 0 0;
     font-size: 1em;
     height: 1em;
