@@ -118,6 +118,11 @@ body {
     text-align: center;
 }
 
+.handicap-input.input[type=text] {
+    border-color: #333;
+    color: 2px solid #333
+}
+
 
 
 
