@@ -273,34 +273,25 @@ input[type=radio], input[type=checkbox] {
 #hole-title {
     flex: 3;
 
-    justify-content: space-around;
-
     font-size: 1em;
     font-weight: bold;
     padding: 0 0.5em;
 }
 #hole-title > div {
-    text-align: center;
+    flex: 1;
     
+    text-align: center;
 }
 #hole-title > div:nth-of-type(2) {
     font-size: 4.5em;
     font-weight: bold;
 }
-
-#hole-title > div > div{
-}
-
-#hole-content {
+#hole-form {
     flex: 8;    
 }
 #hole-footer {
     flex: 2;
 }
-
-
-
-
 
 
 .player-box {
@@ -315,21 +306,32 @@ input[type=radio], input[type=checkbox] {
     border-bottom: 1px dotted #333;
 }
 .p-b-header {
+    flex: 1;
+
     display: flex;
     justify-content: center;
+
+    font-size: 1.25em;
+    /* font-weight: bold; */
 }
 .p-b-content {
+    flex: 2;
     display: flex;
-    flex-direction: row;
+    height: 100%;
+    /* flex-direction: row; */
 }
 .p-b-content > div {
     flex: 1;
-}
-.p-b-content > div:nth-child(1) {
+
+    display: flex;
+    flex-direction: column;
 }
 .p-b-content > div:nth-child(2) {
     align-items: center;
     justify-content: center;
+}
+.p-b-content > div:nth-child(1) {
+    /* justify-content: flex-end; */
 }
 .p-b-content > div:nth-child(3) {
     align-items: flex-end;
