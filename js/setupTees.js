@@ -89,7 +89,8 @@ function setupTees() {
         })
 
         saveScorecard(scorecard)
-        holeInput(1)
+        //holeInput(1)
+        holeView(1)
     })
 
     footer.appendChild(btn_cancel)
