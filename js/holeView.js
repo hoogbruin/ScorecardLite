@@ -113,6 +113,17 @@ function holeView(hole_number) {
 
         player_box.appendChild(div)
 
+        // Slaginmatning
+        var div = document.createElement('div')
+
+        var pb_input = document.createElement('input')
+        pb_input.id = 'pb-input'
+        pb_input.setAttribute('type', 'text')
+        pb_input.setAttribute('readonly', true)
+        div.appendChild(pb_input)
+        player_box.appendChild(div)
+
+
         // Poängbogey
         var div = document.createElement('div')
 
@@ -132,13 +143,7 @@ function holeView(hole_number) {
         pb_hole_points.id = 'pb-hole-points'
         player_box.appendChild(pb_hole_points)
 
-        // Slaginmatning
-        var div = document.createElement('div')
-
-        var pb_input = document.createElement('input')
-        pb_input.id = 'pb-input'
-        pb_input.setAttribute('type', 'text')
-        pb_input.setAttribute('readonly', true)
+        
 
         updatePlayerBox(player, hole, pb_scratch_score, pb_pb_score, pb_hole_points, pb_input)
 
@@ -149,8 +154,7 @@ function holeView(hole_number) {
             })
         })
 
-        div.appendChild(pb_input)
-        player_box.appendChild(div)
+        
         content.appendChild(player_box)    
     })
 

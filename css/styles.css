@@ -272,14 +272,24 @@ input[type=radio], input[type=checkbox] {
 }
 #hole-title {
     flex: 2;
-    padding: 0 0.5em;
 
+    justify-content: space-around;
+
+    font-size: 1em;
+    font-weight: normal;
+    padding: 0 0.5em;
 }
+#hole-title > div {
+    text-align: center;
+}
+#hole-title > div > div{
+}
+
 #hole-content {
-    flex: 9;    
+    flex: 8;    
 }
 #hole-footer {
-    
+    flex: 2;
 }
 
 
@@ -320,8 +330,8 @@ input[type=radio], input[type=checkbox] {
 
 padding: 0.5rem;
 
-    font-size: 1.25em;
-    font-weight: bold;
+    font-size: 1rem;
+    /* font-weight: bold; */
     border-bottom: 1px dotted #777;
 }
 
@@ -334,7 +344,7 @@ padding: 0.5rem;
 }
 
 .player_box > div:nth-child(1) {
-    flex: 3;
+    flex: 1;
     justify-content: space-around;
 }
 .player_box > div:nth-child(2) {
@@ -356,7 +366,7 @@ padding: 0.5rem;
     justify-content: center;
 }
 .player_box > div:nth-child(5) {
-    flex: 2;
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
