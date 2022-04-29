@@ -75,39 +75,40 @@ function holeView(hole_number) {
         var player_box = document.createElement('div')
         player_box.className = 'player-box'
 
+        var p_b_header = document.createElement('div')
+        p_b_header.className = 'p-b-header'
+        p_b_header.innerText = player.fname + ' ' + player.lname
+        player_box.appendChild(p_b_header)
+
+        var p_b_content = document.createElement('div')
+        p_b_content.className = 'p-b-content'
+
         // Namn, Tee och Hcp        Div 1
         var div1 = document.createElement('div')
 
-        var p_b_name = document.createElement('div')
-        p_b_name.id = 'p-b-name'
-        p_b_name.innerText = player.fname + ' ' + player.lname
-        div1.appendChild(p_b_name)
-
         var p_b_tee = document.createElement('div')
-        p_b_tee.id = 'p-b-tee'
+        p_b_tee.className = 'p-b-tee'
         p_b_tee.innerText = 'Tee ' + player.tee
         div1.appendChild(p_b_tee)
 
         var p_b_hcp = document.createElement('div')
-        p_b_hcp.id = 'p-b-hcp'
+        p_b_hcp.className = 'p-b-hcp'
         p_b_hcp.innerText = 'Slag ' + calculateHoleHcp(hole.index, player.shcp)
         div1.appendChild(p_b_hcp)
-
         div1.addEventListener('click', function(e) {
             cardModal(player)
         })
-
-        player_box.appendChild(div1)
+        p_b_content.appendChild(div1)
 
         // Slaginmatning                                   Div 2
         var div2 = document.createElement('div')
 
         var p_b_input = document.createElement('input')
-        p_b_input.id = 'p-b-input'
+        p_b_input.className = 'p-b-input'
         p_b_input.setAttribute('type', 'text')
         p_b_input.setAttribute('readonly', true)
         div2.appendChild(p_b_input)
-        player_box.appendChild(div2)
+        p_b_content.appendChild(div2)
 
         // Scorer                               Div 3
         var div3 = document.createElement('div')
@@ -117,14 +118,15 @@ function holeView(hole_number) {
         // div3.appendChild(p_b_scratch)
 
         var p_b_points = document.createElement('div')
-        p_b_points.id = 'p-b-points'
+        p_b_points.className = 'p-b-points'
         div3.appendChild(p_b_points)
 
         var p_b_stableford = document.createElement('div')
-        p_b_stableford.id = 'p-b-stableford'
+        p_b_stableford.className = 'p-b-stableford'
         div3.appendChild(p_b_stableford)
 
-        player_box.appendChild(div3)
+        p_b_content.appendChild(div3)
+        player_box.appendChild(p_b_content)
 
         updatePlayerBox(player, hole, p_b_stableford, p_b_points, p_b_input)          //p_b_scratch
 
