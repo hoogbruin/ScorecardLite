@@ -276,12 +276,18 @@ input[type=radio], input[type=checkbox] {
     justify-content: space-around;
 
     font-size: 1em;
-    font-weight: normal;
+    font-weight: bold;
     padding: 0 0.5em;
 }
 #hole-title > div {
     text-align: center;
+    
 }
+#hole-title > div:nth-of-type(2) {
+    font-size: 4.5em;
+    font-weight: bold;
+}
+
 #hole-title > div > div{
 }
 

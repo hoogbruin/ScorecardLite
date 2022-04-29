@@ -38,14 +38,7 @@ function holeView(hole_number) {
 
     // Hole
     var div = document.createElement('div')
-
-    var hole_header = document.createElement('div')
-    hole_header.innerText = 'Hål'
-    div.appendChild(hole_header)
-
-    var hole_value = document.createElement('div')
-    hole_value.innerText = hole.number
-    div.appendChild(hole_value)
+    div.innerText = hole.number
 
     title.appendChild(div)
 
