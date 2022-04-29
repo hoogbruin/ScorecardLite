@@ -73,84 +73,65 @@ function holeView(hole_number) {
     
     scorecard.players.forEach(player => {
         var player_box = document.createElement('div')
-        player_box.className = 'player_box'
+        player_box.className = 'player-box'
 
-        // Namn, Tee och Hcp
-        var div = document.createElement('div')
+        // Namn, Tee och Hcp        Div 1
+        var div1 = document.createElement('div')
 
-        var pb_name = document.createElement('div')
-        pb_name.id = 'pb-name'
-        pb_name.innerText = player.fname + ' ' + player.lname
-        div.appendChild(pb_name)
+        var p_b_name = document.createElement('div')
+        p_b_name.id = 'p-b-name'
+        p_b_name.innerText = player.fname + ' ' + player.lname
+        div1.appendChild(p_b_name)
 
-        var pb_tee = document.createElement('div')
-        pb_tee.id = 'pb-tee'
-        pb_tee.innerText = 'Tee ' + player.tee
-        div.appendChild(pb_tee)
+        var p_b_tee = document.createElement('div')
+        p_b_tee.id = 'p-b-tee'
+        p_b_tee.innerText = 'Tee ' + player.tee
+        div1.appendChild(p_b_tee)
 
-        var pb_hcp = document.createElement('div')
-        pb_hcp.id = 'pb-hcp'
-        pb_hcp.innerText = 'HCP ' + calculateHoleHcp(hole.index, player.shcp)
-        div.appendChild(pb_hcp)
+        var p_b_hcp = document.createElement('div')
+        p_b_hcp.id = 'p-b-hcp'
+        p_b_hcp.innerText = 'Slag ' + calculateHoleHcp(hole.index, player.shcp)
+        div1.appendChild(p_b_hcp)
 
-        div.addEventListener('click', function(e) {
+        div1.addEventListener('click', function(e) {
             cardModal(player)
         })
 
-        player_box.appendChild(div)
+        player_box.appendChild(div1)
 
-        // Slaggolf !!!
-        var div = document.createElement('div')
+        // Slaginmatning                                   Div 2
+        var div2 = document.createElement('div')
 
-        var pb_scratch_header = document.createElement('div')
-        pb_scratch_header.id = 'pb-scratch-header'
-        // pb_scratch_header.innerText = 'Slaggolf'
-        div.appendChild(pb_scratch_header)
+        var p_b_input = document.createElement('input')
+        p_b_input.id = 'p-b-input'
+        p_b_input.setAttribute('type', 'text')
+        p_b_input.setAttribute('readonly', true)
+        div2.appendChild(p_b_input)
+        player_box.appendChild(div2)
 
-        var pb_scratch_score = document.createElement('div')
-        pb_scratch_score.id = 'pb-scratch-score'
-        div.appendChild(pb_scratch_score)
+        // Scorer                               Div 3
+        var div3 = document.createElement('div')
 
-        player_box.appendChild(div)
+        // var p_b_scratch = document.createElement('div')     // Ännu ej beräknad
+        // p_b_scratch.id = 'p-b-scratch'
+        // div3.appendChild(p_b_scratch)
 
-        // Slaginmatning
-        var div = document.createElement('div')
+        var p_b_points = document.createElement('div')
+        p_b_points.id = 'p-b-points'
+        div3.appendChild(p_b_points)
 
-        var pb_input = document.createElement('input')
-        pb_input.id = 'pb-input'
-        pb_input.setAttribute('type', 'text')
-        pb_input.setAttribute('readonly', true)
-        div.appendChild(pb_input)
-        player_box.appendChild(div)
+        var p_b_stableford = document.createElement('div')
+        p_b_stableford.id = 'p-b-stableford'
+        div3.appendChild(p_b_stableford)
 
+        player_box.appendChild(div3)
 
-        // Poängbogey
-        var div = document.createElement('div')
-
-        var pb_pb_header = document.createElement('div')
-        pb_pb_header.id = 'pb-pb-header'
-        pb_pb_header.innerText = 'Poängbogey'
-        div.appendChild(pb_pb_header)
-
-        var pb_pb_score = document.createElement('div')
-        pb_pb_score.id = 'pb-pb-score'
-        div.appendChild(pb_pb_score)
-
-        player_box.appendChild(div)
-
-        // Hålpoäng
-        var pb_hole_points = document.createElement('div')
-        pb_hole_points.id = 'pb-hole-points'
-        player_box.appendChild(pb_hole_points)
-
-        
-
-        updatePlayerBox(player, hole, pb_scratch_score, pb_pb_score, pb_hole_points, pb_input)
+        updatePlayerBox(player, hole, p_b_stableford, p_b_points, p_b_input)          //p_b_scratch
 
         // Event Scoreinput
-        pb_input.addEventListener('click', function(e) {
+        p_b_input.addEventListener('click', function(e) {
             strokesModal(player, hole, function() {
-                updatePlayerBox(player, hole, pb_scratch_score, pb_pb_score, pb_hole_points, pb_input)
+                updatePlayerBox(player, hole, p_b_stableford, p_b_points, p_b_input)      //p_b_scratch
             })
         })
 
@@ -232,25 +213,25 @@ function removeScore(player, hole) {
     }
 }
 
-function updatePlayerBox(player, hole, pb_scratch_score, pb_pb_score, pb_hole_points, pb_input) {   // Skall detta ligga nestlat i holeView()
+function updatePlayerBox(player, hole, p_b_stableford, p_b_points, p_b_input) {   // Skall detta ligga nestlat i holeView() p_b_scratch
     // Slaggolf och Poängbogey skall visas oavsett om det finns ett HoleScore objekt för det aktuella hålet
     if(player.total_strokes == 0) {
         // pb_scratch_score.innerText = '-'
-        pb_pb_score.innerText = '-'
+        p_b_stableford.innerText = '-'
     } else {
         // pb_scratch_score.innerText = 'X'
-        pb_pb_score.innerText = calculateTotalStablefordNet(player)
+        p_b_stableford.innerText = calculateTotalStablefordNet(player)
     }
 
     // Kolla om det finns ett HoleScore objekt
     var holeScore = player.score.find(o => o.hole == hole.number)
 
     if(holeScore !== undefined) {
-        pb_input.value = holeScore.strokes
-        pb_hole_points.innerText =  holeScore.points + 'p'
+        p_b_input.value = holeScore.strokes
+        p_b_points.innerText =  holeScore.points + 'p'
     } else {
-        pb_input.value = ''
-        pb_hole_points.innerText =  ''
+        p_b_input.value = ''
+        p_b_points.innerText =  ''
     }
 }
 
