@@ -78,7 +78,7 @@ function setupTees() {
         // Iterera genom formuläret
         scorecard.players.forEach(player => {
             // var selected_tee = document.querySelector("input[name=" + CSS.escape(player.fname + player.lname) + "]:checked")
-            var selected_tee = document.querySelector('input[name=" + player.id + "]:checked')
+            var selected_tee = document.querySelector('input[name="' + player.id + '"]:checked')
             player.tee = selected_tee.value
             
             // Hämta tee data från course
