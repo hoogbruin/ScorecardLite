@@ -15,19 +15,16 @@ function startPage() {
     content.id = 'home-content'
 
 
-    var image = document.createElement('img')
-    image.id = 'new-image'
-    image.src = '/media/plus-svgrepo-com.svg'
 
-    // var btn_new = document.createElement('button')
-    // btn_new.type = 'button'
-    // btn_new.id = 'btn-new'
-    // btn_new.innerHTML = '<i class="bi bi-plus-circle-fill" style="color:green"></i>'
-    image.addEventListener('click', function() {
+    var btn_new = document.createElement('button')
+    btn_new.type = 'button'
+    btn_new.id = 'btn-new'
+    btn_new.innerHTML = '<i class="bi bi-plus-circle-fill"></i>'
+    btn_new.addEventListener('click', function() {
         scorecard = new Scorecard(Date.now())
         setupCourse()
     })
-    content.appendChild(image)
+    content.appendChild(btn_new)
 
     // Footer
     var footer = document.createElement('div')
