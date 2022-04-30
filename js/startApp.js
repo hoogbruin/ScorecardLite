@@ -64,7 +64,8 @@ function startPage() {
     // btn_menu.id = 'btn_menu'
     btn_menu.innerText = 'Meny'
     btn_menu.addEventListener('click', function() {
-        menuModal()
+        // menuModal()
+        menuModal2()
     })
     footer.appendChild(btn_menu)
 
