@@ -61,7 +61,7 @@ function setupHandicaps() {
     var btn_cancel = document.createElement('button')
     btn_cancel.type = 'button'
     btn_cancel.className = 'btn'
-    btn_cancel.innerText = 'Avbryt'
+    btn_cancel.innerHTML = '<i class="bi bi-x"></i>'
     btn_cancel.addEventListener('click', function () {
         startPage()
     })
@@ -70,7 +70,7 @@ function setupHandicaps() {
     btn_next.type = 'submit'
     btn_next.className = 'btn'
     btn_next.setAttribute('form', 'form-handicap')
-    btn_next.innerText = 'Fortsätt'
+    btn_next.innerHTML = '<i class="bi bi-check"></i>'
     form.addEventListener('submit', function (e) {
         e.preventDefault()
 

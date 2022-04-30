@@ -26,7 +26,7 @@ form {
 
 /*********************************************** Base layout */
 .header {
-    flex: 2;
+    flex: 3;
 
     display: flex;
     justify-content: center;
@@ -51,14 +51,13 @@ form {
     font-weight: bold;
 }
 .content {
-    flex: 17;
+    flex: 16;
 }
 .footer {
     flex: 3;
 
     background-color: #333;
     color: #eee;
-    font-size: 2em;
 
     display: flex;
 }
@@ -215,11 +214,6 @@ form {
 }
 
 /*************************************************** Button class */
-.menu-icon {
-    font-size: 2em;
-    font-weight: bold;
-}
-
 .btn {
     flex: 1;
 
@@ -227,25 +221,15 @@ form {
     background-color: #333;
     color: #eee;
 
-    font-size: 1.25rem;
-    font-weight: bold;
-    /* text-decoration: underline; */
-}
-#new-image {
-    width: 10em;
+    font-size: 2.5rem;
 }
 #btn-new {
-
     border: none;
-background-color: #444;
-    
+
     color: #0b6556;
-
-
     font-size: 10em;
     font-weight: bold;
-    /* text-decoration: underline; */
-    
+    background-color: #444;
 }
 
 

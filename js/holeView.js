@@ -146,7 +146,7 @@ function holeView(hole_number) {
     btn_previous.className = 'btn'
     // btn_previous.id = 'btn_previous'
     // btn_previous.setAttribute('form', 'players_section')
-    btn_previous.innerText = 'Föregående'
+    btn_previous.innerHTML = '<i class="bi bi-caret-left"></i>'
     if(hole.number - 1 < 1)
         btn_previous.style.visibility = 'hidden'
     btn_previous.addEventListener('click', function() {
@@ -159,7 +159,7 @@ function holeView(hole_number) {
     btn_menu.className = 'btn'
     // btn_menu.id = 'btn_menu'
     // btn_menu.setAttribute('form', 'form_course');
-    btn_menu.innerText = 'Meny'
+    btn_menu.innerHTML = '<i class="bi bi-list"></i>'
     btn_menu.addEventListener('click', function() {
         saveScorecard(scorecard)        // Behövs kanske inte här?
         // viewScorecard(hole.number)
@@ -170,7 +170,7 @@ function holeView(hole_number) {
     btn_next.className = 'btn'
     btn_next.id = 'btn_next'
     // btn_next.setAttribute('form', 'players_section')
-    btn_next.innerText= 'Nästa'
+    btn_next.innerHTML= '<i class="bi bi-caret-right"></i>'
     if(hole.number + 1 > number_of_holes) {
         btn_next.innerText= 'Färdig!'
         

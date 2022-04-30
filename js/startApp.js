@@ -34,7 +34,7 @@ function startPage() {
     var btn_menu = document.createElement('button')
     btn_menu.type = 'button'
     btn_menu.className = "btn"
-    btn_menu.innerHTML = '<i class="bi bi-list menu-icon"></i>'
+    btn_menu.innerHTML = '<i class="bi bi-list"></i>'
     btn_menu.addEventListener('click', function() {
         menuModal2()
     })

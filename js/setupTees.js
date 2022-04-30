@@ -59,7 +59,7 @@ function setupTees() {
     btn_cancel.type = 'button'
     btn_cancel.className = 'btn'
     // btn_cancel.id = 'btn_cancel'
-    btn_cancel.innerText = 'Avbryt'
+    btn_cancel.innerHTML = '<i class="bi bi-x"></i>'
     btn_cancel.addEventListener('click', function () {
         startPage()
     })
@@ -70,7 +70,7 @@ function setupTees() {
     // btn_start.id = 'btn_tee'
     // btn_start.setAttribute('form', 'form_setupTees')
     btn_start.setAttribute('form', 'form-tee')
-    btn_start.innerText = 'Slå ut!'
+    btn_start.innerHTML = '<i class="bi bi-check"></i>'
 
     form.addEventListener('submit', function (e) {
         e.preventDefault()
