@@ -298,11 +298,11 @@ input[type=radio], input[type=checkbox] {
 #hole-title {
     flex: 6;
 
-    font-size: 1em;
+    font-size: 1.25rem;
     font-weight: bold;
     padding: 0 0.5em;
 
-    text-shadow: 0 0 5px #000;
+    text-shadow: 0 0 5px #333;
 }
 #hole-title > div {
     flex: 1;
@@ -310,7 +310,7 @@ input[type=radio], input[type=checkbox] {
     text-align: center;
 }
 #hole-title > div:nth-of-type(2) {
-    font-size: 4.5em;
+    font-size: 6.5rem;
     font-weight: bold;
 }
 #hole-form {
