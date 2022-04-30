@@ -14,10 +14,10 @@ function menuModal2() {
     // modalTitle.id = 'menu-modal-title'
     // modalTitle.innerText = Meny
 
-    var div = document.createElement('div')
-    div.className = 'menu-modal-item'
-    div.innerText = 'Meny'
-    modal.appendChild(div)
+    // var div = document.createElement('div')
+    // div.className = 'menu-modal-item'
+    // div.innerText = 'Meny'
+    // modal.appendChild(div)
 
     var div = document.createElement('div')
     div.className = 'menu-modal-item'
@@ -42,7 +42,7 @@ function menuModal2() {
 
     var div = document.createElement('div')
     div.className = 'menu-modal-item'
-    div.innerHTML = '<i class="bi bi-list"></i>'
+    div.innerHTML = '<i class="bi bi-list" style="font-size:2.5rem"></i>'
     div.addEventListener('click', function() {
         app.removeChild(modal)
     })
