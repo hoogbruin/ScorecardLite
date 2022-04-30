@@ -64,7 +64,7 @@ function holeView(hole_number) {
     // Content
     var content = document.createElement('form')
     content.className = 'content'
-    content.id = 'hole-form'
+    content.id = 'hole-content'
     // players_section.id = 'players_section'
     
     scorecard.players.forEach(player => {
@@ -79,26 +79,24 @@ function holeView(hole_number) {
         var p_b_content = document.createElement('div')
         p_b_content.className = 'p-b-content'
 
-        // SHCP, Slag - Div 1
+        // DIV 1
         var div1 = document.createElement('div')
 
-        // var p_b_shcp = document.createElement('div')
-        // p_b_shcp.className = 'p-b-tee'
-        // p_b_shcp.innerText = 'SHCP ' + player.shcp
-        // div1.appendChild(p_b_shcp)
+        var p_b_hcp_header = document.createElement('div')
+        p_b_hcp_header.className = 'p-b-hcp-header'
+        p_b_hcp_header.innerText = 'Slag'
+        div1.appendChild(p_b_hcp_header)
 
         var hcp = calculateHoleHcp(hole.index, player.shcp)
 
         var p_b_hcp = document.createElement('div')
         p_b_hcp.className = 'p-b-hcp'
-        p_b_hcp.innerText = 'Slag ' + (hcp == 0 ? '-' : hcp)
+        p_b_hcp.innerText = (hcp == 0) ? '-' : hcp
         div1.appendChild(p_b_hcp)
-        div1.addEventListener('click', function(e) {
-            scorecardModal(player)
-        })
+        
         p_b_content.appendChild(div1)
 
-        // Slaginmatning - Div 2
+        // DIV 2
         var div2 = document.createElement('div')
 
         var p_b_input = document.createElement('input')
@@ -108,33 +106,51 @@ function holeView(hole_number) {
         div2.appendChild(p_b_input)
         p_b_content.appendChild(div2)
 
-        // Scratch, Stableford och hålpoäng - Div 3
+        // DIV 3
         var div3 = document.createElement('div')
 
-        // var p_b_scratch = document.createElement('div')     // Ännu ej beräknad
-        // p_b_scratch.id = 'p-b-scratch'
-        // div3.appendChild(p_b_scratch)
+        var points = document.createElement('div')
 
-        var p_b_stableford = document.createElement('div')
-        p_b_stableford.className = 'p-b-stableford'
-        div3.appendChild(p_b_stableford)
+        var p_b_points_header = document.createElement('div')
+        p_b_points_header.className = 'p-b-points-header'
+        p_b_points_header.innerText = 'Hål'
+        points.appendChild(p_b_points_header)
 
         var p_b_points = document.createElement('div')
         p_b_points.className = 'p-b-points'
-        div3.appendChild(p_b_points)
+        points.appendChild(p_b_points)
+
+        div3.appendChild(points)
+
+        var net = document.createElement('div')
+
+        var p_b_net_header = document.createElement('div')
+        p_b_net_header.className = 'p-b-net-header'
+        p_b_net_header.innerText = 'Tot'
+        net.appendChild(p_b_net_header)
+
+
+        var p_b_net = document.createElement('div')
+        p_b_net.className = 'p-b-net'
+        net.appendChild(p_b_net)
+
+        div3.appendChild(net)
+
+        div3.addEventListener('click', function(e) {
+            scorecardModal(player)
+        })
 
         p_b_content.appendChild(div3)
         player_box.appendChild(p_b_content)
 
-        updatePlayerBox(player, hole, p_b_stableford, p_b_points, p_b_input)          //p_b_scratch
+        updatePlayerBox(player, hole, p_b_net, p_b_points, p_b_input)          //p_b_scratch
 
         // Event Scoreinput
         p_b_input.addEventListener('click', function(e) {
             strokesModal(player, hole, function() {
-                updatePlayerBox(player, hole, p_b_stableford, p_b_points, p_b_input)      //p_b_scratch
+                updatePlayerBox(player, hole, p_b_net, p_b_points, p_b_input)      //p_b_scratch
             })
         })
-
         
         content.appendChild(player_box)    
     })
@@ -216,14 +232,14 @@ function removeScore(player, hole) {
     }
 }
 
-function updatePlayerBox(player, hole, p_b_stableford, p_b_points, p_b_input) {   // Skall detta ligga nestlat i holeView() p_b_scratch
+function updatePlayerBox(player, hole, p_b_net, p_b_points, p_b_input) {   // Skall detta ligga nestlat i holeView() p_b_scratch
     // Slaggolf och Poängbogey skall visas oavsett om det finns ett HoleScore objekt för det aktuella hålet
     if(player.total_strokes == 0) {
         // pb_scratch_score.innerText = '-'
-        p_b_stableford.innerText = 'PB Tot   -'
+        p_b_net.innerText = '-'
     } else {
         // pb_scratch_score.innerText = 'X'
-        p_b_stableford.innerText = 'PB Tot   ' + calculateTotalStablefordNet(player)
+        p_b_net.innerText = calculateTotalStablefordNet(player)
     }
 
     // Kolla om det finns ett HoleScore objekt
@@ -231,10 +247,10 @@ function updatePlayerBox(player, hole, p_b_stableford, p_b_points, p_b_input) { 
 
     if(holeScore !== undefined) {
         p_b_input.value = holeScore.strokes
-        p_b_points.innerText = 'PB Hål   ' + holeScore.points + 'p'
+        p_b_points.innerText = holeScore.points + 'p'
     } else {
         p_b_input.value = ''
-        p_b_points.innerText =  'PB Hål   -'
+        p_b_points.innerText = '-'
     }
 }
 
