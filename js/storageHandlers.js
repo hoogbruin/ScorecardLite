@@ -20,7 +20,7 @@ function getUsers() {
 
 function createUser(fname, lname, gender, hcp) {
     var newUser = new User(Date.now())
-    
+
     newUser.fname = fname
     newUser.lname = lname
     newUser.gender = gender

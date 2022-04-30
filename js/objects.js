@@ -1,5 +1,5 @@
 function User(id) {
-    this.id
+    this.id = id
     this.fname
     this.lname
     this.gender

@@ -211,10 +211,10 @@ function updatePlayerBox(player, hole, p_b_stableford, p_b_points, p_b_input) { 
     // Slaggolf och Poängbogey skall visas oavsett om det finns ett HoleScore objekt för det aktuella hålet
     if(player.total_strokes == 0) {
         // pb_scratch_score.innerText = '-'
-        p_b_stableford.innerText = '-'
+        p_b_stableford.innerText = 'PB Tot   -'
     } else {
         // pb_scratch_score.innerText = 'X'
-        p_b_stableford.innerText = 'PB ' + calculateTotalStablefordNet(player)
+        p_b_stableford.innerText = 'PB Tot   ' + calculateTotalStablefordNet(player)
     }
 
     // Kolla om det finns ett HoleScore objekt
@@ -222,10 +222,10 @@ function updatePlayerBox(player, hole, p_b_stableford, p_b_points, p_b_input) { 
 
     if(holeScore !== undefined) {
         p_b_input.value = holeScore.strokes
-        p_b_points.innerText = 'Hål ' + holeScore.points + 'p'
+        p_b_points.innerText = 'PB Hål   ' + holeScore.points + 'p'
     } else {
         p_b_input.value = ''
-        p_b_points.innerText =  'Hål -'
+        p_b_points.innerText =  'PB Hål   -'
     }
 }
 

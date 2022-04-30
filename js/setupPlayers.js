@@ -46,7 +46,20 @@ function setupPlayers() {
     btn_cancel.addEventListener('click', function (event) {
         startPage()
     })
-    // footer.appendChild(btn_cancel)
+
+    var btn_user = document.createElement('button')
+    btn_user.type = 'button'
+    btn_user.className = 'btn'
+    btn_user.innerText = 'Ny Spelare'
+    btn_user.addEventListener('click', function (event) {
+        newPlayer()
+    })
+
+
+
+
+
+
 
     var btn_next = document.createElement('button')
     btn_next.type = 'submit'
@@ -74,6 +87,7 @@ function setupPlayers() {
     })
 
     footer.appendChild(btn_cancel)
+    footer.appendChild(btn_user)
     footer.appendChild(btn_next)    
 
     // Koppla samman

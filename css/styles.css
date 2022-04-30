@@ -258,6 +258,12 @@ input[type=radio], input[type=checkbox] {
 
 
 
+/*************************************************** newPlayerView */
+#form-new-player {
+    display: flex;
+    flex-direction: column;
+}
+
 
 
 
@@ -309,10 +315,10 @@ input[type=radio], input[type=checkbox] {
     flex: 1;
 
     display: flex;
-    justify-content: center;
+    justify-content: center;    
 
     font-size: 1.25em;
-    /* font-weight: bold; */
+    font-weight: bold;
 }
 .p-b-content {
     flex: 2;
@@ -446,12 +452,12 @@ input[type=radio], input[type=checkbox] {
 
 /* Dölja pilar i input type=numbers */
 /* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
+/* input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 /* Firefox */
-input[type=number] {
+/* input[type=number] {
   -moz-appearance: textfield;
-}
+} */ */
