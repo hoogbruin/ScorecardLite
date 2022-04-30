@@ -14,11 +14,10 @@ function startPage() {
     content.className = 'content'
     content.id = 'home-content'
 
-
-
+    // New scorecard button
     var btn_new = document.createElement('button')
     btn_new.type = 'button'
-    btn_new.id = 'btn-new'
+    btn_new.id = 'btn-new-scorecard'
     btn_new.innerHTML = '<i class="bi bi-plus-circle"></i>'
     btn_new.addEventListener('click', function() {
         scorecard = new Scorecard(Date.now())
@@ -33,7 +32,7 @@ function startPage() {
 
     var btn_menu = document.createElement('button')
     btn_menu.type = 'button'
-    btn_menu.className = "btn"
+    btn_menu.className = 'btn-menu-item'
     btn_menu.innerHTML = '<i class="bi bi-list"></i>'
     btn_menu.addEventListener('click', function() {
         menuModal2()

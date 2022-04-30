@@ -56,7 +56,7 @@ form {
 .footer {
     flex: 3;
 
-    background-color: #333;
+    background-color: #444;
     color: #eee;
 
     display: flex;
@@ -64,7 +64,7 @@ form {
 
 /*************************************************** courseView */
 .course-item {
-    height: 10%;
+    height: calc(100vh/12);
     
     display: flex;                                                              
     align-items: center;
@@ -80,7 +80,7 @@ form {
 
 /*************************************************** playersView */
 .player-item {
-    height: 10%;
+    height: calc(100vh/12);
 
     display: flex;
     align-items: center;
@@ -109,7 +109,7 @@ form {
 
     font-size: 1.25em;
 }
-.handicap-item:last-child {
+.handicap-item:nth-child(4) {
     border-bottom: none;
 }
 .handicap-spinner {
@@ -141,7 +141,7 @@ form {
 
     font-size: 1.25em;
 }
-.tee-item:last-child {
+.tee-item:nth-child(4) {
     border-bottom: none;
 }
 .tee-list {
@@ -159,25 +159,23 @@ form {
 #home-header {
     flex: 9;
     font-size: 3rem;
+    background-color: #333;
 }
 #home-content {
-    background-color: #444;
-    flex: 12   ;
+    background-color: #333;
+    flex: 12;
 
     display: flex;
     align-items: flex-start;
     justify-content: center;
 }
-#home-footer {
+/* #home-footer {
     flex: 3;
-}
-#home-content .scorecard_item {
-    height: 20%;
-}
+} */
 
 /*************************************************** Scorecard list item */
 .scorecard_item {
-    height: 10%;
+    height: calc(100vh/12);
     
     display: flex;
     align-items: center;
@@ -197,7 +195,7 @@ form {
 
 /*************************************************** User list item */
 .user_item {
-    height: 10%;
+    height: calc(100vh/12);
     
     display: flex;
     align-items: center;
@@ -214,22 +212,22 @@ form {
 }
 
 /*************************************************** Button class */
-.btn {
+.btn-menu-item {
     flex: 1;
 
     border: none;
-    background-color: #333;
+    background-color: #444;
     color: #eee;
 
     font-size: 2.5rem;
 }
-#btn-new {
+#btn-new-scorecard {
     border: none;
 
     color: #0b6556;
     font-size: 10em;
     font-weight: bold;
-    background-color: #444;
+    background-color: #333;
 }
 
 
@@ -326,6 +324,11 @@ input[type=radio], input[type=checkbox] {
     font-size: 1rem;
     border-bottom: 1px dotted #333;
 }
+.player-box:nth-child(4) {
+    border-bottom: none;
+}
+
+
 .p-b-header {
     flex: 1;
 

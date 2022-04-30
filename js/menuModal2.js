@@ -21,7 +21,7 @@ function menuModal2() {
 
     var div = document.createElement('div')
     div.className = 'menu-modal-item'
-    div.innerText = 'Lagrade Scorekort'
+    div.innerText = 'Mina Scorekort'
     div.addEventListener('click', function() {
         scorecardList()
     })
@@ -35,10 +35,10 @@ function menuModal2() {
     })
     modal.appendChild(div)
 
-    var div = document.createElement('div')
-    div.className = 'menu-modal-item'
-    div.innerText = 'Rensa LocalStorage'
-    modal.appendChild(div)
+    // var div = document.createElement('div')
+    // div.className = 'menu-modal-item'
+    // div.innerText = 'Rensa LocalStorage'
+    // modal.appendChild(div)
 
     var div = document.createElement('div')
     div.className = 'menu-modal-item'

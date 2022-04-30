@@ -143,7 +143,7 @@ function holeView(hole_number) {
 
     var btn_previous = document.createElement('button')
     btn_previous.type = 'button'
-    btn_previous.className = 'btn'
+    btn_previous.className = 'btn-menu-item'
     // btn_previous.id = 'btn_previous'
     // btn_previous.setAttribute('form', 'players_section')
     btn_previous.innerHTML = '<i class="bi bi-caret-left"></i>'
@@ -156,7 +156,7 @@ function holeView(hole_number) {
     
     var btn_menu = document.createElement('button')
     btn_menu.type = 'button'
-    btn_menu.className = 'btn'
+    btn_menu.className = 'btn-menu-item'
     // btn_menu.id = 'btn_menu'
     // btn_menu.setAttribute('form', 'form_course');
     btn_menu.innerHTML = '<i class="bi bi-list"></i>'
@@ -167,7 +167,7 @@ function holeView(hole_number) {
 
     var btn_next = document.createElement('button')
     btn_next.type = 'button'
-    btn_next.className = 'btn'
+    btn_next.className = 'btn-menu-item'
     btn_next.id = 'btn_next'
     // btn_next.setAttribute('form', 'players_section')
     btn_next.innerHTML= '<i class="bi bi-caret-right"></i>'

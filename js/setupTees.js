@@ -57,7 +57,7 @@ function setupTees() {
 
     var btn_cancel = document.createElement('button')
     btn_cancel.type = 'button'
-    btn_cancel.className = 'btn'
+    btn_cancel.className = 'btn-menu-item'
     // btn_cancel.id = 'btn_cancel'
     btn_cancel.innerHTML = '<i class="bi bi-x"></i>'
     btn_cancel.addEventListener('click', function () {
@@ -66,7 +66,7 @@ function setupTees() {
 
     var btn_start = document.createElement('button')
     btn_start.type = 'submit'
-    btn_start.className = 'btn'
+    btn_start.className = 'btn-menu-item'
     // btn_start.id = 'btn_tee'
     // btn_start.setAttribute('form', 'form_setupTees')
     btn_start.setAttribute('form', 'form-tee')

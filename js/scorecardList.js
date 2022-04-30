@@ -47,9 +47,9 @@ function scorecardList() {
 
     var btn_cancel = document.createElement('button')
     btn_cancel.type = 'button'
-    btn_cancel.className = 'btn'
+    btn_cancel.className = 'btn-menu-item'
     btn_cancel.id = 'btn_cancel'
-    btn_cancel.innerText = 'Avbryt'
+    btn_cancel.innerHTML = '<i class="bi bi-x"></i>'
     btn_cancel.addEventListener('click', function () {
         startPage()
     })
