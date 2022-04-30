@@ -7,7 +7,7 @@ function startPage() {
     var header = document.createElement('div')
     header.className = 'header'
     header.id = 'home-header'
-    header.innerText = 'ScorecardLite'
+    header.innerText = 'Scorekortet'
 
     // Hero
     // var hero = document.createElement('div')
