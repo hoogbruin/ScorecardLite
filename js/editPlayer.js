@@ -54,7 +54,8 @@ function editPlayer(player = null) {
     radio.name = 'gender'
     radio.value = 'male'
     radio.required = true
-    radio.checked = (player.gender) == 'male' ? true : false
+    if(!isNew)
+        radio.checked = (player.gender) == 'male' ? true : false
     form.appendChild(radio)
 
     var label = document.createElement('label')
@@ -67,7 +68,8 @@ function editPlayer(player = null) {
     radio.name = 'gender'
     radio.value = 'female'
     radio.required = true
-    radio.checked = (player.gender) == 'female' ? true : false
+    if(!isNew)
+        radio.checked = (player.gender) == 'female' ? true : false
     form.appendChild(radio)
 
     var label = document.createElement('label')

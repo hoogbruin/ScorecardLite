@@ -40,36 +40,14 @@ function menuModal() {
     div.innerText = 'Rensa LocalStorage'
     modalWindow.appendChild(div)
 
+    modal.addEventListener('click', function(e) {
+        // console.log(e.target)
+        // console.log(modal)
+        if(e.target == modal)
+            app.removeChild(modal)
+    })
+
     // Koppla samman
     modal.appendChild(modalWindow)
     app.appendChild(modal)
-
-    // Events
-    // modalNumpad.addEventListener('click', function(e) {
-    //     var strokes = e.target.innerText
- 
-    //     strokes = strokes > (hole.par + 5) ? hole.par + 5 : strokes 
-
-    //     saveInput(player, hole, strokes)
-    //     callback()
-
-    //     app.removeChild(modal)
-    // })
-
-    // modalActions.addEventListener('click', function(e) {
-    //     var action = e.target.innerText
-
-    //     if(action == 'Strecka') {
-    //         var strokes = hole.par + 5
-
-    //         saveInput(player, hole, strokes)
-    //         callback()
-    //     } else if(action == 'Rensa') {
-    //         removeScore(player, hole)
-    //         recalculateScore(player)
-    //         callback()
-    //     }
-
-    //     app.removeChild(modal)
-    // })
 }
