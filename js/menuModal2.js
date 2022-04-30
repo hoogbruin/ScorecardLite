@@ -42,7 +42,7 @@ function menuModal2() {
 
     var div = document.createElement('div')
     div.className = 'menu-modal-item'
-    div.innerText = '☰'
+    div.innerHTML = '<i class="bi bi-list"></i>'
     div.addEventListener('click', function() {
         app.removeChild(modal)
     })

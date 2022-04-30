@@ -42,7 +42,7 @@ function setupPlayers() {
     var btn_cancel = document.createElement('button')
     btn_cancel.type = 'button'
     btn_cancel.className = 'btn'
-    btn_cancel.innerText = 'Avbryt'
+    btn_cancel.innerHTML = '<i class="bi bi-x menu-icon"></i>'
     btn_cancel.addEventListener('click', function (event) {
         startPage()
     })
@@ -50,7 +50,7 @@ function setupPlayers() {
     var btn_user = document.createElement('button')
     btn_user.type = 'button'
     btn_user.className = 'btn'
-    btn_user.innerText = 'Ny Spelare'
+    btn_user.innerHTML = '<i class="bi bi-person-plus menu-icon"></i>'
     btn_user.addEventListener('click', function (event) {
         editPlayer()
     })
@@ -65,7 +65,7 @@ function setupPlayers() {
     btn_next.type = 'submit'
     btn_next.className = 'btn'
     btn_next.setAttribute('form', 'form-players')
-    btn_next.innerText = 'Fortsätt'
+    btn_next.innerHTML = '<i class="bi bi-check menu-icon"></i>'
  
     form.addEventListener('submit', function (e) {
         e.preventDefault()
