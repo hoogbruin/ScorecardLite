@@ -303,14 +303,6 @@ input[type=radio], input[type=checkbox] {
     padding: 0 0.5em;
 
     text-shadow: 0 0 5px #000;
-
-    background-image: url('../media/lilla_vik.jpg');
-    background-color: #cccccc; /* Used if the image is unavailable */
-    /* height: 500px; You must set a specified height */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
-
 }
 #hole-title > div {
     flex: 1;
@@ -327,6 +319,15 @@ input[type=radio], input[type=checkbox] {
 #hole-footer {
     flex: 3;
 }
+
+
+.course-image {
+    background-color: #0b6556; /* Used if the image is unavailable */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
 
 
 .player-box {

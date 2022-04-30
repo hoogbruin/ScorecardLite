@@ -2,6 +2,7 @@ var Courses = [
     {
         "name" : "Österlens GK - Djupadal",
         "par"  : 71,
+        "image": "djupadal.jpg",
         "tees" : [
             {
                 "name" : "63",
@@ -52,6 +53,7 @@ var Courses = [
     {
         "name" : "Österlens GK - Lilla Vik",
         "par"  : 72,
+        "image": "lilla_vik.jpg",
         "tees" : [
             {
                 "name" : "58",

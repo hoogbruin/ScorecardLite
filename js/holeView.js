@@ -23,6 +23,12 @@ function holeView(hole_number) {
     title.id = 'hole-title'
     // hole_section.id = 'hole_section'
 
+    // Background image
+    if(course.image !== undefined) {
+        title.classList.add('course-image')
+        title.style.backgroundImage = 'url(../media/' + course.image + ')'
+    }
+
     // Par
     var div = document.createElement('div')
 
