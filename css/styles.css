@@ -156,12 +156,19 @@ form {
 
 /*************************************************** homeView */
 #home-header {
-    flex: 6;
-
+    flex: 8;
     font-size: 3rem;
 }
 #home-content {
-    flex: 5;
+    background-color: #444;
+    flex: 14;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#home-footer {
+    flex: 2;
 }
 #home-content .scorecard_item {
     height: 20%;
@@ -215,8 +222,27 @@ form {
 
     font-size: 0.5em;
     font-weight: bold;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
+
+#btn-new {
+
+    border: none;
+    background-color: green;
+    color: #eee;
+
+
+    width: 1em;
+    height: 1em;
+
+    border-radius: 50%;
+
+    font-size: 10em;
+    font-weight: bold;
+    /* text-decoration: underline; */
+    
+}
+
 
 
 

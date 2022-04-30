@@ -42,7 +42,7 @@ function menuModal2() {
 
     var div = document.createElement('div')
     div.className = 'menu-modal-item'
-    div.innerText = 'Tillbaka'
+    div.innerText = '☰'
     div.addEventListener('click', function() {
         app.removeChild(modal)
     })
