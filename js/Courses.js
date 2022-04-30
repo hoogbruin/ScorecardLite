@@ -1,6 +1,6 @@
 var Courses = [
     {
-        "name" : "Djupadal",
+        "name" : "Österlens GK - Djupadal",
         "par"  : 71,
         "tees" : [
             {
@@ -50,7 +50,7 @@ var Courses = [
         ]
     },
     {
-        "name" : "Lilla Vik",
+        "name" : "Österlens GK - Lilla Vik",
         "par"  : 72,
         "tees" : [
             {

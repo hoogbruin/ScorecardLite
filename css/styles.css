@@ -296,11 +296,21 @@ input[type=radio], input[type=checkbox] {
     padding: 0 0.5em;
 }
 #hole-title {
-    flex: 5;
+    flex: 6;
 
     font-size: 1em;
     font-weight: bold;
     padding: 0 0.5em;
+
+    text-shadow: 0 0 5px #000;
+
+    background-image: url('../media/lilla_vik.jpg');
+    background-color: #cccccc; /* Used if the image is unavailable */
+    /* height: 500px; You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+
 }
 #hole-title > div {
     flex: 1;
@@ -312,7 +322,7 @@ input[type=radio], input[type=checkbox] {
     font-weight: bold;
 }
 #hole-form {
-    flex: 16;    
+    flex: 15;    
 }
 #hole-footer {
     flex: 3;
