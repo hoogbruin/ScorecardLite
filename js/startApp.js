@@ -19,7 +19,7 @@ function startPage() {
     var btn_new = document.createElement('button')
     btn_new.type = 'button'
     btn_new.id = 'btn-new'
-    btn_new.innerHTML = '<i class="bi bi-plus-circle-fill"></i>'
+    btn_new.innerHTML = '<i class="bi bi-plus-circle"></i>'
     btn_new.addEventListener('click', function() {
         scorecard = new Scorecard(Date.now())
         setupCourse()
