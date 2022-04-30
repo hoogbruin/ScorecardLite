@@ -82,10 +82,10 @@ function holeView(hole_number) {
         // SHCP, Slag - Div 1
         var div1 = document.createElement('div')
 
-        var p_b_shcp = document.createElement('div')
-        p_b_shcp.className = 'p-b-tee'
-        p_b_shcp.innerText = 'SHCP ' + player.shcp
-        div1.appendChild(p_b_shcp)
+        // var p_b_shcp = document.createElement('div')
+        // p_b_shcp.className = 'p-b-tee'
+        // p_b_shcp.innerText = 'SHCP ' + player.shcp
+        // div1.appendChild(p_b_shcp)
 
         var hcp = calculateHoleHcp(hole.index, player.shcp)
 

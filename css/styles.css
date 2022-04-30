@@ -360,12 +360,14 @@ input[type=radio], input[type=checkbox] {
     display: flex;
     height: 100%;
     /* flex-direction: row; */
+    font-weight: bold;
 }
 .p-b-content > div {
     flex: 1;
 
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 .p-b-content > div:nth-child(2) {
     align-items: center;
@@ -387,6 +389,7 @@ input[type=radio], input[type=checkbox] {
     text-align: center;
     width: 1.5em;
     height: 1.5em;
+    color: #444;
 }
 
 
