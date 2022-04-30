@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
 * {
     overflow: auto;
     box-sizing: border-box;
@@ -156,19 +158,19 @@ form {
 
 /*************************************************** homeView */
 #home-header {
-    flex: 8;
+    flex: 9;
     font-size: 3rem;
 }
 #home-content {
     background-color: #444;
-    flex: 14;
+    flex: 12   ;
 
     display: flex;
     align-items: center;
     justify-content: center;
 }
 #home-footer {
-    flex: 2;
+    flex: 3;
 }
 #home-content .scorecard_item {
     height: 20%;
@@ -224,18 +226,25 @@ form {
     font-weight: bold;
     /* text-decoration: underline; */
 }
-
+#new-image {
+    width: 10em;
+}
 #btn-new {
 
     border: none;
-    background-color: green;
-    color: #eee;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    vertical-align: middle;
+
+    /* line-height: 1em; */
 
     width: 1em;
     height: 1em;
 
-    border-radius: 50%;
+    bor der-radius: 50%;
 
     font-size: 10em;
     font-weight: bold;

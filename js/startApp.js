@@ -14,15 +14,20 @@ function startPage() {
     content.className = 'content'
     content.id = 'home-content'
 
-    var btn_new = document.createElement('button')
-    btn_new.type = 'button'
-    btn_new.id = 'btn-new'
-    btn_new.innerText = '+'
-    btn_new.addEventListener('click', function() {
+
+    var image = document.createElement('img')
+    image.id = 'new-image'
+    image.src = '/media/plus-svgrepo-com.svg'
+
+    // var btn_new = document.createElement('button')
+    // btn_new.type = 'button'
+    // btn_new.id = 'btn-new'
+    // btn_new.innerHTML = '<i class="bi bi-plus-circle-fill" style="color:green"></i>'
+    image.addEventListener('click', function() {
         scorecard = new Scorecard(Date.now())
         setupCourse()
     })
-    content.appendChild(btn_new)
+    content.appendChild(image)
 
     // Footer
     var footer = document.createElement('div')
