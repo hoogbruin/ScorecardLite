@@ -40,10 +40,28 @@ function createUser(fname, lname, gender, hcp) {
 function deleteUser(user) {
     if(localStorage.hasOwnProperty('Users')) {
         var users = JSON.parse(localStorage.getItem('Users'))
-        var index =  users.indexOf(user)
+        var existing = users.find(u => u.id == user.id)
+        var index = users.indexOf(existing)
 
-        if(index > -1)
+        if(index > -1) {
             users.splice(index, 1)
+            localStorage.setItem('Users', JSON.stringify(users))
+        }
+    }
+}
+
+function updateUser(id, fname, lname, gender, hcp) {
+    
+    if(localStorage.hasOwnProperty('Users')) {
+        var users = JSON.parse(localStorage.getItem('Users'))
+        var user = users.find(u => u.id == id)
+
+        user.fname = fname
+        user.lname = lname
+        user.gender = gender
+        user.hcp = hcp
+
+        localStorage.setItem('Users', JSON.stringify(users))
     }
 }
 

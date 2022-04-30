@@ -1,4 +1,6 @@
-function newPlayer() {
+function editPlayer(player = null) {
+    var isNew = (player == null)
+
     // Header
     var header = document.createElement('div')
     header.className = 'header'
@@ -7,7 +9,7 @@ function newPlayer() {
     // Title
     var title = document.createElement('div')
     title.className = 'title'
-    title.innerText = 'Skapa Spelare'
+    title.innerText = isNew ? 'Skapa Spelare' : 'Redigera Spelare'
 
     // Content
     var form = document.createElement('form')
@@ -23,6 +25,7 @@ function newPlayer() {
     input.id = 'fname'
     input.name = 'fname'
     input.required = true
+    input.value = isNew ? '' : player.fname
     form.appendChild(input)
 
     var label = document.createElement('label')
@@ -34,6 +37,7 @@ function newPlayer() {
     input.id = 'lname'
     input.name = 'lname'
     input.required = true
+    input.value = isNew ? '' : player.lname
     form.appendChild(input)
 
     var label = document.createElement('label')
@@ -50,6 +54,7 @@ function newPlayer() {
     radio.name = 'gender'
     radio.value = 'male'
     radio.required = true
+    radio.checked = (player.gender) == 'male' ? true : false
     form.appendChild(radio)
 
     var label = document.createElement('label')
@@ -62,6 +67,7 @@ function newPlayer() {
     radio.name = 'gender'
     radio.value = 'female'
     radio.required = true
+    radio.checked = (player.gender) == 'female' ? true : false
     form.appendChild(radio)
 
     var label = document.createElement('label')
@@ -75,7 +81,8 @@ function newPlayer() {
     input.min = -4
     input.max = 36
     input.step = 0.1
-    input.required = true
+    input.required = 
+    input.value = isNew ? '' : player.hcp
     form.appendChild(input)
     
     // Footer
@@ -87,15 +94,29 @@ function newPlayer() {
     btn_cancel.className = 'btn'
     btn_cancel.innerText = 'Avbryt'
     btn_cancel.addEventListener('click', function (event) {
-        setupPlayers()
+        isNew ? setupPlayers() : userList()
     })
+    footer.appendChild(btn_cancel)
+
+    if(!isNew) {
+        var btn_delete = document.createElement('button')
+        btn_delete.type = 'button'
+        btn_delete.className = 'btn'
+        btn_delete.innerText = 'Ta bort'
+        btn_delete.addEventListener('click', function () {
+            if(confirm('Är du säker?')) {
+                deleteUser(player)
+                userList()
+            }
+        })
+        footer.appendChild(btn_delete)
+    }
 
     var btn_save = document.createElement('button')
     btn_save.type = 'submit'
     btn_save.className = 'btn'
     btn_save.setAttribute('form', 'form-new-player')
     btn_save.innerText = 'Spara'
- 
     form.addEventListener('submit', function (e) {
         e.preventDefault()
 
@@ -104,11 +125,14 @@ function newPlayer() {
         var gender = form.elements['gender'].value
         var hcp = form.elements['hcp'].value
 
-        createUser(fname, lname, gender, hcp)
-        setupPlayers()
+        if(isNew) {
+            createUser(fname, lname, gender, hcp)
+            setupPlayers()
+        } else {
+            updateUser(player.id, fname, lname, gender, hcp)
+            userList()
+        }
     })
-
-    footer.appendChild(btn_cancel)
     footer.appendChild(btn_save)
 
     // Koppla samman

@@ -52,7 +52,7 @@ function setupPlayers() {
     btn_user.className = 'btn'
     btn_user.innerText = 'Ny Spelare'
     btn_user.addEventListener('click', function (event) {
-        newPlayer()
+        editPlayer()
     })
 
 

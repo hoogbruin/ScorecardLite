@@ -31,11 +31,8 @@ function userList() {
             user_item.appendChild(div)
 
             user_item.addEventListener('click', function() {
-                console.log(user)
-                // console.log(this)
-                // var selected_user = getUser(this.id)             Onödig funktion? 
-                alert('Bingo')
-                //   userView(selected_user)
+                // console.log(user)
+                editPlayer(user)
             })
 
             content.appendChild(user_item)
