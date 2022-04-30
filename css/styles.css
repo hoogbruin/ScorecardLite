@@ -288,6 +288,7 @@ input[type=radio], input[type=checkbox] {
 
 /*************************************************** holeView */
 #hole-header {
+    flex: 1;
     justify-content: space-between;
     
     font-size: 1em;
@@ -295,7 +296,7 @@ input[type=radio], input[type=checkbox] {
     padding: 0 0.5em;
 }
 #hole-title {
-    flex: 3;
+    flex: 5;
 
     font-size: 1em;
     font-weight: bold;
@@ -311,10 +312,10 @@ input[type=radio], input[type=checkbox] {
     font-weight: bold;
 }
 #hole-form {
-    flex: 8;    
+    flex: 16;    
 }
 #hole-footer {
-    flex: 2;
+    flex: 3;
 }
 
 

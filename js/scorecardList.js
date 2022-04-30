@@ -17,17 +17,19 @@ function scorecardList() {
     var scorecards = getScorecards()
 
     if(scorecards != undefined) {
-        scorecards.forEach(scorecard => {
+        var length = scorecards.length
+
+        for(var i = length - 1; i >= 0; i--) {
             var scorecard_item = document.createElement('div')
             scorecard_item.className = 'scorecard_item'
-            scorecard_item.id = scorecard.date
+            scorecard_item.id = scorecards[i].date
             
             var div = document.createElement('div')
-            div.innerText = new Date(scorecard.date).toLocaleDateString()
+            div.innerText = new Date(scorecards[i].date).toLocaleDateString()
             scorecard_item.appendChild(div)
 
             var div = document.createElement('div')
-            div.innerText = scorecard.course
+            div.innerText = scorecards[i].course
             scorecard_item.appendChild(div)
 
             scorecard_item.addEventListener('click', function() {
@@ -38,7 +40,7 @@ function scorecardList() {
             })
 
             content.appendChild(scorecard_item)
-        })
+        }
     } 
 
     // Footer

@@ -35,7 +35,7 @@ function startPage() {
     btn_menu.className = 'btn-menu-item'
     btn_menu.innerHTML = '<i class="bi bi-list"></i>'
     btn_menu.addEventListener('click', function() {
-        menuModal2()
+        homeMenuModal()
     })
     footer.appendChild(btn_menu)
 

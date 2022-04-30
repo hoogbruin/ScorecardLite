@@ -91,20 +91,11 @@ function editPlayer(player = null) {
     var footer = document.createElement('div')
     footer.className = 'footer'
 
-    var btn_cancel = document.createElement('button')
-    btn_cancel.type = 'button'
-    btn_cancel.className = 'btn'
-    btn_cancel.innerText = 'Avbryt'
-    btn_cancel.addEventListener('click', function (event) {
-        isNew ? setupPlayers() : userList()
-    })
-    footer.appendChild(btn_cancel)
-
     if(!isNew) {
         var btn_delete = document.createElement('button')
         btn_delete.type = 'button'
-        btn_delete.className = 'btn'
-        btn_delete.innerText = 'Ta bort'
+        btn_delete.className = 'btn-menu-item'
+        btn_delete.innerHTML = '<i class="bi bi-trash3"></i>'
         btn_delete.addEventListener('click', function () {
             if(confirm('Är du säker?')) {
                 deleteUser(player)
@@ -114,11 +105,20 @@ function editPlayer(player = null) {
         footer.appendChild(btn_delete)
     }
 
+    var btn_cancel = document.createElement('button')
+    btn_cancel.type = 'button'
+    btn_cancel.className = 'btn-menu-item'
+    btn_cancel.innerHTML = '<i class="bi bi-x"></i>'
+    btn_cancel.addEventListener('click', function (event) {
+        isNew ? setupPlayers() : userList()
+    })
+    footer.appendChild(btn_cancel)
+
     var btn_save = document.createElement('button')
     btn_save.type = 'submit'
-    btn_save.className = 'btn'
+    btn_save.className = 'btn-menu-item'
     btn_save.setAttribute('form', 'form-new-player')
-    btn_save.innerText = 'Spara'
+    btn_save.innerHTML = '<i class="bi bi-save"></i>'
     form.addEventListener('submit', function (e) {
         e.preventDefault()
 

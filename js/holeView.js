@@ -3,19 +3,19 @@ function holeView(hole_number) {
     var hole = course.holes.find(h => h.number == hole_number)
 
     // Header
-    var header = document.createElement('div')
-    header.className = 'header'
-    header.id = 'hole-header'
-    // course_section.id = 'course_section'
+    // var header = document.createElement('div')
+    // header.className = 'header'
+    // header.id = 'hole-header'
+    // // course_section.id = 'course_section'
 
-    var course_name = document.createElement('div')
-    var par = document.createElement('div')
+    // var course_name = document.createElement('div')
+    // var par = document.createElement('div')
 
-    course_name.innerText = course.name
-    par.innerText = 'Par ' + course.par
+    // course_name.innerText = course.name
+    // par.innerText = 'Par ' + course.par
 
-    header.appendChild(course_name)
-    header.appendChild(par)
+    // header.appendChild(course_name)
+    // header.appendChild(par)
 
     // Title
     var title = document.createElement('div')
@@ -157,12 +157,10 @@ function holeView(hole_number) {
     var btn_menu = document.createElement('button')
     btn_menu.type = 'button'
     btn_menu.className = 'btn-menu-item'
-    // btn_menu.id = 'btn_menu'
-    // btn_menu.setAttribute('form', 'form_course');
     btn_menu.innerHTML = '<i class="bi bi-list"></i>'
     btn_menu.addEventListener('click', function() {
-        saveScorecard(scorecard)        // Behövs kanske inte här?
-        // viewScorecard(hole.number)
+        saveScorecard(scorecard)                    // Onödig?
+        holeMenuModal()
     })
 
     var btn_next = document.createElement('button')
@@ -194,7 +192,7 @@ function holeView(hole_number) {
     var app = document.getElementById('app')
     app.innerHTML = ''
 
-    app.appendChild(header)
+    // app.appendChild(header)
     app.appendChild(title)
     app.appendChild(content)
     app.appendChild(footer)
