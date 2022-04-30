@@ -103,6 +103,7 @@ var Courses = [
     {
         "name" : "Tegelberga GK - Gamla Banan",
         "par"  : 71,
+        "image": "tegelberga_gamla.jpg",
         "tees" : [
             {
                 "name" : "60",
@@ -156,6 +157,7 @@ var Courses = [
     {
         "name" : "Tegelberga GK - Pay & Play",
         "par"  : 70,
+        "image": "tegelberga_p&p.jpg",
         "tees" : [
             {
                 "name" : "Vit",

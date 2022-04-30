@@ -26,7 +26,7 @@ function holeView(hole_number) {
     // Background image
     if(course.image !== undefined) {
         title.classList.add('course-image')
-        title.style.backgroundImage = 'url(../media/' + course.image + ')'
+        title.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url(../media/' + course.image + ')'
     }
 
     // Par
