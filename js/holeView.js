@@ -173,12 +173,17 @@ function holeView(hole_number) {
     btn_next.innerText= 'Nästa'
     if(hole.number + 1 > number_of_holes) {
         btn_next.innerText= 'Färdig!'
-        btn_next.disabled = true
+        
+        // btn_next.disabled = true
     // btn_next.style.visibility = 'hidden'
     }
     btn_next.addEventListener('click', function() {
-        saveScorecard(scorecard)
-        holeView(hole.number + 1)
+        if(hole.number + 1 > number_of_holes) {
+            summaryView()
+        } else {
+            saveScorecard(scorecard)
+            holeView(hole.number + 1)
+        }
     })
 
     footer.appendChild(btn_previous)

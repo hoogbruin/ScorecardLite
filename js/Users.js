@@ -41,11 +41,4 @@ var baseUsers = [
         "gender" : "male",
         "hcp": 18.4
     }
-    // {
-        // "id" : 1651097227943,
-    //     "fname": "Julia",
-    //     "lname" : "von Heidenstam",
-    //     "gender" : "female",
-    //     "hcp": 18.4
-    // }
 ]

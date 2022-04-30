@@ -33,7 +33,7 @@ function scorecardList() {
             scorecard_item.addEventListener('click', function() {
                 // console.log(this)
                 var selected_scorecard = getScorecard(this.id)
-                alert('Bingo')
+                summaryView()
                 // scorecardView(selected_scorecard)
             })
 
