@@ -22,7 +22,13 @@ function summaryPage() {
 
         var box_image = document.createElement('div')
         box_image.className = 'summary-box-image'
-            // Fixa bild
+            
+        // Image
+        // if(player.image !== undefined) {
+        //     console.log(player.image)
+        //     box_image.style.backgroundImage = 'url(../media/' + player.image + ')'
+        // }
+
         box.appendChild(box_image)
 
         var box_data = document.createElement('div')
