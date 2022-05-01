@@ -328,11 +328,52 @@ input[type=radio], input[type=checkbox] {
 .summary-box-calculations {
     display: flex;
     flex-direction: row;
+    /* justify-content: space-between; */
 }
-.summary-box-div1 {}
-.summary-box-div2 {}
-.summary-box-div3 {}
-.summary-box-div4 {}
+.summary-box-calculations > div{
+    flex: 1;
+}
+.summary-box-div1 {
+    display: flex;
+    flex-direction: row;
+}
+.summary-box-div1 > div {
+    flex: 1;
+}
+.summary-box-div1 > div:last-of-type > div {
+    text-align: center;
+}
+.summary-box-div2 {
+    display: flex;
+    flex-direction: column;
+}
+.summary-box-div2 > div:last-of-type{
+    display: flex;
+    flex-direction: row;
+}
+.summary-box-div2 > div:last-of-type > div {
+    flex: 1;
+}
+.summary-box-div3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.summary-box-div3 > div:last-of-type{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.summary-box-div4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.summary-box-div4 > div:last-of-type{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
 
 
 
