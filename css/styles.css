@@ -39,7 +39,7 @@ body {
     /* background-color: #eee; */
 }
 .title {
-    flex: 2;
+    flex: 3;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,14 +47,14 @@ body {
     margin: 0 0.5rem;
 
     color: #555;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: bold;
     /* background-color: #1a8068; */
     background-color: #eee;
-    border-bottom: 3px solid #555;
+    border-bottom: 1px solid #555;
 }
 .content {
-    flex: 17;
+    flex: 18;
 
     margin: 0 0.5rem;
 
@@ -69,7 +69,7 @@ body {
     font-size: 2.5rem;    
     color: #555;
     background-color: #eee;
-    border-top: 3px solid #555;
+    border-top: 1px solid #555;
 }
 
 /*************************************************** courseView */
@@ -436,7 +436,7 @@ input[type=radio], input[type=checkbox] {
     margin-top: 0.5rem;
     padding: 0 0.5em;
 
-    text-shadow: 0 0 5px #555;
+    /* text-shadow: 0 0 5px #555; */
 }
 #hole-title > div {
     flex: 1;

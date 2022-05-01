@@ -20,8 +20,8 @@ function summaryPage() {
         var box = document.createElement('div')
         box.className = 'summary-box'
 
-        var box_image = document.createElement('div')
-        box_image.className = 'summary-box-image'
+        // var box_image = document.createElement('div')
+        // box_image.className = 'summary-box-image'
             
         // Image
         // if(player.image !== undefined) {
@@ -29,7 +29,7 @@ function summaryPage() {
         //     box_image.style.backgroundImage = 'url(../media/' + player.image + ')'
         // }
 
-        box.appendChild(box_image)
+        // box.appendChild(box_image)
 
         var box_data = document.createElement('div')
         box_data.className = 'summary-box-data'
