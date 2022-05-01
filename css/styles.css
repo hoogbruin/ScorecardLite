@@ -157,7 +157,9 @@ body {
 
 /*************************************************** homeView */
 #home-header {
-    flex: 9;
+    flex: 5;
+    align-items: flex-end;
+
     font-size: 3rem;
     background-color: #eee;
     color: #555;
@@ -165,10 +167,10 @@ body {
 }
 #home-content {
     background-color: #eee;
-    flex: 12;
+    flex: 16;
 
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
 }
 #home-footer {
@@ -184,7 +186,7 @@ body {
     padding: 0 0.5em;
 
     border-bottom: 1px dotted #555;
-    font-size: 1.25em;
+    font-size: 1.25rem;
 }
 .scorecard_item:active {
     background-color: #658ebc;
@@ -205,7 +207,7 @@ body {
     padding: 0 0.5em;
 
     border-bottom: 1px dotted #555;
-    font-size: 1.25em;
+    font-size: 1.25rem;
 }
 .user_item:active {
     background-color: #658ebc;
@@ -230,7 +232,7 @@ body {
     padding: 0.1em;
 
     color: #1a8068;
-    font-size: 10em;
+    font-size: 9em;
     font-weight: bold;
     background-color: #eee;
     /* text-shadow: 0 0 10px #ccc; */
