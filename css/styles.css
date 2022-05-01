@@ -291,13 +291,13 @@ input[type=radio], input[type=checkbox] {
     display: flex;
     flex-direction: column;
 
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 #summary-content {
     display: flex;
     flex-direction: column;
 
-    padding:0.5rem;
+    padding:0.25rem;
 }
 .summary-box {
     height: 35%;
@@ -305,9 +305,9 @@ input[type=radio], input[type=checkbox] {
     display: flex;
     flex-direction: row;
 
-    font-size: 1rem;
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    padding: 0.25rem;
+    margin-bottom: 0.25rem;
     border: 1px solid #444;
 }
 .summary-box:nth-of-type(4) {
@@ -324,21 +324,21 @@ input[type=radio], input[type=checkbox] {
     width: 75%;
     display: flex;
     flex-direction: column;
-    margin-left: 0.5rem;
+    margin-left: 0.25rem;
 }
 .summary-box-name {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: bold;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
 }
 .summary-box-consitions {
     display: flex;
     flex-direction: row;
 
-    padding: 0.5em 0;
+    padding: 0.25em 0;
     border-top: 1px dotted #444;
     border-bottom: 1px dotted #444;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.25em;
 }
 .summary-box-consitions > div {
     flex: 1;
@@ -379,7 +379,7 @@ input[type=radio], input[type=checkbox] {
     flex: 1;
     display: flex;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 .summary-box-div3 {
     display: flex;
@@ -392,7 +392,7 @@ input[type=radio], input[type=checkbox] {
     flex: 1;
     display: flex;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 
