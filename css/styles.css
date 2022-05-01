@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    margin: 0 0.5em;
+    margin: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     color: #555;
     background-color: #eee;
@@ -30,8 +30,10 @@ body {
     justify-content: center;
     align-items: center;
     
+    margin: 0 0.5rem;
+
     color: #555;
-    font-size: 2em;
+    font-size: 2.5rem;
     font-weight: bold;
     background-color: #eee;
 }
@@ -41,18 +43,27 @@ body {
     justify-content: center;
     align-items: center;
 
+    margin: 0 0.5rem;
+
     color: #eee;
-    font-size: 1.4em;
+    font-size: 1.5rem;
     font-weight: bold;
     background-color: #1a8068;
 }
 .content {
     flex: 17;
+
+    margin: 0 0.5rem;
+
+    font-size: 1.25rem;
 }
 .footer {
     flex: 2;
     display: flex;
 
+    margin: 0 0.5rem;
+
+    font-size: 2.5rem;    
     color: #555;
     background-color: #eee;
     border-top: 1px solid #555;
@@ -67,8 +78,6 @@ body {
     
     padding: 0 0.5em;
     border-bottom: 1px dotted #555;
-
-    font-size: 1.25em;
 }
 .course-item > label {
     width: 100%;
@@ -83,8 +92,6 @@ body {
 
     padding: 0 0.5em;
     border-bottom: 1px dotted #555;
-
-    font-size: 1.25em;
 }
 .player-item > label {
     width: 100%;
@@ -100,11 +107,15 @@ body {
     align-items: center;
     justify-content: space-evenly;
 
+    font-weight: bold;
+
     padding: 0 0.5em;
     border-bottom: 1px dotted #555;
 
-    font-size: 1.25em;
+
 }
+
+
 .handicap-item:nth-child(4) {
     border-bottom: none;
 }
@@ -112,14 +123,14 @@ body {
     display: flex;
 }
 .handicap-spinner > div {
-    width: 5em;
+    width: 10rem;
     text-align: center;
     color: #555;
 }
 .handicap-input {
-    width: 5em;
+    width: 6rem;
     text-align: center;
-    font-size: 1em;
+    font-size: 1.25rem;
     color: #555;
 }
 
@@ -135,8 +146,12 @@ body {
     border-bottom: 1px dotted #555;
     padding: 0 0.5em;
 
-    font-size: 1.25em;
+    font-size: 1.25rem;
 }
+.tee-item > div:first-of-type {
+    font-weight: bold;
+}
+
 .tee-item:nth-child(4) {
     border-bottom: none;
 }
@@ -155,11 +170,11 @@ body {
 #home-header {
     flex: 10;
     font-size: 3rem;
-    background-color: #555;
-    color: #eee;
+    background-color: #eee;
+    color: #555;
 }
 #home-content {
-    background-color: #555;
+    background-color: #eee;
     flex: 12;
 
     display: flex;
@@ -212,20 +227,24 @@ body {
 .btn-menu-item {
     flex: 1;
 
-    border: none;
-    background-color: #eee;
+    padding: 0;
+
     color: #555;
-
     font-size: 2.5rem;
-
+    background-color: #eee;
+    
+    border: none;
 }
 #btn-new-scorecard {
     border: none;
 
+    padding: 0.1em;
+
     color: #1a8068;
     font-size: 10em;
     font-weight: bold;
-    background-color: #555;
+    background-color: #eee;
+    text-shadow: 0 0 10px #ccc;
 }
 
 
@@ -411,6 +430,8 @@ input[type=radio], input[type=checkbox] {
 
     font-size: 1.25rem;
     font-weight: bold;
+
+    margin-top: 0.5rem;
     padding: 0 0.5em;
 
     text-shadow: 0 0 5px #555;
@@ -456,7 +477,8 @@ input[type=radio], input[type=checkbox] {
     flex: 1;
 
     display: flex;
-    justify-content: center;    
+    justify-content: center;
+    align-items: center;
 
     font-size: 1.25rem;
     font-weight: bold;
