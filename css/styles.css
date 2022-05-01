@@ -49,7 +49,7 @@ form {
     justify-content: center;
     align-items: center;
 
-    background-color: #0b6556;
+    background-color: #1a8068;
     color: #eee;
 
     font-size: 1.4em;
@@ -321,7 +321,7 @@ input[type=radio], input[type=checkbox] {
 }
 
 .course-image {
-    background-color: #0b6556; /* Used if the image is unavailable */
+    background-color: #1a8068; /* Used if the image is unavailable */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */

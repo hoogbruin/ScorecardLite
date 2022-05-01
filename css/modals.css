@@ -156,11 +156,11 @@
 
 .modal-card-row > div > div {
     padding: 0.5rem 0;
-    border-bottom: 1px solid #0b6556;
+    border-bottom: 1px solid #1a8068;
 }
 
 .modal-card-row > div > div:first-of-type {
-    background-color: #0b6556;
+    background-color: #1a8068;
     color: #eee;
     font-weight: bold;
 }
@@ -214,7 +214,7 @@
 
     color: #eee;
     background-color: #444;
-    border: 1px solid #0b6556;    
+    border: 1px solid #1a8068;    
 }
 
 .menu-modal-item:last-of-type{
