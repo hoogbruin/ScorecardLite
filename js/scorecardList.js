@@ -2,12 +2,7 @@ function scorecardList() {
     // Header
     var header = document.createElement('div')
     header.className = 'header'
-    header.innerText = 'ScorecardLite'
-
-    // Title
-    var title = document.createElement('div')
-    title.className = 'title'
-    title.innerText = 'Lagrade Scorekort'
+    header.innerText = 'Lagrade Scorekort'
 
     // Content
     var content = document.createElement('div')
@@ -62,7 +57,6 @@ function scorecardList() {
     app.innerHTML = ''
 
     app.appendChild(header)
-    app.appendChild(title)
     app.appendChild(content)
     app.appendChild(footer)
 }

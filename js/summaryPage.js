@@ -1,15 +1,15 @@
 function summaryPage() {
     
-    // Title
-    var title = document.createElement('div')
-    title.className = 'title'
-    title.id = 'summary-title'
+    // Header
+    var header = document.createElement('div')
+    header.className = 'header'
+    header.id = 'summary-header'
     var course_name = document.createElement('div')
     course_name.innerText = course.name
     var date = document.createElement('div')
     date.innerText = scorecard.date
-    title.appendChild(course_name)
-    title.appendChild(date)
+    header.appendChild(course_name)
+    header.appendChild(date)
 
     // Content
     var content = document.createElement('div')
@@ -161,7 +161,7 @@ function summaryPage() {
     var app = document.getElementById('app')
     app.innerHTML = ''
 
-    app.appendChild(title)
+    app.appendChild(header)
     app.appendChild(content)
     app.appendChild(footer)
 }

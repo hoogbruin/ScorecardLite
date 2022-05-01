@@ -1,13 +1,8 @@
 function setupHandicaps() {
     // // Header
-    // var header = document.createElement('div')
-    // header.className = 'header'
-    // header.innerText = 'ScorecardLite'
-
-    // Title
-    var title = document.createElement('div')
-    title.className = 'title'
-    title.innerText = 'Justera Handicap'
+    var header = document.createElement('div')
+    header.className = 'header'
+    header.innerText = 'Justera Handicap'
 
     // Content
     var form = document.createElement('form')
@@ -89,8 +84,7 @@ function setupHandicaps() {
     var app = document.getElementById('app')
     app.innerHTML = ''
 
-    // app.appendChild(header)
-    app.appendChild(title)
+    app.appendChild(header)
     app.appendChild(form)
     app.appendChild(footer)
 }

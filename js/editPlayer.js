@@ -4,12 +4,7 @@ function editPlayer(player = null) {
     // Header
     var header = document.createElement('div')
     header.className = 'header'
-    header.innerText = 'ScorecardLite'
-
-    // Title
-    var title = document.createElement('div')
-    title.className = 'title'
-    title.innerText = isNew ? 'Skapa Spelare' : 'Redigera Spelare'
+    header.innerText = isNew ? 'Skapa Spelare' : 'Redigera Spelare'
 
     // Content
     var form = document.createElement('form')
@@ -142,7 +137,6 @@ function editPlayer(player = null) {
     app.innerHTML = ''
 
     app.appendChild(header)
-    app.appendChild(title)
     app.appendChild(form)
     app.appendChild(footer)
 }

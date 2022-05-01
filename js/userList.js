@@ -2,12 +2,7 @@ function userList() {
     // Header
     var header = document.createElement('div')
     header.className = 'header'
-    header.innerText = 'ScorecardLite'
-
-    // Title
-    var title = document.createElement('div')
-    title.className = 'title'
-    title.innerText = 'Registrerade Spelare'
+    header.innerText = 'Sparade Spelare'
 
     // Content
     var content = document.createElement('div')
@@ -58,7 +53,6 @@ function userList() {
     app.innerHTML = ''
 
     app.appendChild(header)
-    app.appendChild(title)
     app.appendChild(content)
     app.appendChild(footer)
 }

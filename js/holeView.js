@@ -3,32 +3,10 @@ function holeView(hole_number) {
     var hole = course.holes.find(h => h.number == hole_number)
 
     // Header
-    // var header = document.createElement('div')
-    // header.className = 'header'
-    // header.id = 'hole-header'
-    // // course_section.id = 'course_section'
-
-    // var course_name = document.createElement('div')
-    // var par = document.createElement('div')
-
-    // course_name.innerText = course.name
-    // par.innerText = 'Par ' + course.par
-
-    // header.appendChild(course_name)
-    // header.appendChild(par)
-
-    // Title
-    var title = document.createElement('div')
-    title.className = 'title'
-    title.id = 'hole-title'
-    // hole_section.id = 'hole_section'
-
-    // Background image
-    // if(course.image !== undefined) {
-    //     title.classList.add('course-image')
-    //     title.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url(../media/' + course.image + ')'
-    // }
-
+    var header = document.createElement('div')
+    header.className = 'header'
+    header.id = 'hole-header'
+  
     // Par
     var div = document.createElement('div')
 
@@ -40,13 +18,13 @@ function holeView(hole_number) {
     par_value.innerText = hole.par
     div.appendChild(par_value)
 
-    title.appendChild(div)
+    header.appendChild(div)
 
     // Hole
     var div = document.createElement('div')
     div.innerText = hole.number
 
-    title.appendChild(div)
+    header.appendChild(div)
 
     // Index
     var div = document.createElement('div')
@@ -59,7 +37,7 @@ function holeView(hole_number) {
     index_value.innerText = hole.index
     div.appendChild(index_value)
 
-    title.appendChild(div)
+    header.appendChild(div)
 
     // Content
     var content = document.createElement('form')
@@ -214,8 +192,7 @@ function holeView(hole_number) {
     var app = document.getElementById('app')
     app.innerHTML = ''
 
-    // app.appendChild(header)
-    app.appendChild(title)
+    app.appendChild(header)
     app.appendChild(content)
     app.appendChild(footer)
 }

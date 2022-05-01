@@ -25,20 +25,6 @@ body {
 
 /*********************************************** Base layout */
 .header {
-    flex: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    margin: 0 0.5rem;
-
-    color: #eee;
-    font-size: 2.5rem;
-    font-weight: bold;
-    background-color: #1a8068;
-    /* background-color: #eee; */
-}
-.title {
     flex: 3;
     display: flex;
     justify-content: center;
@@ -175,6 +161,7 @@ body {
     font-size: 3rem;
     background-color: #eee;
     color: #555;
+    border: none;
 }
 #home-content {
     background-color: #eee;
@@ -299,7 +286,7 @@ input[type=radio], input[type=checkbox] {
 /*************************************************** summaryPage */
 
 
-#summary-title {
+#summary-header {
     /* flex: 3; */
     flex: 2;
 
@@ -420,14 +407,6 @@ input[type=radio], input[type=checkbox] {
 
 /*************************************************** holeView */
 #hole-header {
-    flex: 1;
-    justify-content: space-between;
-    
-    font-size: 1em;
-    font-weight: normal;
-    padding: 0 0.5em;
-}
-#hole-title {
     flex: 6;
 
     font-size: 1.25rem;
@@ -438,12 +417,12 @@ input[type=radio], input[type=checkbox] {
 
     /* text-shadow: 0 0 5px #555; */
 }
-#hole-title > div {
+#hole-header > div {
     flex: 1;
     
     text-align: center;
 }
-#hole-title > div:nth-of-type(2) {
+#hole-header > div:nth-of-type(2) {
     font-size: 6.5rem;
     font-weight: bold;
 }
