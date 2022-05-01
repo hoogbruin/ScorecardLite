@@ -25,17 +25,18 @@ body {
 
 /*********************************************** Base layout */
 .header {
-    flex: 3;
+    flex: 2;
     display: flex;
     justify-content: center;
     align-items: center;
     
     margin: 0 0.5rem;
 
-    color: #555;
+    color: #eee;
     font-size: 2.5rem;
     font-weight: bold;
-    background-color: #eee;
+    background-color: #1a8068;
+    /* background-color: #eee; */
 }
 .title {
     flex: 2;
@@ -45,13 +46,15 @@ body {
 
     margin: 0 0.5rem;
 
-    color: #eee;
+    color: #555;
     font-size: 1.5rem;
     font-weight: bold;
-    background-color: #1a8068;
+    /* background-color: #1a8068; */
+    background-color: #eee;
+    border-bottom: 3px solid #555;
 }
 .content {
-    flex: 16;
+    flex: 17;
 
     margin: 0 0.5rem;
 
@@ -66,7 +69,7 @@ body {
     font-size: 2.5rem;    
     color: #555;
     background-color: #eee;
-    border-top: 1px solid #555;
+    border-top: 3px solid #555;
 }
 
 /*************************************************** courseView */
