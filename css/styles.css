@@ -44,14 +44,14 @@ body {
     justify-content: center;
     align-items: center;
 
-    /* margin: 0 0.5rem; */
+    margin: 0 0.5rem;
 
-    color: #eee;
+    color: #555;
     font-size: 2rem;
     font-weight: bold;
-    background-color: #1a8068;
+    background-color: #eee;
     /* background-color: #eee; */
-    border-bottom: 1px solid #555;
+    border-bottom: 2px solid #555;
 }
 .content {
     flex: 18;
@@ -64,12 +64,12 @@ body {
     flex: 3;
     display: flex;
 
-    /* margin: 0 0.5rem; */
+    margin: 0 0.5rem;
 
     font-size: 2.5rem;    
-    color: #eee;
-    background-color: #1a8068;
-    /* border-top: 1px solid #555; */
+    color: #555;
+    background-color: #eee;
+    border-top: 2px solid #555;
 }
 
 /*************************************************** courseView */
@@ -231,9 +231,9 @@ body {
 
     padding: 0;
 
-    color: #eee;
+    color: #555;
     font-size: 2.5rem;
-    background-color: #1a8068;
+    background-color: #eee;
     
     border: none;
 }
@@ -246,7 +246,7 @@ body {
     font-size: 10em;
     font-weight: bold;
     background-color: #eee;
-    text-shadow: 0 0 10px #ccc;
+    /* text-shadow: 0 0 10px #ccc; */
 }
 
 
