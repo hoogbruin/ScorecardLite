@@ -82,7 +82,7 @@ function setupPlayers() {
 
             setupHandicaps()
         } else {
-            alert('Välj 1-4 spelare')
+            alertModal('Observera', 'Välj 1-4 spelare')
         }
     })
 

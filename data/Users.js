@@ -4,7 +4,8 @@ var baseUsers = [
         "fname" : "Nils-Jakob",
         "lname" : "Olsson",
         "gender" : "male",
-        "hcp": 7.5
+        "hcp": 7.5,
+        "image": "nils-jakob_olsson.jpg"
     },
     {
         "id" : 1651092227943,
