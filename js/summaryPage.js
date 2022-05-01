@@ -1,4 +1,5 @@
 function summaryPage() {
+    
     // Title
     var title = document.createElement('div')
     title.className = 'title'
