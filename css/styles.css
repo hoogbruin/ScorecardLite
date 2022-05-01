@@ -51,14 +51,14 @@ body {
     background-color: #1a8068;
 }
 .content {
-    flex: 17;
+    flex: 16;
 
     margin: 0 0.5rem;
 
     font-size: 1.25rem;
 }
 .footer {
-    flex: 2;
+    flex: 3;
     display: flex;
 
     margin: 0 0.5rem;
@@ -123,7 +123,7 @@ body {
     display: flex;
 }
 .handicap-spinner > div {
-    width: 10rem;
+    width: 6rem;
     text-align: center;
     color: #555;
 }
@@ -168,7 +168,7 @@ body {
 
 /*************************************************** homeView */
 #home-header {
-    flex: 10;
+    flex: 9;
     font-size: 3rem;
     background-color: #eee;
     color: #555;
@@ -182,7 +182,6 @@ body {
     justify-content: center;
 }
 #home-footer {
-    flex: 2;
 }
 
 /*************************************************** Scorecard list item */

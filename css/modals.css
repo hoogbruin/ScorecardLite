@@ -209,7 +209,7 @@
 }
 
 
-/* Menu modal */
+/************************************************************** Menu modal */
 #menu-modal {
     position: fixed;
 
@@ -239,7 +239,7 @@
     border: 1px solid black; 
 }
 .menu-modal-item {
-    height: calc(100vh*2/24);
+    height: calc(100vh*3/24);
     
     display: flex;
     align-items: center;
