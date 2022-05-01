@@ -288,12 +288,16 @@ input[type=radio], input[type=checkbox] {
 
 
 #summary-title {
+    flex: 3;
+    
     display: flex;
     flex-direction: column;
 
     font-size: 0.8rem;
 }
 #summary-content {
+    flex: 18;
+
     display: flex;
     flex-direction: column;
 
@@ -314,14 +318,14 @@ input[type=radio], input[type=checkbox] {
     margin-bottom: 0;
 }
 .summary-box-image {
-    width: 25%;
+    width: 30%;
     background-image: url('../media/djupadal.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .summary-box-data {
-    width: 75%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     margin-left: 0.25rem;
@@ -331,7 +335,7 @@ input[type=radio], input[type=checkbox] {
     font-weight: bold;
     margin-bottom: 0.25rem;
 }
-.summary-box-consitions {
+.summary-box-conditions {
     display: flex;
     flex-direction: row;
 
@@ -340,10 +344,10 @@ input[type=radio], input[type=checkbox] {
     border-bottom: 1px dotted #444;
     margin-bottom: 0.25em;
 }
-.summary-box-consitions > div {
+.summary-box-conditions > div {
     flex: 1;
 }
-.summary-box-consitions > div:nth-of-type(2n+1){
+.summary-box-conditions > div:nth-of-type(2n+1){
     font-weight: bold;
 }
 .summary-box-calculations {
@@ -368,33 +372,19 @@ input[type=radio], input[type=checkbox] {
 .summary-box-div1 > div > div {
     flex: 1;
 }
-.summary-box-div2 {
+.summary-box-div2, .summary-box-div3 {
     display: flex;
     flex-direction: column;
     align-items: center;
 
     font-weight: bold;
 }
-.summary-box-div2 > div:last-of-type{
+.summary-box-div2 > div:last-of-type, .summary-box-div3 > div:last-of-type{
     flex: 1;
     display: flex;
     align-items: center;
     font-size: 1.5rem;
 }
-.summary-box-div3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    font-weight: bold;
-}
-.summary-box-div3 > div:last-of-type{
-    flex: 1;
-    display: flex;
-    align-items: center;
-    font-size: 1.5rem;
-}
-
 
 
 

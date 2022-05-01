@@ -10,7 +10,7 @@ function holeMenuModal() {
     div.className = 'menu-modal-item'
     div.innerText = 'Avsluta Rundan'
     div.addEventListener('click', function() {
-        summaryView()
+        summaryPage()
     })
     modal.appendChild(div)
 
