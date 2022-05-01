@@ -10,61 +10,52 @@ html {
 }
 
 body {
-    
-    margin: 0;
+    margin: 0 0.5em;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    color: #555;
     background-color: #eee;
-    color: #444;
-}
-
-/* TEMP */
-form {                      
-    /* margin: 0; */
 }
 
 #app {
+    height: 100vh;
+
     display: flex;
     flex-direction: column;
-    
-    height: 100vh;
 }
 
 /*********************************************** Base layout */
 .header {
     flex: 3;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-color: #444;
-    color: #eee;
+    
+    color: #555;
     font-size: 2em;
     font-weight: bold;
+    background-color: #eee;
 }
 .title {
     flex: 2;
-
     display: flex;
     justify-content: center;
     align-items: center;
 
-    background-color: #1a8068;
     color: #eee;
-
     font-size: 1.4em;
     font-weight: bold;
+    background-color: #1a8068;
 }
 .content {
-    flex: 16;
+    flex: 17;
 }
 .footer {
-    flex: 3;
-
-    background-color: #444;
-    color: #eee;
-
+    flex: 2;
     display: flex;
+
+    color: #555;
+    background-color: #eee;
+    border-top: 1px solid #555;
 }
 
 /*************************************************** courseView */
@@ -75,7 +66,7 @@ form {
     align-items: center;
     
     padding: 0 0.5em;
-    border-bottom: 1px dotted #333;
+    border-bottom: 1px dotted #555;
 
     font-size: 1.25em;
 }
@@ -91,7 +82,7 @@ form {
     align-items: center;
 
     padding: 0 0.5em;
-    border-bottom: 1px dotted #333;
+    border-bottom: 1px dotted #555;
 
     font-size: 1.25em;
 }
@@ -110,7 +101,7 @@ form {
     justify-content: space-evenly;
 
     padding: 0 0.5em;
-    border-bottom: 1px dotted #333;
+    border-bottom: 1px dotted #555;
 
     font-size: 1.25em;
 }
@@ -123,13 +114,13 @@ form {
 .handicap-spinner > div {
     width: 5em;
     text-align: center;
-    color: #333;
+    color: #555;
 }
 .handicap-input {
     width: 5em;
     text-align: center;
     font-size: 1em;
-    color: #333;
+    color: #555;
 }
 
 /*************************************************** teeView */
@@ -141,7 +132,7 @@ form {
     align-items: center;
     justify-content: space-evenly;
 
-    border-bottom: 1px dotted #333;
+    border-bottom: 1px dotted #555;
     padding: 0 0.5em;
 
     font-size: 1.25em;
@@ -162,21 +153,22 @@ form {
 
 /*************************************************** homeView */
 #home-header {
-    flex: 9;
+    flex: 10;
     font-size: 3rem;
-    background-color: #333;
+    background-color: #555;
+    color: #eee;
 }
 #home-content {
-    background-color: #333;
+    background-color: #555;
     flex: 12;
 
     display: flex;
     align-items: flex-start;
     justify-content: center;
 }
-/* #home-footer {
-    flex: 3;
-} */
+#home-footer {
+    flex: 2;
+}
 
 /*************************************************** Scorecard list item */
 .scorecard_item {
@@ -187,7 +179,7 @@ form {
 
     padding: 0 0.5em;
 
-    border-bottom: 1px dotted #333;
+    border-bottom: 1px dotted #555;
     font-size: 1.25em;
 }
 .scorecard_item:active {
@@ -208,7 +200,7 @@ form {
 
     padding: 0 0.5em;
 
-    border-bottom: 1px dotted #333;
+    border-bottom: 1px dotted #555;
     font-size: 1.25em;
 }
 .user_item:active {
@@ -221,8 +213,8 @@ form {
     flex: 1;
 
     border: none;
-    background-color: #444;
-    color: #eee;
+    background-color: #eee;
+    color: #555;
 
     font-size: 2.5rem;
 
@@ -233,8 +225,7 @@ form {
     color: #1a8068;
     font-size: 10em;
     font-weight: bold;
-    background-color: #333;
-    text-shadow: 0 0 10px #222;
+    background-color: #555;
 }
 
 
@@ -288,31 +279,48 @@ input[type=radio], input[type=checkbox] {
 
 
 #summary-title {
-    flex: 3;
-    
+    /* flex: 3; */
+    flex: 2;
+
     display: flex;
     flex-direction: column;
 
-    font-size: 0.8rem;
+    font-size: 1.5rem;
+    background-color: #eee;
+    color: #555;
 }
 #summary-content {
-    flex: 18;
+    /* flex: 18; */
+    flex: 20;
 
     display: flex;
     flex-direction: column;
 
-    padding:0.25rem;
+    /* padding:0.25rem 0.5rem; */
+    padding: 1rem;
 }
+#summary-footer {
+    flex: 2;
+}
+
 .summary-box {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 10px #aaa;
+    border-radius: 0.25em;
+
+
+
+
     height: 25%;
 
     display: flex;
     flex-direction: row;
 
     font-size: 0.8rem;
-    padding: 0.25rem;
-    margin-bottom: 0.25rem;
-    border: 1px solid #444;
+    /* padding: 0.25rem; */
+    /* margin-bottom: 0.25rem; */
+    /* box-shadow: 0 0 5px #555; */
 }
 .summary-box:nth-of-type(4) {
     margin-bottom: 0;
@@ -328,7 +336,8 @@ input[type=radio], input[type=checkbox] {
     width: 70%;
     display: flex;
     flex-direction: column;
-    margin-left: 0.25rem;
+    /* margin-left: 0.25rem; */
+    margin-left: 1rem;
 }
 .summary-box-name {
     font-size: 1rem;
@@ -340,8 +349,8 @@ input[type=radio], input[type=checkbox] {
     flex-direction: row;
 
     padding: 0.25em 0;
-    border-top: 1px dotted #444;
-    border-bottom: 1px dotted #444;
+    border-top: 1px dotted #555;
+    border-bottom: 1px dotted #555;
     margin-bottom: 0.25em;
 }
 .summary-box-conditions > div {
@@ -404,7 +413,7 @@ input[type=radio], input[type=checkbox] {
     font-weight: bold;
     padding: 0 0.5em;
 
-    text-shadow: 0 0 5px #333;
+    text-shadow: 0 0 5px #555;
 }
 #hole-title > div {
     flex: 1;
@@ -438,7 +447,7 @@ input[type=radio], input[type=checkbox] {
     padding: 0.5rem;
 
     font-size: 1rem;
-    border-bottom: 1px dotted #333;
+    border-bottom: 1px dotted #555;
 }
 .player-box:nth-child(4) {
     border-bottom: none;
@@ -493,14 +502,14 @@ input[type=radio], input[type=checkbox] {
 .player-box input[type=text] {
     border: none;
     background-color: #eee;
-    box-shadow: 0px 0px 5px #333;
+    box-shadow: 0px 0px 5px #555;
     border-radius: 50%;
     font-size: 2em;
     font-weight: bold;
     text-align: center;
     width: 1.5em;
     height: 1.5em;
-    color: #444;
+    color: #555;
 }
 
 
