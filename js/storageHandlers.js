@@ -87,9 +87,10 @@ function saveScorecard(scorecard) {
 
     // Kolla om den redan existerar annars lägg till
     var current = scorecards.find(s => s.date == scorecard.date)
+    var index = scorecards.indexOf(current)
 
     if(current !== undefined) {
-        current = scorecard
+        scorecards[index] = scorecard
     } else {
         scorecards.push(scorecard)
     }

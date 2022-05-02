@@ -53,7 +53,9 @@ function setupCourse() {
 
         var selected_course = this.elements.course.value
         course = Courses.find(c => c.name == selected_course)
-        scorecard.course = course.name
+        
+        scorecard.course_id = course.id
+        scorecard.course_name = course.name
 
         setupPlayers()
     })

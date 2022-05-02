@@ -8,7 +8,8 @@ function User(id) {
 
 function Scorecard(date) {
     this.date = date
-    this.course     //coursename NOT entire course eobject
+    this.course_id
+    this.course_name
     this.players = []
 }
 

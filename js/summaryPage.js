@@ -130,11 +130,26 @@ function summaryPage() {
     var footer = document.createElement('div')
     footer.className = 'footer'
 
-    var btn_cancel = document.createElement('button')
-    btn_cancel.type = 'button'
-    btn_cancel.className = 'btn-menu-item'
-    btn_cancel.innerHTML = '<i class="bi bi-x"></i>'
-    btn_cancel.addEventListener('click', function () {
+    var btn_edit = document.createElement('button')
+    btn_edit.type = 'button'
+    btn_edit.className = 'btn-menu-item'
+    btn_edit.innerHTML = '<i class="bi bi-pencil"></i>'
+    btn_edit.addEventListener('click', function () {
+        holeView(1)
+    })
+
+    var btn_menu = document.createElement('button')
+    btn_menu.type = 'button'
+    btn_menu.className = 'btn-menu-item'
+    btn_menu.innerHTML = '<i class="bi bi-list"></i>'
+    btn_menu.addEventListener('click', function () {
+    })
+
+    var btn_exit = document.createElement('button')
+    btn_exit.type = 'button'
+    btn_exit.className = 'btn-menu-item'
+    btn_exit.innerHTML = '<i class="bi bi-box-arrow-right"></i>'
+    btn_exit.addEventListener('click', function () {
         startPage()
     })
 
@@ -154,8 +169,10 @@ function summaryPage() {
     //     setupPlayers()
     // })
 
-    footer.appendChild(btn_cancel)
-    // footer.appendChild(btn_next)
+    footer.appendChild(btn_edit)
+    footer.appendChild(btn_menu)
+    footer.appendChild(btn_exit)
+    
 
     // Koppla samman
     var app = document.getElementById('app')

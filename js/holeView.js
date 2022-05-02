@@ -167,13 +167,10 @@ function holeView(hole_number) {
     btn_next.type = 'button'
     btn_next.className = 'btn-menu-item'
     btn_next.id = 'btn_next'
-    // btn_next.setAttribute('form', 'players_section')
-    btn_next.innerHTML= '<i class="bi bi-caret-right"></i>'
+    btn_next.innerHTML = '<i class="bi bi-caret-right"></i>'
     if(hole.number + 1 > number_of_holes) {
-        btn_next.innerText= 'Färdig!'
+        btn_next.innerHTML = '<i class="bi bi-table"></i>'
         
-        // btn_next.disabled = true
-    // btn_next.style.visibility = 'hidden'
     }
     btn_next.addEventListener('click', function() {
         if(hole.number + 1 > number_of_holes) {

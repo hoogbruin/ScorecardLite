@@ -24,14 +24,13 @@ function scorecardList() {
             scorecard_item.appendChild(div)
 
             var div = document.createElement('div')
-            div.innerText = scorecards[i].course
+            div.innerText = scorecards[i].course_name
             scorecard_item.appendChild(div)
 
             scorecard_item.addEventListener('click', function() {
-                // console.log(this)
-                var selected_scorecard = getScorecard(this.id)
-                summaryView()
-                // scorecardView(selected_scorecard)
+                scorecard = getScorecard(this.id)
+                course = Courses.find(c => c.id == scorecard.course_id)
+                summaryPage()
             })
 
             content.appendChild(scorecard_item)
