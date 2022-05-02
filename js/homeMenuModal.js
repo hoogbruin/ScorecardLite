@@ -23,6 +23,18 @@ function homeMenuModal() {
     })
     modal.appendChild(div)
 
+    // Rensa LocalStorage
+    var div = document.createElement('div')
+    div.className = 'menu-modal-item'
+    div.innerText = 'Töm LocalStorage'
+    div.addEventListener('click', function() {
+        if(confirm('Är du säker!?'))
+            localStorage.clear()
+            
+        app.removeChild(modal)
+    })
+    modal.appendChild(div)
+
     // Meny
     var div = document.createElement('div')
     div.className = 'menu-modal-item'
