@@ -39,7 +39,7 @@ function scorecardList() {
 
     // Footer
     var footer = document.createElement('div')
-    footer.className = 'footer'
+    footer.className = 'footer  single-btn'
 
     var btn_cancel = document.createElement('button')
     btn_cancel.type = 'button'
