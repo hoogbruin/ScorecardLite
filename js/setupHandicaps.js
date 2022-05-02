@@ -29,13 +29,13 @@ function setupHandicaps() {
         input.readOnly = true
 
         var add = document.createElement('div')
-        add.innerText = '＋'
+        add.innerHTML = '<i class="bi bi-caret-up-fill"></i>'
         add.onclick = function() {
             input.value = (parseFloat(input.value) + 0.1).toFixed(1)
         }
 
         var subtract = document.createElement('div')
-        subtract.innerText = '-'
+        subtract.innerHTML = '<i class="bi bi-caret-down-fill"></i>'
         subtract.onclick = function() {
             input.value = (parseFloat(input.value) - 0.1).toFixed(1)
         }
