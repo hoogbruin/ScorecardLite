@@ -27,7 +27,7 @@ function startPage() {
 
     // Footer
     var footer = document.createElement('div')
-    footer.className = 'footer'
+    footer.className = 'footer single-btn'
     footer.id = 'home-footer'
 
     var btn_menu = document.createElement('button')

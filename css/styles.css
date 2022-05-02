@@ -49,6 +49,7 @@ body {
 .footer {
     flex: 3;
     display: flex;
+    justify-content: space-between;
 
     margin: 0 0.5rem;
 
@@ -216,8 +217,7 @@ body {
 
 /*************************************************** Button class */
 .btn-menu-item {
-    flex: 1;
-
+    width: calc(100%/3);
     padding: 0;
 
     color: #555;
@@ -226,6 +226,11 @@ body {
     
     border: none;
 }
+
+.single-btn {
+    justify-content: center;
+}
+
 #btn-new-scorecard {
     border: none;
 
