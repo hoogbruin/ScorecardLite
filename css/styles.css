@@ -53,9 +53,6 @@ body {
 
     margin: 0 0.5rem;
 
-    font-size: 2.5rem;    
-    color: #555;
-    background-color: #eee;
     border-top: 2px solid #555;
 }
 
@@ -93,7 +90,6 @@ body {
     flex: 1;
 }
 
-
 /*************************************************** handicapView */
 .handicap-item {
     height: 25%;
@@ -107,11 +103,7 @@ body {
 
     padding: 0 0.5em;
     border-bottom: 1px dotted #555;
-
-
 }
-
-
 .handicap-item:nth-child(4) {
     border-bottom: none;
 }
@@ -162,25 +154,19 @@ body {
     align-items: center;
 }
 
-/*************************************************** homeView */
+/* Perfect ************************************************** homeView */
 #home-header {
     flex: 5;
     align-items: flex-end;
 
     font-size: 2.5rem;
-    background-color: #eee;
-    color: #555;
     border: none;
 }
 #home-content {
-    background-color: #eee;
     flex: 16;
 
     display: flex;
-    align-items: center;
     justify-content: center;
-}
-#home-footer {
 }
 
 /*************************************************** Scorecard list item */
@@ -217,18 +203,18 @@ body {
     font-size: 1.25rem;
 }
 .user_item:active {
-    background-color: #658ebc;
+    background-color: #5a7dbe;
     color: white;
 }
 
-/*************************************************** Button class */
+/***PERFECT    ************************************************ Button class */
 .btn-menu-item {
     width: calc(100%/3);
-    padding: 0;
+    /* padding: 0; */
 
     color: #555;
     font-size: 2.5rem;
-    background-color: #eee;
+    /* background-color: #eee; */
     
     border: none;
 }
@@ -240,41 +226,12 @@ body {
 #btn-new-scorecard {
     border: none;
 
-    padding: 0.1em;
-
+    font-size: 8.5rem;
     color: #1a8068;
-    font-size: 7em;
     background-color: #eee;
-    /* text-shadow: 0 0 10px #ccc; */
 }
 
-
-
-
-/* overflow: auto; */
-
-/* .cardBox {
-    display: flex;
-}
-
-.cardBox > div {
-    flex: 1;
-} */
-
-/* #footer, #footer_section {
-    flex: 1;
-    
-    background-color:#777;
-    color: #eee;
-    font-size: 2em;
-
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-} */
-
-
-/* List items */
+/***************************************************************** List items */
 
 input[type=radio], input[type=checkbox] {
     margin: 0 0.5em 0 0;
@@ -285,10 +242,6 @@ input[type=radio], input[type=checkbox] {
     align-self: center;
 }
 
-
-
-
-
 /*************************************************** newPlayerView */
 #form-new-player {
     display: flex;
@@ -296,8 +249,6 @@ input[type=radio], input[type=checkbox] {
 }
 
 /*************************************************** summaryPage */
-
-
 #summary-header {
     /* flex: 3; */
     flex: 2;
@@ -328,9 +279,6 @@ input[type=radio], input[type=checkbox] {
     margin-bottom: 1rem;
     box-shadow: 0 0 10px #aaa;
     border-radius: 0.25em;
-
-
-
 
     height: 25%;
 
@@ -412,12 +360,11 @@ input[type=radio], input[type=checkbox] {
     flex: 1;
     display: flex;
     align-items: center;
+
     font-size: 1.5rem;
 }
 
-
-
-/*************************************************** holeView */
+/*Perfect  ************************************************** holeView */
 #hole-header {
     flex: 6;
 
@@ -428,13 +375,11 @@ input[type=radio], input[type=checkbox] {
 }
 #hole-header > div:nth-of-type(2) {
     flex: 4;
+
     font-size: 6.5rem;
 }
 #hole-content {
     flex: 15;    
-}
-#hole-footer {
-    flex: 3;
 }
 
 .player-box {
@@ -469,7 +414,6 @@ input[type=radio], input[type=checkbox] {
     flex: 2;
     display: flex;
 }
-
 .p-b-content > div:nth-child(1) {
     flex-direction: column;
     align-items: center;
@@ -502,14 +446,8 @@ input[type=radio], input[type=checkbox] {
     color: #555;
 }
 
-
-
-
-
-
-
-/* Scorecard */
-#scorecard-header {
+/********************************************************************************* Scorecard */
+/* #scorecard-header {
     flex: 1;
 
     font-size: 2em;
@@ -539,10 +477,10 @@ input[type=radio], input[type=checkbox] {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-}
+} */
 
 
-
+/* 
 
 
 .card {
@@ -592,20 +530,4 @@ input[type=radio], input[type=checkbox] {
 .card-row > div > div:first-of-type {
     background-color: rgb(43, 53, 35);
     color: #eee;
-}
-.card-summary {
-}
-
-/* flex: unset; */
-
-/* Dölja pilar i input type=numbers */
-/* Chrome, Safari, Edge, Opera */
-/* input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-/* Firefox */
-/* input[type=number] {
-  -moz-appearance: textfield;
-} */ */
+} */
