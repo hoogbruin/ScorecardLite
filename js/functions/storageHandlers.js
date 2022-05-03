@@ -111,5 +111,6 @@ function getScorecards() {
         return JSON.parse(localStorage.getItem('Scorecards'))
 }
 
-function deleteScorecard(date) {
+function deleteScorecard(scorecard) {
+    alert(scorecard.date)
 }

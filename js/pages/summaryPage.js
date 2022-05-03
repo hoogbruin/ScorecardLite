@@ -143,6 +143,7 @@ function summaryPage() {
     btn_menu.className = 'btn-menu-item'
     btn_menu.innerHTML = '<i class="bi bi-list"></i>'
     btn_menu.addEventListener('click', function () {
+        summaryMenuModal()
     })
 
     var btn_exit = document.createElement('button')
@@ -153,26 +154,9 @@ function summaryPage() {
         startPage()
     })
 
-    // var btn_next = document.createElement('button')
-    // btn_next.type = 'submit'
-    // btn_next.className = 'btn'
-    // btn_next.setAttribute('form', 'form-course')
-    // btn_next.innerText = 'Fortsätt'
-
-    // form.addEventListener('submit', function (e) {
-    //     e.preventDefault()
-
-    //     var selected_course = this.elements.course.value
-    //     course = Courses.find(c => c.name == selected_course)
-    //     scorecard.course = course.name
-
-    //     setupPlayers()
-    // })
-
     footer.appendChild(btn_edit)
     footer.appendChild(btn_menu)
     footer.appendChild(btn_exit)
-    
 
     // Koppla samman
     var app = document.getElementById('app')
