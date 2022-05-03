@@ -75,7 +75,7 @@ function scorecardModal(player) {
             col.appendChild(div)
 
             var div = document.createElement('div')
-            div.innerText = holeScore.points
+            div.innerText = holeScore.points == 0 ? '-' : holeScore.points
             col.appendChild(div)
 
             strokesCounter += parseInt(holeScore.strokes)
