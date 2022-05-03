@@ -152,8 +152,8 @@
     text-align: center;
 }
 .modal-card-row > div:first-of-type {
-    /* flex: 2; */
-    flex: auto;
+    flex: 2;
+    /* flex: auto; */
     text-align: initial;
 }
 .modal-card-row > div:last-of-type {
@@ -183,9 +183,17 @@
 #modal-card-summary {
     display: flex;
     flex-direction: row;
+
+    background-color: #1a8068;
+    color: #eee;
+    font-weight: bold;
+}
+#modal-card-summary > div {
+    padding: 0.5rem 0;
 }
 #modal-card-summary > div:first-of-type {
     flex: 6;
+    padding-left: 0.5rem;
 }
 #modal-card-summary > div:nth-child(2) {
     flex: 2;
