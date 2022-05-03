@@ -232,25 +232,13 @@ function scorecardModal(player) {
     // TOT Summary
     var summary = document.createElement('div')
     summary.id = 'modal-card-summary'
-    
+
     var div = document.createElement('div')
-    div.innerText = 'TOT'
+    div.innerText = 'Slag ' + player.total_strokes
     summary.appendChild(div)
 
     var div = document.createElement('div')
-    div.innerText = 'Slag'
-    summary.appendChild(div)
-
-    var div = document.createElement('div')
-    div.innerText = 'X'
-    summary.appendChild(div)
-
-    var div = document.createElement('div')
-    div.innerText = 'Poäng'
-    summary.appendChild(div)
-
-    var div = document.createElement('div')
-    div.innerText = 'Y'
+    div.innerText = 'Poäng ' + player.total_stableford + 'p'
     summary.appendChild(div)
 
     card.appendChild(summary)
