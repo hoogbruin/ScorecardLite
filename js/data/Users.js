@@ -4,7 +4,7 @@ var baseUsers = [
         "fname" : "Nils-Jakob",
         "lname" : "Olsson",
         "gender" : "male",
-        "hcp": 7.5,
+        "hcp": 10.8,
         "image": "phil.png"
     },
     {
@@ -12,34 +12,41 @@ var baseUsers = [
         "fname": "Andreas",
         "lname" : "Ask",
         "gender" : "male",
-        "hcp": 19.2
+        "hcp": 15.4
     },
     {
         "id" : 1651093227943,
         "fname": "Martin",
         "lname" : "Persson",
         "gender" : "male",
-        "hcp": 18.2
+        "hcp": 11.7
     },   
     {
         "id" : 1651094227943,
         "fname": "Mathias",
         "lname" : "Ljung",
         "gender" : "male",
-        "hcp": 25.0
+        "hcp": 18.9
     },      
     {
         "id" : 1651095227943,
         "fname": "Björn",
         "lname" : "Skarin",
         "gender" : "male",
-        "hcp": 15.1
+        "hcp": 10.7
     },
     {
         "id" : 1651096227943,
         "fname": "Kristoffer",
         "lname" : "Wittström",
         "gender" : "male",
-        "hcp": 18.4
+        "hcp": 23.7
+    },
+    {
+        "id" : 1651097227943,
+        "fname": "Marcus",
+        "lname" : "Östrell",
+        "gender" : "male",
+        "hcp": 16.0
     }
 ]

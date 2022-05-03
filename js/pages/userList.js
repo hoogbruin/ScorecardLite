@@ -2,7 +2,7 @@ function userList() {
     // Header
     var header = document.createElement('div')
     header.className = 'header'
-    header.innerText = 'Sparade Spelare'
+    header.innerText = 'Spelare'
 
     // Content
     var content = document.createElement('div')

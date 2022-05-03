@@ -124,7 +124,8 @@ function holeView(hole_number) {
         updatePlayerBox(player, hole, p_b_net, p_b_points, p_b_input)          //p_b_scratch
 
         // Event Scoreinput
-        p_b_input.addEventListener('click', function(e) {
+        // p_b_input.addEventListener('click', function(e) {
+        div2.addEventListener('click', function(e) {
             strokesModal(player, hole, function() {
                 updatePlayerBox(player, hole, p_b_net, p_b_points, p_b_input)      //p_b_scratch
             })

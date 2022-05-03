@@ -2,7 +2,7 @@ function scorecardList() {
     // Header
     var header = document.createElement('div')
     header.className = 'header'
-    header.innerText = 'Lagrade Scorekort'
+    header.innerText = 'Mina Scorekort'
 
     // Content
     var content = document.createElement('div')
