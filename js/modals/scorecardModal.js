@@ -229,17 +229,39 @@ function scorecardModal(player) {
     row.appendChild(col)
     card.appendChild(row)
 
-    // // Card summary
-    // var summary = document.createElement('div')
-    // summary.className = 'card-summary'
-    // summary.innerText = 'Summary'
+    // TOT Summary
+    var summary = document.createElement('div')
+    summary.id = 'modal-card-summary'
+    
+    var div = document.createElement('div')
+    div.innerText = 'TOT'
+    summary.appendChild(div)
+
+    var div = document.createElement('div')
+    div.innerText = 'Slag'
+    summary.appendChild(div)
+
+    var div = document.createElement('div')
+    div.innerText = 'X'
+    summary.appendChild(div)
+
+    var div = document.createElement('div')
+    div.innerText = 'Poäng'
+    summary.appendChild(div)
+
+    var div = document.createElement('div')
+    div.innerText = 'Y'
+    summary.appendChild(div)
+
+    card.appendChild(summary)
+
+    modal.appendChild(card)
 
     // // Todo
     // var div = document.createElement('div')
     // div.innerText = 'Brutto Slag, Netto Slag, Tot Poäng, Hcp-resultat, Justerad bruttoscore '
     // summary.appendChild(div)
 
-    modal.appendChild(card)
     app.appendChild(modal)
 
     // Events

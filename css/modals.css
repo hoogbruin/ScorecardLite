@@ -152,15 +152,19 @@
     text-align: center;
 }
 .modal-card-row > div:first-of-type {
-    flex: 2;
+    /* flex: 2; */
+    flex: auto;
     text-align: initial;
 }
-.modal-card-row > div:first-of-type > div{
+.modal-card-row > div:last-of-type {
+    flex: auto;
+}
+.modal-card-row > div:first-of-type > div {
     padding-left: 0.5rem;
 }
-.modal-card-row > div:last-of-type > div{
+/* .modal-card-row > div:last-of-type > div {
     padding-right: 0.5rem;
-}
+} */
 .modal-card-row > div > div {
     padding: 0.5rem 0;
     border-bottom: 1px solid #1a8068;
@@ -176,7 +180,25 @@
 .modal-card-row > div > div:nth-of-type(4) {
     font-weight: bold;
 }
-
+#modal-card-summary {
+    display: flex;
+    flex-direction: row;
+}
+#modal-card-summary > div:first-of-type {
+    flex: 6;
+}
+#modal-card-summary > div:nth-child(2) {
+    flex: 2;
+}
+#modal-card-summary > div:nth-child(3) {
+    flex: 1;
+}
+#modal-card-summary > div:nth-child(4) {
+    flex: 2;
+}
+#modal-card-summary > div:last-of-type {
+    flex: 1;
+}
 
 /************************************************************** Menu modal */
 #menu-modal {
