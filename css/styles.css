@@ -298,7 +298,22 @@ input[type=radio], input[type=checkbox] {
 }
 .summary-box-calculations > div {
     flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-weight: bold;
 }
+.summary-box-calculations > div > div:last-of-type {
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    font-size: 2rem;
+}
+
+/* 
 .summary-box-div1 {
     display: flex;
     flex-direction: column;
@@ -309,25 +324,26 @@ input[type=radio], input[type=checkbox] {
 .summary-box-div1 > div {
     display: flex;
     flex-direction: row;
-    /* margin-bottom: 0.25rem; */
+    margin-bottom: 0.25rem;
 }
 .summary-box-div1 > div > div {
     flex: 1;
 }
-.summary-box-div2, .summary-box-div3 {
+*/
+/* .summary-box-div2, .summary-box-div3 {
     display: flex;
     flex-direction: column;
     align-items: center;
 
     font-weight: bold;
-}
-.summary-box-div2 > div:last-of-type, .summary-box-div3 > div:last-of-type{
+} */
+/* .summary-box-div2 > div:last-of-type, .summary-box-div3 > div:last-of-type{
     flex: 1;
     display: flex;
     align-items: center;
 
     font-size: 2rem;
-}
+} */
 
 /*Perfect  ************************************************** holeView */
 #hole-header {

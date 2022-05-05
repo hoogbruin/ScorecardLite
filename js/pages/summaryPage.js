@@ -58,34 +58,39 @@ function summaryPage() {
 
         box.appendChild(box_conditions)
 
+        // 
         var box_calc = document.createElement('div')
         box_calc.className = 'summary-box-calculations'
 
         var div1 = document.createElement('div')
         div1.className = 'summary-box-div1'
             var div = document.createElement('div')
-            div.innerText = 'Slaggolf'
+            div.innerText = 'Slag'
             div1.appendChild(div)
 
             var div = document.createElement('div')
-                var div_header = document.createElement('div')
-                div_header.innerText = 'Brutto'
-                div.appendChild(div_header)    
-
-                var div_value = document.createElement('div')
-                div_value.innerText = 'X'
-                div.appendChild(div_value)
+            div.innerText = 'Z'
             div1.appendChild(div)
 
-            var div = document.createElement('div')
-                var div_header = document.createElement('div')
-                div_header.innerText = 'Netto'
-                div.appendChild(div_header)    
+            // var div = document.createElement('div')
+            //     var div_header = document.createElement('div')
+            //     div_header.innerText = 'Brutto'
+            //     div.appendChild(div_header)    
 
-                var div_value = document.createElement('div')
-                div_value.innerText = 'Y'
-                div.appendChild(div_value)
-            div1.appendChild(div)
+            //     var div_value = document.createElement('div')
+            //     div_value.innerText = 'X'
+            //     div.appendChild(div_value)
+            // div1.appendChild(div)
+
+            // var div = document.createElement('div')
+            //     var div_header = document.createElement('div')
+            //     div_header.innerText = 'Netto'
+            //     div.appendChild(div_header)    
+
+            //     var div_value = document.createElement('div')
+            //     div_value.innerText = 'Y'
+            //     div.appendChild(div_value)
+            // div1.appendChild(div)
         box_calc.appendChild(div1)
         
         var div2 = document.createElement('div')
@@ -110,6 +115,8 @@ function summaryPage() {
             div3.appendChild(div)
         box_calc.appendChild(div3)
 
+        // 
+        
         box.addEventListener('click', function(e) {
             scorecardModal(player)
         })
