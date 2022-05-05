@@ -110,6 +110,10 @@ function summaryPage() {
             div3.appendChild(div)
         box_calc.appendChild(div3)
 
+        box.addEventListener('click', function(e) {
+            scorecardModal(player)
+        })
+
         box.appendChild(box_calc)
         content.appendChild(box)
     })
