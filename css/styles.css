@@ -171,22 +171,19 @@ body {
 
 /*************************************************** Scorecard list item */
 .scorecard_item {
-    height: calc(100vh/12);
+    height: calc(100vh/8);
     
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 
     padding: 0 0.5em;
 
     border-bottom: 1px dotted #555;
-    font-size: 1.25rem;
 }
 .scorecard_item:active {
     background-color: #658ebc;
     color: white;
-}
-.scorecard_item div:first-of-type {
-    margin-right: 2em;
 }
 
 /************************** ************************* User list item */
@@ -392,7 +389,7 @@ input[type=radio], input[type=checkbox] {
 
     font-size: 1rem;
     font-weight: bold;
-    border-bottom: 1px dashed #555;
+    border-bottom: 1px dotted #555;
 }
 .player-box:nth-child(4) {
     border-bottom: none;

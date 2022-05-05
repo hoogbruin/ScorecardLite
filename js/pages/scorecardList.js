@@ -20,11 +20,11 @@ function scorecardList() {
             scorecard_item.id = scorecards[i].date
             
             var div = document.createElement('div')
-            div.innerText = new Date(scorecards[i].date).toLocaleDateString()
+            div.innerText = scorecards[i].course_name
             scorecard_item.appendChild(div)
 
             var div = document.createElement('div')
-            div.innerText = scorecards[i].course_name
+            div.innerText = new Date(scorecards[i].date).toLocaleDateString()
             scorecard_item.appendChild(div)
 
             scorecard_item.addEventListener('click', function() {
@@ -35,11 +35,14 @@ function scorecardList() {
 
             content.appendChild(scorecard_item)
         }
-    } 
+    } else {
+        // Meddeleande om niga rundor, centrerat vettivalt och horisontellt
+
+    }
 
     // Footer
     var footer = document.createElement('div')
-    footer.className = 'footer  single-btn'
+    footer.className = 'footer single-btn'
 
     var btn_cancel = document.createElement('button')
     btn_cancel.type = 'button'

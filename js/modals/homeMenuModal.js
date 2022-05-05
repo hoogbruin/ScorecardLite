@@ -5,6 +5,14 @@ function homeMenuModal() {
     var modal = document.createElement('div')
     modal.id = 'menu-modal'
 
+
+    // Empty space
+    // var div = document.createElement('div')
+    // // div.className = 'menu-modal-item'
+    // div.id = 'empty-space'
+    // modal.appendChild(div)
+
+
     // Mina Scorekort
     var div = document.createElement('div')
     div.className = 'menu-modal-item'
