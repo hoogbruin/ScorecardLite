@@ -275,16 +275,16 @@ input[type=radio], input[type=checkbox] {
     text-align: center;
     font-size: 1.25rem;
     font-weight: bold;
-    margin-bottom: 0.25rem;
+    /* margin-bottom: 0.25rem; */
 }
 .summary-box-conditions {
     display: flex;
     flex-direction: row;
 
-    padding: 0.25em 0;
+    /* padding: 0.25em 0; */
     border-top: 1px dotted #555;
     border-bottom: 1px dotted #555;
-    margin-bottom: 0.25em;
+    /* margin-bottom: 0.25em; */
 }
 .summary-box-conditions > div {
     flex: 1;
@@ -309,7 +309,7 @@ input[type=radio], input[type=checkbox] {
 .summary-box-div1 > div {
     display: flex;
     flex-direction: row;
-    margin-bottom: 0.25rem;
+    /* margin-bottom: 0.25rem; */
 }
 .summary-box-div1 > div > div {
     flex: 1;
