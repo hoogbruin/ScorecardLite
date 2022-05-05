@@ -261,6 +261,9 @@ input[type=radio], input[type=checkbox] {
 }
 
 .summary-box {
+    display: flex;
+    flex-direction: column;
+
     padding: 0.5rem;
 
     height: 25%;
@@ -273,28 +276,31 @@ input[type=radio], input[type=checkbox] {
 }
 .summary-box-name {
     text-align: center;
+    line-height: 2.5rem;
     font-size: 1.25rem;
     font-weight: bold;
     /* margin-bottom: 0.25rem; */
 }
-.summary-box-conditions {
+/* .summary-box-conditions {
     display: flex;
     flex-direction: row;
 
-    /* padding: 0.25em 0; */
+    padding: 0.25em 0;
     border-top: 1px dotted #555;
     border-bottom: 1px dotted #555;
-    /* margin-bottom: 0.25em; */
+    margin-bottom: 0.25em;
 }
 .summary-box-conditions > div {
     flex: 1;
 }
 .summary-box-conditions > div:nth-of-type(2n+1){
     font-weight: bold;
-}
+} */
 .summary-box-calculations {
+    flex: 1;
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 .summary-box-calculations > div {
     flex: 1;

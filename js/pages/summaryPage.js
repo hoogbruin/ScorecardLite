@@ -29,34 +29,34 @@ function summaryPage() {
 
         box.appendChild(box_name)     
 
-        var box_conditions = document.createElement('div')
-        box_conditions.className = 'summary-box-conditions'
+        // var box_conditions = document.createElement('div')
+        // box_conditions.className = 'summary-box-conditions'
 
-        var div = document.createElement('div')
-        div.innerText = 'Tee'
-        box_conditions.appendChild(div)
+        // var div = document.createElement('div')
+        // div.innerText = 'Tee'
+        // box_conditions.appendChild(div)
 
-        var div = document.createElement('div')
-        div.innerText = player.tee
-        box_conditions.appendChild(div)
+        // var div = document.createElement('div')
+        // div.innerText = player.tee
+        // box_conditions.appendChild(div)
 
-        var div = document.createElement('div')
-        div.innerText = 'Hcp'
-        box_conditions.appendChild(div)
+        // var div = document.createElement('div')
+        // div.innerText = 'Hcp'
+        // box_conditions.appendChild(div)
 
-        var div = document.createElement('div')
-        div.innerText = player.hcp
-        box_conditions.appendChild(div)
+        // var div = document.createElement('div')
+        // div.innerText = player.hcp
+        // box_conditions.appendChild(div)
 
-        var div = document.createElement('div')
-        div.innerText = 'SHcp'
-        box_conditions.appendChild(div)
+        // var div = document.createElement('div')
+        // div.innerText = 'SHcp'
+        // box_conditions.appendChild(div)
 
-        var div = document.createElement('div')
-        div.innerText = player.shcp
-        box_conditions.appendChild(div)
+        // var div = document.createElement('div')
+        // div.innerText = player.shcp
+        // box_conditions.appendChild(div)
 
-        box.appendChild(box_conditions)
+        // box.appendChild(box_conditions)
 
         // 
         var box_calc = document.createElement('div')
@@ -69,7 +69,7 @@ function summaryPage() {
             div1.appendChild(div)
 
             var div = document.createElement('div')
-            div.innerText = 'Z'
+            div.innerText = player.total_strokes
             div1.appendChild(div)
 
             // var div = document.createElement('div')
@@ -111,7 +111,7 @@ function summaryPage() {
             div3.appendChild(div)
 
             var div = document.createElement('div')
-            div.innerText = 'X'
+            div.innerText = player.total_stableford
             div3.appendChild(div)
         box_calc.appendChild(div3)
 
