@@ -20,25 +20,14 @@ function summaryPage() {
         var box = document.createElement('div')
         box.className = 'summary-box'
 
-        // var box_image = document.createElement('div')
-        // box_image.className = 'summary-box-image'
-            
-        // Image
-        // if(player.image !== undefined) {
-        //     console.log(player.image)
-        //     box_image.style.backgroundImage = 'url(../media/' + player.image + ')'
-        // }
-
-        // box.appendChild(box_image)
-
-        var box_data = document.createElement('div')
-        box_data.className = 'summary-box-data'
+        // var box_data = document.createElement('div')
+        // box_data.className = 'summary-box-data'
 
         var box_name = document.createElement('div')
         box_name.className = 'summary-box-name'
         box_name.innerText = player.fname + ' ' + player.lname
 
-        box_data.appendChild(box_name)     
+        box.appendChild(box_name)     
 
         var box_conditions = document.createElement('div')
         box_conditions.className = 'summary-box-conditions'
@@ -67,7 +56,7 @@ function summaryPage() {
         div.innerText = player.shcp
         box_conditions.appendChild(div)
 
-        box_data.appendChild(box_conditions)
+        box.appendChild(box_conditions)
 
         var box_calc = document.createElement('div')
         box_calc.className = 'summary-box-calculations'
@@ -121,8 +110,7 @@ function summaryPage() {
             div3.appendChild(div)
         box_calc.appendChild(div3)
 
-        box_data.appendChild(box_calc)
-        box.appendChild(box_data)
+        box.appendChild(box_calc)
         content.appendChild(box)
     })
 
