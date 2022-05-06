@@ -319,26 +319,7 @@ input[type=radio], input[type=checkbox] {
     font-size: 2rem;
 }
 
-.eagle {
-    color: white;
-    background-color: yellow;
-}
-.birdie {
-    color: white;
-    background-color: green;
-}
-.bogey {
-    color: white;
-    background-color: blue;
-}
-.double-bogey {
-    color: white;
-    background-color: red;
-}
-.trippel-bogey {
-    color: white;
-    background-color: black;
-}
+
 
 /* 
 .summary-box-div1 {

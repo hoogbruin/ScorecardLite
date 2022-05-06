@@ -158,10 +158,10 @@
 } */
 .modal-card-row > div > div {
     padding: 0.5rem 0;
-    border-bottom: 1px solid #1a8068;
+    border-bottom: 1px solid #555;
 }
 .modal-card-row > div > div:first-of-type {
-    background-color: #1a8068;
+    background-color: #555;
     color: #eee;
     font-weight: bold;
 }
@@ -177,7 +177,7 @@
 
     font-weight: bold;
     color: #eee;
-    background-color: #1a8068;
+    background-color: #555;
 }
 #modal-card-summary > div {
     flex: 1;
