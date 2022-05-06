@@ -1,10 +1,11 @@
+<!DOCTYPE html>
 <html>
 
 <head>
     <title>ScorecardLite</title>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#000000">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -18,53 +19,52 @@
 
 <body>
     <div id="app">
-        <div class="header" id="hole-header">
-            <div>
-                <div>Par</div>
-                <div>4</div>
-            </div>
-            <div>1</div>
-            <div>
-                <div>Index</div>
-                <div>7</div>
-            </div>
+        <div class="header" id="summary-header">
+            <div>Österlens GK - Lilla Vik</div>
+            <div>2022-05-06</div>
         </div>
-        <form class="content" id="hole-content">
-            <div class="player-box">
-                <div class="p-b-header">Kristoffer Wittström</div>
-                <div class="p-b-content">
-                    <div>
-                        <div class="p-b-hcp-header">Slag</div>
-                        <div class="p-b-hcp">1</div>
+        <div class="content" id="summary-content">
+            <div class="summary-box">
+                <div class="summary-box-name">Nils-Jakob Olsson</div>
+                <div class="summary-box-calculations">
+                    <div class="summary-box-div1">
+                        <div>Slag</div>
+                        <div>92</div>
                     </div>
-                    <div><input class="p-b-input" type="text" readonly="true"></div>
-                    <div>
-                        <div>
-                            <div class="p-b-points-header">Hål</div>
-                            <div class="p-b-points">0p</div>
-                        </div>
-                        <div>
-                            <div class="p-b-net-header">Tot</div>
-                            <div class="p-b-net">-2p</div>
-                        </div>
+                    <div class="summary-box-div2">
+                        <div>Poäng</div>
+                        <div>29</div>
+                    </div>
+                    <div class="summary-box-div3">
+                        <div>Hcp-res</div>
+                        <div>17.3</div>
                     </div>
                 </div>
             </div>
-        </form>
-        <div class="footer" id="hole-footer"><button type="button" class="btn-menu-item" style="visibility: hidden;"><i
-                    class="bi bi-caret-left"></i></button><button type="button" class="btn-menu-item"><i
-                    class="bi bi-list"></i></button><button type="button" class="btn-menu-item" id="btn_next"><i
-                    class="bi bi-caret-right"></i></button></div>
-
-
-
-
-                    
+            <div class="summary-box">
+                <div class="summary-box-name">Martin Persson</div>
+                <div class="summary-box-calculations">
+                    <div class="summary-box-div1">
+                        <div>Slag</div>
+                        <div>89</div>
+                    </div>
+                    <div class="summary-box-div2">
+                        <div>Poäng</div>
+                        <div>33</div>
+                    </div>
+                    <div class="summary-box-div3">
+                        <div>Hcp-res</div>
+                        <div>14.7</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer"><button type="button" class="btn-menu-item"><i class="bi bi-pencil"></i></button><button
+                type="button" class="btn-menu-item"><i class="bi bi-list"></i></button><button type="button"
+                class="btn-menu-item"><i class="bi bi-box-arrow-right"></i></button></div>
         <div id="modal-card-modal">
-            <!-- <div id="modal-card-window"> -->
-            <div id="modal-card-header">Kristoffer Wittström</div>
+            <div id="modal-card-header">Martin Persson</div>
             <div id="modal-card">
-
                 <div class="modal-card-row">
                     <div>
                         <div>Hål</div>
@@ -75,73 +75,73 @@
                     </div>
                     <div>
                         <div>1</div>
-                        <div>7</div>
+                        <div>11</div>
                         <div>4</div>
-                        <div>8</div>
-                        <div>0</div>
+                        <div>4</div>
+                        <div>3</div>
                     </div>
                     <div>
                         <div>2</div>
-                        <div>1</div>
                         <div>3</div>
-                        <div>&nbsp;</div>
-                        <div>&nbsp;</div>
+                        <div>5</div>
+                        <div>5</div>
+                        <div>3</div>
                     </div>
                     <div>
                         <div>3</div>
-                        <div>13</div>
-                        <div>4</div>
-                        <div>&nbsp;</div>
-                        <div>&nbsp;</div>
-                    </div>
-                    <div>
-                        <div>4</div>
                         <div>9</div>
+                        <div>3</div>
+                        <div>3</div>
+                        <div>3</div>
+                    </div>
+                    <div>
                         <div>4</div>
-                        <div>&nbsp;</div>
-                        <div>&nbsp;</div>
+                        <div>13</div>
+                        <div>5</div>
+                        <div>5</div>
+                        <div>2</div>
                     </div>
                     <div>
                         <div>5</div>
-                        <div>11</div>
-                        <div>5</div>
-                        <div>&nbsp;</div>
-                        <div>&nbsp;</div>
+                        <div>7</div>
+                        <div>4</div>
+                        <div class="trippel-bogey">9</div>
+                        <div>-</div>
                     </div>
                     <div>
                         <div>6</div>
-                        <div>17</div>
-                        <div>3</div>
-                        <div>&nbsp;</div>
-                        <div>&nbsp;</div>
+                        <div>1</div>
+                        <div>4</div>
+                        <div class="trippel-bogey">7</div>
+                        <div>-</div>
                     </div>
                     <div>
                         <div>7</div>
-                        <div>15</div>
-                        <div>4</div>
-                        <div>&nbsp;</div>
-                        <div>&nbsp;</div>
+                        <div>17</div>
+                        <div>3</div>
+                        <div>3</div>
+                        <div>2</div>
                     </div>
                     <div>
                         <div>8</div>
                         <div>5</div>
                         <div>4</div>
-                        <div>&nbsp;</div>
-                        <div>&nbsp;</div>
+                        <div class="bogey">5</div>
+                        <div>2</div>
                     </div>
                     <div>
                         <div>9</div>
-                        <div>3</div>
-                        <div>5</div>
-                        <div>&nbsp;</div>
-                        <div>&nbsp;</div>
+                        <div>15</div>
+                        <div>4</div>
+                        <div class="bogey">5</div>
+                        <div>1</div>
                     </div>
                     <div>
                         <div>UT</div>
                         <div>&nbsp;</div>
                         <div>36</div>
-                        <div>8</div>
-                        <div>0</div>
+                        <div>46</div>
+                        <div>16</div>
                     </div>
                 </div>
                 <div class="modal-card-row">
@@ -154,82 +154,160 @@
                     </div>
                     <div>
                         <div>10</div>
-                        <div>18</div>
-                        <div>3</div>
-                        <div>&nbsp;</div>
-                        <div>&nbsp;</div>
+                        <div>16</div>
+                        <div>5</div>
+                        <div>5</div>
+                        <div>2</div>
                     </div>
                     <div>
                         <div>11</div>
-                        <div>2</div>
+                        <div>8</div>
                         <div>4</div>
-                        <div>&nbsp;</div>
-                        <div>&nbsp;</div>
+                        <div class="double-bogey">6</div>
+                        <div>1</div>
                     </div>
                     <div>
                         <div>12</div>
-                        <div>14</div>
-                        <div>5</div>
-                        <div>&nbsp;</div>
-                        <div>&nbsp;</div>
+                        <div>4</div>
+                        <div>4</div>
+                        <div class="double-bogey">6</div>
+                        <div>1</div>
                     </div>
                     <div>
                         <div>13</div>
-                        <div>10</div>
+                        <div>2</div>
                         <div>4</div>
-                        <div>&nbsp;</div>
-                        <div>&nbsp;</div>
+                        <div>4</div>
+                        <div>3</div>
                     </div>
                     <div>
                         <div>14</div>
-                        <div>12</div>
-                        <div>4</div>
-                        <div>&nbsp;</div>
-                        <div>&nbsp;</div>
+                        <div>18</div>
+                        <div>3</div>
+                        <div class="bogey">4</div>
+                        <div>1</div>
                     </div>
                     <div>
                         <div>15</div>
-                        <div>16</div>
-                        <div>3</div>
-                        <div>&nbsp;</div>
-                        <div>&nbsp;</div>
+                        <div>14</div>
+                        <div>4</div>
+                        <div class="bogey">5</div>
+                        <div>1</div>
                     </div>
                     <div>
                         <div>16</div>
-                        <div>4</div>
-                        <div>4</div>
-                        <div>&nbsp;</div>
-                        <div>&nbsp;</div>
+                        <div>10</div>
+                        <div>3</div>
+                        <div class="bogey">4</div>
+                        <div>2</div>
                     </div>
                     <div>
                         <div>17</div>
                         <div>6</div>
-                        <div>4</div>
-                        <div>&nbsp;</div>
-                        <div>&nbsp;</div>
+                        <div>5</div>
+                        <div>5</div>
+                        <div>3</div>
                     </div>
                     <div>
                         <div>18</div>
-                        <div>8</div>
+                        <div>12</div>
                         <div>4</div>
-                        <div>&nbsp;</div>
-                        <div>&nbsp;</div>
+                        <div>4</div>
+                        <div>3</div>
                     </div>
                     <div>
-                        <div>IN</div>
+                        <div>UT</div>
                         <div>&nbsp;</div>
-                        <div>35</div>
-                        <div>0</div>
-                        <div>0</div>
+                        <div>36</div>
+                        <div>43</div>
+                        <div>17</div>
                     </div>
                 </div>
-
+                <div id="modal-card-summary">
+                    <div>89 slag</div>
+                    <div>33 poäng</div>
+                </div>
             </div>
-            <!-- </div> -->
+
+            <canvas id="bar-chart" style="max-width: 100%;"> 
+
+
+
+            </canvas>
         </div>
     </div>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.js" integrity="sha512-Lii3WMtgA0C0qmmkdCpsG0Gjr6M0ajRyQRQSbTF6BsrVh/nhZdHpVZ76iMIPvQwz1eoXC3DmAg9K51qT5/dEVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0/dist/chartjs-plugin-datalabels.min.js" integrity="sha256-RgW6ICRcHgz1vaGkL5egQAqmkWxGbwa2E3Boz/3CapM=" crossorigin="anonymous"></script> -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    
+    <script>
 
-    <script src="js/data/Courses.js"></script>
+        var ctx = document.getElementById('bar-chart');
+
+
+        var y = [1, 3, 5, 5, 2, 1]
+        var x = ['-Eagle', 'Birdie', 'Par', 'Bogey', 'DBogey', 'TBogey+']
+
+        var z = {'Eagle-': 1, Birdie: 2, Par: 4, Bogey: 3, DBogey: 2, 'TBogey+': 0}
+
+        Chart.register(ChartDataLabels);
+
+        var myChart = new Chart(ctx, {
+            plugins: [ChartDataLabels],
+            type: 'bar',
+            data: {
+                // labels: z,
+                datasets: [{
+                    datalabels: {
+        color: '#FFCE56'
+      },
+                        data: z,
+                        backgroundColor: [
+                            "rgba(255, 99, 132, 0.2)",
+                            "rgba(54, 162, 235, 0.2)",
+                            "rgba(255, 206, 86, 0.2)",
+                            "rgba(75, 192, 192, 0.2)",
+                            "rgba(153, 102, 255, 0.2)"
+                        ],
+                    }]
+            },
+            options: {
+                // maintainAspectRatio: false,
+                // responsive: false
+                plugins: {
+                    datalabels: {
+        color: 'black'
+      },
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+
+                        grid: {
+                            display: true
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: true
+                        }
+                    }
+                }       
+            }
+        })
+
+
+
+
+    </script>
+
+
+
+    <!-- <script src="js/data/Courses.js"></script>
     <script src="js/data/Users.js"></script>
     <script src="js/functions/objects.js"></script>
     <script src="js/functions/scripts.js"></script>
@@ -249,7 +327,7 @@
     <script src="js/pages/setupHandicaps.js"></script>
     <script src="js/pages/setupTees.js"></script>
     <script src="js/pages/holeView.js"></script>
-    <script src="js/pages/startApp.js"></script>
+    <script src="js/pages/startApp.js"></script> -->
 
 
 </body>

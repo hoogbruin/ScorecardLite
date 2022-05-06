@@ -15,235 +15,127 @@ function scorecardModal(player) {
     var card = document.createElement('div')
     card.id = 'modal-card'
 
-    // OUT scores 1 row
-    var row = document.createElement('div')
-    row.className = 'modal-card-row'
+    for(var x = 0; x <= 9; x += 9) {
+        var row = document.createElement('div')
+        row.className = 'modal-card-row'
 
-    var col = document.createElement('div')
-
-    var div = document.createElement('div')
-    div.innerText = 'Hål'
-    col.appendChild(div)
-
-    var div = document.createElement('div')
-    div.innerText = 'Index'
-    col.appendChild(div)
-
-    var div = document.createElement('div')
-    div.innerText = 'Par'
-    col.appendChild(div)
-
-    var div = document.createElement('div')
-    div.innerText = 'Slag'
-    col.appendChild(div)
-
-    var div = document.createElement('div')
-    div.innerText = 'Poäng'
-    col.appendChild(div)
-
-    row.appendChild(col)
-
-    var parCounter = 0
-    var strokesCounter = 0
-    var pointsCounter = 0
-
-    // Holes 1 row
-    for (var i = 1; i <= 9; i++) {
         var col = document.createElement('div')
 
-        // Hitta course.holes och scorecard.player.score
-        var holeInfo = course.holes.find(h => h.number == i)
-        var holeScore = player.score.find(s => s.hole == i)
-
         var div = document.createElement('div')
-        div.innerText = i
+        div.innerText = 'Hål'
         col.appendChild(div)
 
         var div = document.createElement('div')
-        div.innerText = holeInfo.index
+        div.innerText = 'Index'
         col.appendChild(div)
 
         var div = document.createElement('div')
-        div.innerText = holeInfo.par
+        div.innerText = 'Par'
         col.appendChild(div)
 
-        parCounter += holeInfo.par
+        var div = document.createElement('div')
+        div.innerText = 'Slag'
+        col.appendChild(div)
 
-        if (holeScore !== undefined) {
-            var div = document.createElement('div')
-                if(holeScore.strokes - holeInfo.par < 0) {
-                    if(holeScore.strokes - holeInfo.par == -1) {
-                        div.className = 'birdie'
-                    } else {
-                        div.className = 'eagle'
-                    }
-                } else if(holeScore.strokes - holeInfo.par > 0) {
-                    if(holeScore.strokes - holeInfo.par == 1) {
-                        div.className = 'bogey'
-                    } else if(holeScore.strokes - holeInfo.par == 2) {
-                        div.className = 'double-bogey'
-                    } else {
-                        div.className = 'trippel-bogey'
-                    }
-                }
-
-                div.innerText = holeScore.strokes
-            col.appendChild(div)
-
-            var div = document.createElement('div')
-                div.innerText = holeScore.points == 0 ? '-' : holeScore.points
-            col.appendChild(div)
-
-            strokesCounter += parseInt(holeScore.strokes)
-            pointsCounter += holeScore.points
-        } else {
-            var div = document.createElement('div')
-            div.innerHTML = '&nbsp;'
-            col.appendChild(div)
-
-            var div = document.createElement('div')
-            div.innerHTML = '&nbsp;'
-            col.appendChild(div)
-
-            strokesCounter += 0
-            pointsCounter += 0
-        }
+        var div = document.createElement('div')
+        div.innerText = 'Poäng'
+        col.appendChild(div)
 
         row.appendChild(col)
-    }
 
-    // OUT summary 1 row
-    var col = document.createElement('div')
+        var parCounter = 0
+        var strokesCounter = 0
+        var pointsCounter = 0
 
-    var div = document.createElement('div')
-    div.innerText = 'UT'
-    col.appendChild(div)
+        for (var i = 1; i <= 9; i++) {
+            var col = document.createElement('div')
 
-    var div = document.createElement('div')
-    div.innerHTML = '&nbsp;'
-    col.appendChild(div)
+            // Hitta course.holes och scorecard.player.score
+            var holeInfo = course.holes.find(h => h.number == (i + x))
+            var holeScore = player.score.find(s => s.hole == (i + x))
 
-    var div = document.createElement('div')
-    div.innerText = parCounter
-    col.appendChild(div)
+            var div = document.createElement('div')
+            div.innerText = (i + x)
+            col.appendChild(div)
 
-    var div = document.createElement('div')
-    div.innerText = strokesCounter
-    col.appendChild(div)
+            var div = document.createElement('div')
+            div.innerText = holeInfo.index
+            col.appendChild(div)
 
-    var div = document.createElement('div')
-    div.innerText = pointsCounter
-    col.appendChild(div)
+            var div = document.createElement('div')
+            div.innerText = holeInfo.par
+            col.appendChild(div)
 
-    row.appendChild(col)
-    card.appendChild(row)
+            parCounter += holeInfo.par
 
-    // IN scores 2 row
-    var row = document.createElement('div')
-    row.className = 'modal-card-row'
+            if (holeScore !== undefined) {
+                var div = document.createElement('div')
+                    if(holeScore.strokes - holeInfo.par < 0) {
+                        if(holeScore.strokes - holeInfo.par == -1) {
+                            div.className = 'birdie'
+                        } else {
+                            div.className = 'eagle'
+                        }
+                    } else if(holeScore.strokes - holeInfo.par > 0) {
+                        if(holeScore.strokes - holeInfo.par == 1) {
+                            div.className = 'bogey'
+                        } else if(holeScore.strokes - holeInfo.par == 2) {
+                            div.className = 'double-bogey'
+                        } else {
+                            div.className = 'trippel-bogey'
+                        }
+                    }
 
-    var col = document.createElement('div')
+                    div.innerText = holeScore.strokes
+                col.appendChild(div)
 
-    var div = document.createElement('div')
-    div.innerText = 'Hål'
-    col.appendChild(div)
+                var div = document.createElement('div')
+                    div.innerText = holeScore.points == 0 ? '-' : holeScore.points
+                col.appendChild(div)
 
-    var div = document.createElement('div')
-    div.innerText = 'Index'
-    col.appendChild(div)
+                strokesCounter += parseInt(holeScore.strokes)
+                pointsCounter += holeScore.points
+            } else {
+                var div = document.createElement('div')
+                div.innerHTML = '&nbsp;'
+                col.appendChild(div)
 
-    var div = document.createElement('div')
-    div.innerText = 'Par'
-    col.appendChild(div)
+                var div = document.createElement('div')
+                div.innerHTML = '&nbsp;'
+                col.appendChild(div)
 
-    var div = document.createElement('div')
-    div.innerText = 'Slag'
-    col.appendChild(div)
+                strokesCounter += 0
+                pointsCounter += 0
+            }
 
-    var div = document.createElement('div')
-    div.innerText = 'Poäng'
-    col.appendChild(div)
+            row.appendChild(col)
+        }
 
-    row.appendChild(col)
-
-    var parCounter = 0
-    var strokesCounter = 0
-    var pointsCounter = 0
-
-    // Holes 2 row
-    for (var i = 10; i <= 18; i++) {
         var col = document.createElement('div')
 
-        // Hitta course.holes och scorecard.player.score
-        var holeInfo = course.holes.find(h => h.number == i)
-        var holeScore = player.score.find(s => s.hole == i)
-
         var div = document.createElement('div')
-        div.innerText = i
+        div.innerText = 'UT'
         col.appendChild(div)
 
         var div = document.createElement('div')
-        div.innerText = holeInfo.index
+        div.innerHTML = '&nbsp;'
         col.appendChild(div)
 
         var div = document.createElement('div')
-        div.innerText = holeInfo.par
+        div.innerText = parCounter
         col.appendChild(div)
 
-        parCounter += holeInfo.par
+        var div = document.createElement('div')
+        div.innerText = strokesCounter
+        col.appendChild(div)
 
-        if (holeScore !== undefined) {
-            var div = document.createElement('div')
-            div.innerText = holeScore.strokes
-            col.appendChild(div)
-
-            var div = document.createElement('div')
-            div.innerText = holeScore.points
-            col.appendChild(div)
-
-            strokesCounter += parseInt(holeScore.strokes)
-            pointsCounter += holeScore.points
-        } else {
-            var div = document.createElement('div')
-            div.innerHTML = '&nbsp;'
-            col.appendChild(div)
-
-            var div = document.createElement('div')
-            div.innerHTML = '&nbsp;'
-            col.appendChild(div)
-
-            strokesCounter += 0
-            pointsCounter += 0
-        }
+        var div = document.createElement('div')
+        div.innerText = pointsCounter
+        col.appendChild(div)
 
         row.appendChild(col)
+        card.appendChild(row)
     }
-
-    // IN summary 2 row
-    var col = document.createElement('div')
-
-    var div = document.createElement('div')
-    div.innerText = 'IN'
-    col.appendChild(div)
-
-    var div = document.createElement('div')
-    div.innerHTML = '&nbsp;'
-    col.appendChild(div)
-
-    var div = document.createElement('div')
-    div.innerText = parCounter
-    col.appendChild(div)
-
-    var div = document.createElement('div')
-    div.innerText = strokesCounter
-    col.appendChild(div)
-
-    var div = document.createElement('div')
-    div.innerText = pointsCounter
-    col.appendChild(div)
-
-    row.appendChild(col)
-    card.appendChild(row)
 
     // TOT Summary
     var summary = document.createElement('div')
