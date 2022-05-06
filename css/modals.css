@@ -115,7 +115,7 @@
     color: #555;
     background-color: #eee;
 }
-#modal-card-header {
+.modal-card-header {
     height: calc(100vh*3/24);
     /* flex: 3; */
     display: flex;
@@ -188,24 +188,24 @@
 }
 .eagle {
     color: white;
-    background-color: #175219;
+    background-color: #0b5c38;
 
 }
 .birdie {
     color: white;
-    background-color: #2a9e2e;
+    background-color: #50bd61;
 }
 .bogey {
     color: white;
-    background-color: #ff3d3d;
+    background-color: #03b7f5;
 }
 .double-bogey {
     color: white;
-    background-color: #862121;
+    background-color: #01688c;
 }
 .trippel-bogey {
     color: white;
-    background-color: #581717;
+    background-color: #003446;
 }
 
 /************************************************************** Menu modal */

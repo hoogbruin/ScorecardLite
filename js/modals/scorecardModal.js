@@ -7,13 +7,15 @@ function scorecardModal(player) {
 
     // Modal header
     var header = document.createElement('div')
-    header.id = 'modal-card-header'
+    header.className = 'modal-card-header'
     header.innerText = player.fname + ' ' + player.lname
     modal.appendChild(header)
 
     // Card
     var card = document.createElement('div')
     card.id = 'modal-card'
+
+    var score_dist = {'Eagle-': 0, Birdie: 0, Par: 0, Bogey: 0, DBogey: 0, 'TBogey+': 0}
 
     for(var x = 0; x <= 9; x += 9) {
         var row = document.createElement('div')
@@ -73,17 +75,24 @@ function scorecardModal(player) {
                     if(holeScore.strokes - holeInfo.par < 0) {
                         if(holeScore.strokes - holeInfo.par == -1) {
                             div.className = 'birdie'
+                            score_dist.Birdie += 1
                         } else {
                             div.className = 'eagle'
+                            score_dist['Eagle-'] += 1
                         }
                     } else if(holeScore.strokes - holeInfo.par > 0) {
                         if(holeScore.strokes - holeInfo.par == 1) {
                             div.className = 'bogey'
+                            score_dist.Bogey += 1
                         } else if(holeScore.strokes - holeInfo.par == 2) {
                             div.className = 'double-bogey'
+                            score_dist.DBogey += 1
                         } else {
                             div.className = 'trippel-bogey'
+                            score_dist['TBogey+'] += 1
                         }
+                    } else {
+                        score_dist.Par += 1
                     }
 
                     div.innerText = holeScore.strokes
@@ -158,8 +167,8 @@ function scorecardModal(player) {
     // div.innerText = 'Brutto Slag, Netto Slag, Tot Poäng, Hcp-resultat, Justerad bruttoscore '
     // summary.appendChild(div)
 
-
     var div = document.createElement('div')
+        div.className = 'modal-card-header'
         div.innerText = 'Scorefördelning'
     modal.appendChild(div)
 
@@ -167,19 +176,20 @@ function scorecardModal(player) {
         bar_chart.id = 'bar-chart'
     modal.appendChild(bar_chart)
 
-    var z = { 'Eagle-': 1, Birdie: 2, Par: 4, Bogey: 3, DBogey: 2, 'TBogey+': 0 }
+    // var z = { 'Eagle-': 1, Birdie: 2, Par: 4, Bogey: 3, DBogey: 2, 'TBogey+': 0 }
 
     var c1 = new Chart(bar_chart, {
         type: 'bar',
         data: {
             datasets: [{
-                data: z,
+                data: score_dist,
                 backgroundColor: [
-                    "rgba(255, 99, 132, 0.2)",
-                    "rgba(54, 162, 235, 0.2)",
-                    "rgba(255, 206, 86, 0.2)",
-                    "rgba(75, 192, 192, 0.2)",
-                    "rgba(153, 102, 255, 0.2)"
+                    "#0b5c38",
+                    "#50bd61",
+                    "#555555",
+                    "#03b7f5",
+                    "#01688c",
+                    "#003446"
                 ],
             }]
         },
@@ -205,12 +215,13 @@ function scorecardModal(player) {
     })
 
     var div = document.createElement('div')
+        div.className = 'modal-card-header'
         div.innerText = 'Scoreutveckling'
     modal.appendChild(div)
 
-    var line_chart = document.createElement('canvas')
-        line_chart.id = 'line-chart'
-    modal.appendChild(bar_chart)
+    // var line_chart = document.createElement('canvas')
+    //     line_chart.id = 'line-chart'
+    // modal.appendChild(bar_chart)
 
     // Events
     modal.addEventListener('click', function (e) {
