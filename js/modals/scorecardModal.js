@@ -158,10 +158,64 @@ function scorecardModal(player) {
     // div.innerText = 'Brutto Slag, Netto Slag, Tot Poäng, Hcp-resultat, Justerad bruttoscore '
     // summary.appendChild(div)
 
-    app.appendChild(modal)
+
+    var div = document.createElement('div')
+        div.innerText = 'Scorefördelning'
+    modal.appendChild(div)
+
+    var bar_chart = document.createElement('canvas')
+        bar_chart.id = 'bar-chart'
+    modal.appendChild(bar_chart)
+
+    var z = { 'Eagle-': 1, Birdie: 2, Par: 4, Bogey: 3, DBogey: 2, 'TBogey+': 0 }
+
+    var c1 = new Chart(bar_chart, {
+        type: 'bar',
+        data: {
+            datasets: [{
+                data: z,
+                backgroundColor: [
+                    "rgba(255, 99, 132, 0.2)",
+                    "rgba(54, 162, 235, 0.2)",
+                    "rgba(255, 206, 86, 0.2)",
+                    "rgba(75, 192, 192, 0.2)",
+                    "rgba(153, 102, 255, 0.2)"
+                ],
+            }]
+        },
+        options: {
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    enabled: false
+                }
+            },
+            scales: {
+                y: {
+                },
+                x: {
+                    grid: {
+                        display: false
+                    }
+                }
+            }
+        }
+    })
+
+    var div = document.createElement('div')
+        div.innerText = 'Scoreutveckling'
+    modal.appendChild(div)
+
+    var line_chart = document.createElement('canvas')
+        line_chart.id = 'line-chart'
+    modal.appendChild(bar_chart)
 
     // Events
     modal.addEventListener('click', function (e) {
         app.removeChild(modal)
     })
+
+    app.appendChild(modal)
 }
