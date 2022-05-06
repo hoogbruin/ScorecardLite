@@ -269,7 +269,7 @@ input[type=radio], input[type=checkbox] {
     height: 25%;
 
     font-size: 1rem;
-    border-bottom: 2px solid #555;
+    border-bottom: 1px dotted #555;
 }
 .summary-box:nth-of-type(4) {
     border-bottom: none;
@@ -317,6 +317,27 @@ input[type=radio], input[type=checkbox] {
     align-items: center;
 
     font-size: 2rem;
+}
+
+.eagle {
+    color: white;
+    background-color: yellow;
+}
+.birdie {
+    color: white;
+    background-color: green;
+}
+.bogey {
+    color: white;
+    background-color: blue;
+}
+.double-bogey {
+    color: white;
+    background-color: red;
+}
+.trippel-bogey {
+    color: white;
+    background-color: black;
 }
 
 /* 

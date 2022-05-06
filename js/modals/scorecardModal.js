@@ -71,11 +71,27 @@ function scorecardModal(player) {
 
         if (holeScore !== undefined) {
             var div = document.createElement('div')
-            div.innerText = holeScore.strokes
+                if(holeScore.strokes - holeInfo.par < 0) {
+                    if(holeScore.strokes - holeInfo.par == -1) {
+                        div.className = 'birdie'
+                    } else {
+                        div.className = 'eagle'
+                    }
+                } else if(holeScore.strokes - holeInfo.par > 0) {
+                    if(holeScore.strokes - holeInfo.par == 1) {
+                        div.className = 'bogey'
+                    } else if(holeScore.strokes - holeInfo.par == 2) {
+                        div.className = 'double-bogey'
+                    } else {
+                        div.className = 'trippel-bogey'
+                    }
+                }
+
+                div.innerText = holeScore.strokes
             col.appendChild(div)
 
             var div = document.createElement('div')
-            div.innerText = holeScore.points == 0 ? '-' : holeScore.points
+                div.innerText = holeScore.points == 0 ? '-' : holeScore.points
             col.appendChild(div)
 
             strokesCounter += parseInt(holeScore.strokes)

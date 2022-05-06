@@ -7,7 +7,7 @@ function summaryPage() {
     var course_name = document.createElement('div')
     course_name.innerText = course.name
     var date = document.createElement('div')
-    date.innerText = scorecard.date
+    date.innerText = new Date(scorecard.date).toLocaleDateString()
     header.appendChild(course_name)
     header.appendChild(date)
 
@@ -20,45 +20,12 @@ function summaryPage() {
         var box = document.createElement('div')
         box.className = 'summary-box'
 
-        // var box_data = document.createElement('div')
-        // box_data.className = 'summary-box-data'
-
         var box_name = document.createElement('div')
         box_name.className = 'summary-box-name'
         box_name.innerText = player.fname + ' ' + player.lname
 
         box.appendChild(box_name)     
-
-        // var box_conditions = document.createElement('div')
-        // box_conditions.className = 'summary-box-conditions'
-
-        // var div = document.createElement('div')
-        // div.innerText = 'Tee'
-        // box_conditions.appendChild(div)
-
-        // var div = document.createElement('div')
-        // div.innerText = player.tee
-        // box_conditions.appendChild(div)
-
-        // var div = document.createElement('div')
-        // div.innerText = 'Hcp'
-        // box_conditions.appendChild(div)
-
-        // var div = document.createElement('div')
-        // div.innerText = player.hcp
-        // box_conditions.appendChild(div)
-
-        // var div = document.createElement('div')
-        // div.innerText = 'SHcp'
-        // box_conditions.appendChild(div)
-
-        // var div = document.createElement('div')
-        // div.innerText = player.shcp
-        // box_conditions.appendChild(div)
-
-        // box.appendChild(box_conditions)
-
-        // 
+       
         var box_calc = document.createElement('div')
         box_calc.className = 'summary-box-calculations'
 
@@ -71,51 +38,32 @@ function summaryPage() {
             var div = document.createElement('div')
             div.innerText = player.total_strokes
             div1.appendChild(div)
-
-            // var div = document.createElement('div')
-            //     var div_header = document.createElement('div')
-            //     div_header.innerText = 'Brutto'
-            //     div.appendChild(div_header)    
-
-            //     var div_value = document.createElement('div')
-            //     div_value.innerText = 'X'
-            //     div.appendChild(div_value)
-            // div1.appendChild(div)
-
-            // var div = document.createElement('div')
-            //     var div_header = document.createElement('div')
-            //     div_header.innerText = 'Netto'
-            //     div.appendChild(div_header)    
-
-            //     var div_value = document.createElement('div')
-            //     div_value.innerText = 'Y'
-            //     div.appendChild(div_value)
-            // div1.appendChild(div)
         box_calc.appendChild(div1)
-        
+
         var div2 = document.createElement('div')
         div2.className = 'summary-box-div2'
             var div = document.createElement('div')
-            div.innerText = 'Hcp-res'
+            div.innerText = 'Poäng'
             div2.appendChild(div)
 
             var div = document.createElement('div')
-            div.innerText = 'Z'
+            div.innerText = player.total_stableford
             div2.appendChild(div)
         box_calc.appendChild(div2)
 
         var div3 = document.createElement('div')
         div3.className = 'summary-box-div3'
             var div = document.createElement('div')
-            div.innerText = 'Poäng'
+            div.innerText = 'Hcp-res'
             div3.appendChild(div)
 
             var div = document.createElement('div')
-            div.innerText = player.total_stableford
+            var tee = course.tees.find(t => t.name == player.tee)
+            var cr = tee[player.gender].course_rating
+            var sr = tee[player.gender].slope_rating
+            div.innerText = calculateHcpResult(cr, sr, course.par, player.shcp, player.total_stableford, pcc = 0)
             div3.appendChild(div)
         box_calc.appendChild(div3)
-
-        // 
         
         box.addEventListener('click', function(e) {
             scorecardModal(player)

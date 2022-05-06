@@ -185,6 +185,27 @@
     padding: 0.5rem 0;
     text-align: center;
 }
+.eagle {
+    color: white;
+    background-color: #175219;
+
+}
+.birdie {
+    color: white;
+    background-color: #2a9e2e;
+}
+.bogey {
+    color: white;
+    background-color: #ff3d3d;
+}
+.double-bogey {
+    color: white;
+    background-color: #862121;
+}
+.trippel-bogey {
+    color: white;
+    background-color: #581717;
+}
 
 /************************************************************** Menu modal */
 #menu-modal {

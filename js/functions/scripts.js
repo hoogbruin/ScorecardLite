@@ -66,3 +66,9 @@ function addDecimal(spinner) {
 function subDecimal(spinner) {
     spinner.value = (parseFloat(spinner.value) - 0.1).toFixed(1);
 }
+
+function calculateHcpResult(course_rating, slope_rating, par, shcp, points, pcc = 0) {
+    var result = (113 / slope_rating) * (par + shcp - (points - 36) - course_rating - pcc)
+    return result.toFixed(1)
+    // (113 ÷ slopevärde) * (par + spelhcp - (erhållna poäng - 36) - course rating - PCC)
+}
