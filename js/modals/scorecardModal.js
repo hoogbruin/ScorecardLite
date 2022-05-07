@@ -224,9 +224,11 @@ function scorecardModal(player) {
             },
             scales: {
                 y: {
-                    drawBorder: false,
                     grid: {
-                        display: false
+                        drawBorder: false,
+                        border: 0,
+                        display: false,
+                        // drawBorder: false,
                     },
                     ticks: {
                         display: false
@@ -234,6 +236,7 @@ function scorecardModal(player) {
                 },
                 x: {
                     grid: {
+                        
                         borderColor: '#555',
                         display: false
                     }
