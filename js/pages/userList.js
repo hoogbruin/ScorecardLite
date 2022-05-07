@@ -27,7 +27,10 @@ function userList() {
 
             user_item.addEventListener('click', function() {
                 // console.log(user)
-                editPlayer(user)
+                editPlayer(function() {
+                    userList()
+                }, user)
+                // editPlayer(user)
             })
 
             content.appendChild(user_item)

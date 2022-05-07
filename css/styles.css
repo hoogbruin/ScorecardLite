@@ -25,7 +25,8 @@ body {
 
 /*********************************************** Base layout */
 .header {
-    flex: 3;
+    /* flex: 3; */
+    height: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,14 +41,16 @@ body {
     border-bottom: 2px solid #555;
 }
 .content {
-    flex: 18;
+    /* flex: 18; */
+    height: 80%;
 
     margin: 0 0.5rem;
 
     font-size: 1.25rem;
 }
 .footer {
-    flex: 3;
+    /* flex: 3; */
+    height: 10%;
     display: flex;
     justify-content: space-between;
 
@@ -156,14 +159,16 @@ body {
 
 /* Perfect ************************************************** homeView */
 #home-header {
-    flex: 5;
+    /* flex: 5; */
+    height: 20%;
     align-items: flex-end;
 
     font-size: 2.5rem;
     border: none;
 }
 #home-content {
-    flex: 16;
+    height: 70%;
+    /* flex: 16; */
 
     display: flex;
     justify-content: center;
@@ -355,7 +360,8 @@ input[type=radio], input[type=checkbox] {
 
 /*Perfect  ************************************************** holeView */
 #hole-header {
-    flex: 6;
+    /* flex: 6; */
+    height: 25%;
 
     font-size: 1.25rem;
 }
@@ -368,7 +374,8 @@ input[type=radio], input[type=checkbox] {
     font-size: 6.5rem;
 }
 #hole-content {
-    flex: 15;    
+    height: 65%;
+    /* flex: 15;     */
 }
 
 .player-box {

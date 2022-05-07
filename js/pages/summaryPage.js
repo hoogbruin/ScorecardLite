@@ -1,4 +1,4 @@
-function summaryPage() {
+function summaryPage(callback) {
     
     // Header
     var header = document.createElement('div')
@@ -98,7 +98,8 @@ function summaryPage() {
     btn_exit.className = 'btn-menu-item'
     btn_exit.innerHTML = '<i class="bi bi-box-arrow-right"></i>'
     btn_exit.addEventListener('click', function () {
-        startPage()
+        // startPage()
+        callback()
     })
 
     footer.appendChild(btn_edit)

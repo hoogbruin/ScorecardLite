@@ -47,14 +47,10 @@ function setupPlayers() {
     btn_user.className = 'btn-menu-item'
     btn_user.innerHTML = '<i class="bi bi-person-plus"></i>'
     btn_user.addEventListener('click', function (event) {
-        editPlayer()
+        editPlayer(function() {
+            setupPlayers()
+        })
     })
-
-
-
-
-
-
 
     var btn_next = document.createElement('button')
     btn_next.type = 'submit'

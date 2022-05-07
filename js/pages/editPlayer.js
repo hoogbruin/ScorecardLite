@@ -1,4 +1,4 @@
-function editPlayer(player = null) {
+function editPlayer(callback, player = null) {
     var isNew = (player == null)
 
     // Header
@@ -94,7 +94,7 @@ function editPlayer(player = null) {
         btn_delete.addEventListener('click', function () {
             if(confirm('Är du säker?')) {
                 deleteUser(player)
-                userList()
+                callback()
             }
         })
         footer.appendChild(btn_delete)
@@ -105,7 +105,8 @@ function editPlayer(player = null) {
     btn_cancel.className = 'btn-menu-item'
     btn_cancel.innerHTML = '<i class="bi bi-x"></i>'
     btn_cancel.addEventListener('click', function (event) {
-        isNew ? setupPlayers() : userList()
+        // isNew ? setupPlayers() : userList()
+        callback()
     })
     footer.appendChild(btn_cancel)
 
@@ -124,10 +125,12 @@ function editPlayer(player = null) {
 
         if(isNew) {
             createUser(fname, lname, gender, hcp)
-            setupPlayers()
+            // setupPlayers()
+            callback()
         } else {
             updateUser(player.id, fname, lname, gender, hcp)
-            userList()
+            // userList()
+            callback()
         }
     })
     footer.appendChild(btn_save)

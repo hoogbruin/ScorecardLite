@@ -248,13 +248,8 @@
 
     border: 1px solid black; 
 } */
-
-#empty-space {
-    flex: 12;
-    background-color: none;
-}
 .menu-modal-item {
-    height: calc(100vh*3/24);
+    height: 12%;
     
     display: flex;
     align-items: center;
@@ -263,6 +258,28 @@
     background-color: #eee;
     border-top: 2px solid #555;    
 }
+
+.btn-modal-menu-item {
+    color: #555;
+    font-size: 1rem;
+    background-color: #eee;
+    
+    border: none;
+}
+
+
+/* Från footern */
+.btn-menu-item {
+    width: calc(100%/3);
+    /* padding: 0; */
+
+    color: #555;
+    font-size: 2.5rem;
+    background-color: #eee;
+    
+    border: none;
+}
+
 
 /* .menu-modal-item:last-of-type{
     border-bottom: none;

@@ -5,52 +5,44 @@ function homeMenuModal() {
     var modal = document.createElement('div')
     modal.id = 'menu-modal'
 
-
-    // Empty space
-    // var div = document.createElement('div')
-    // // div.className = 'menu-modal-item'
-    // div.id = 'empty-space'
-    // modal.appendChild(div)
-
-
     // Mina Scorekort
-    var div = document.createElement('div')
-    div.className = 'menu-modal-item'
-    div.innerText = 'Mina Scorekort'
-    div.addEventListener('click', function() {
+    var btn = document.createElement('button')
+    btn.className = 'btn-modal-menu-item'
+    btn.innerText = 'Mina Scorekort'
+    btn.addEventListener('click', function() {
         scorecardList()
     })
-    modal.appendChild(div)
+    modal.appendChild(btn)
 
     // Hantera Spelare
-    var div = document.createElement('div')
-    div.className = 'menu-modal-item'
-    div.innerText = 'Hantera Spelare'
-    div.addEventListener('click', function() {
+    var btn = document.createElement('button')
+    btn.className = 'btn-modal-menu-item'
+    btn.innerText = 'Hantera Spelare'
+    btn.addEventListener('click', function() {
         userList()
     })
-    modal.appendChild(div)
+    modal.appendChild(btn)
 
     // Rensa LocalStorage
-    var div = document.createElement('div')
-    div.className = 'menu-modal-item'
-    div.innerText = 'Töm LocalStorage'
-    div.addEventListener('click', function() {
+    var btn = document.createElement('button')
+    btn.className = 'btn-modal-menu-item'
+    btn.innerText = 'Töm LocalStorage'
+    btn.addEventListener('click', function() {
         if(confirm('Är du säker!?'))
             localStorage.clear()
             
         app.removeChild(modal)
     })
-    modal.appendChild(div)
+    modal.appendChild(btn)
 
     // Meny
-    var div = document.createElement('div')
-    div.className = 'menu-modal-item'
-    div.innerHTML = '<i class="bi bi-list" style="font-size:2.5rem"></i>'
-    div.addEventListener('click', function() {
+    var btn = document.createElement('button')
+    btn.className = 'btn-modal-menu-item'
+    btn.innerHTML = '<i class="bi bi-list" style="font-size:2.5rem"></i>'
+    btn.addEventListener('click', function() {
         app.removeChild(modal)
     })
-    modal.appendChild(div)
+    modal.appendChild(btn)
 
     // Stäng vid klick utanför menyalternativen
     modal.addEventListener('click', function(e) {

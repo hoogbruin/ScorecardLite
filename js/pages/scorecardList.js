@@ -30,7 +30,9 @@ function scorecardList() {
             scorecard_item.addEventListener('click', function() {
                 scorecard = getScorecard(this.id)
                 course = Courses.find(c => c.id == scorecard.course_id)
-                summaryPage()
+                summaryPage(function() {
+                    scorecardList()
+                })
             })
 
             content.appendChild(scorecard_item)

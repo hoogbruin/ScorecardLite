@@ -173,7 +173,9 @@ function holeView(hole_number) {
     }
     btn_next.addEventListener('click', function() {
         if(hole.number + 1 > number_of_holes) {
-            summaryPage()
+            summaryPage(function() {
+                holeView(hole_number)
+            })
         } else {
             saveScorecard(scorecard)
             holeView(hole.number + 1)
