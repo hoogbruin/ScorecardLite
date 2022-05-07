@@ -208,11 +208,14 @@
     background-color: #003446;
 }
 .paragraph-heading {
-    margin: 4rem 0 2rem 0;
+    margin: 3rem 0 2rem 0;
 
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
+}
+#bar-chart {
+    padding: 0 0.5rem;
 }
 
 /************************************************************** Menu modal */

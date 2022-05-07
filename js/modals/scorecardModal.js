@@ -225,6 +225,8 @@ function scorecardModal(player) {
             scales: {
                 y: {
                     grid: {
+                        drawBorder: false,
+                        borderDash: [1, 1],
                         drawTicks: false
                     },
                     ticks: {
