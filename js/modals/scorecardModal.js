@@ -180,7 +180,7 @@ function scorecardModal(player) {
     modal.appendChild(div)
 
     var bar_chart = document.createElement('canvas')
-        bar_chart.id = 'bar-chart'
+    bar_chart.id = 'bar-chart'
     modal.appendChild(bar_chart)
 
     var score_dist_chart = new Chart(bar_chart, {
@@ -236,9 +236,15 @@ function scorecardModal(player) {
                 },
                 x: {
                     grid: {
-                        
+
                         borderColor: '#555',
                         display: false
+                    },
+                    ticks: {
+                        font: {
+                            size: 16,
+                            weight: 'bold'
+                        }
                     }
                 }
             }
