@@ -137,6 +137,7 @@ function holeView(hole_number) {
     // Footer
     var footer = document.createElement('div')
     footer.className = 'footer'
+    footer.id = 'hole-footer'
 
     var number_of_holes = Object.keys(course.holes).length
 
