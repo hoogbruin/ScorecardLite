@@ -15,9 +15,16 @@ function scorecardModal(player) {
     var card = document.createElement('div')
     card.id = 'modal-card'
 
-    var score_dist = {'Eagle-': 0, Birdie: 0, Par: 0, Bogey: 0, DBogey: 0, 'TBogey+': 0}
+    var score_dist = {
+        'Eagle-': 0,
+        Birdie: 0,
+        Par: 0,
+        Bogey: 0,
+        DB: 0,
+        'TB+': 0
+    }
 
-    for(var x = 0; x <= 9; x += 9) {
+    for (var x = 0; x <= 9; x += 9) {
         var row = document.createElement('div')
         row.className = 'modal-card-row'
 
@@ -72,34 +79,34 @@ function scorecardModal(player) {
 
             if (holeScore !== undefined) {
                 var div = document.createElement('div')
-                    if(holeScore.strokes - holeInfo.par < 0) {
-                        if(holeScore.strokes - holeInfo.par == -1) {
-                            div.className = 'birdie'
-                            score_dist.Birdie += 1
-                        } else {
-                            div.className = 'eagle'
-                            score_dist['Eagle-'] += 1
-                        }
-                    } else if(holeScore.strokes - holeInfo.par > 0) {
-                        if(holeScore.strokes - holeInfo.par == 1) {
-                            div.className = 'bogey'
-                            score_dist.Bogey += 1
-                        } else if(holeScore.strokes - holeInfo.par == 2) {
-                            div.className = 'double-bogey'
-                            score_dist.DBogey += 1
-                        } else {
-                            div.className = 'trippel-bogey'
-                            score_dist['TBogey+'] += 1
-                        }
+                if (holeScore.strokes - holeInfo.par < 0) {
+                    if (holeScore.strokes - holeInfo.par == -1) {
+                        div.className = 'birdie'
+                        score_dist.Birdie += 1
                     } else {
-                        score_dist.Par += 1
+                        div.className = 'eagle'
+                        score_dist['Eagle-'] += 1
                     }
+                } else if (holeScore.strokes - holeInfo.par > 0) {
+                    if (holeScore.strokes - holeInfo.par == 1) {
+                        div.className = 'bogey'
+                        score_dist.Bogey += 1
+                    } else if (holeScore.strokes - holeInfo.par == 2) {
+                        div.className = 'double-bogey'
+                        score_dist.DB += 1
+                    } else {
+                        div.className = 'trippel-bogey'
+                        score_dist['TB+'] += 1
+                    }
+                } else {
+                    score_dist.Par += 1
+                }
 
-                    div.innerText = holeScore.strokes
+                div.innerText = holeScore.strokes
                 col.appendChild(div)
 
                 var div = document.createElement('div')
-                    div.innerText = holeScore.points == 0 ? '-' : holeScore.points
+                div.innerText = holeScore.points == 0 ? '-' : holeScore.points
                 col.appendChild(div)
 
                 strokesCounter += parseInt(holeScore.strokes)
@@ -151,7 +158,7 @@ function scorecardModal(player) {
     summary.id = 'modal-card-summary'
 
     var div = document.createElement('div')
-    div.innerText = player.total_strokes + ' slag' 
+    div.innerText = player.total_strokes + ' slag'
     summary.appendChild(div)
 
     var div = document.createElement('div')
@@ -168,21 +175,21 @@ function scorecardModal(player) {
     // summary.appendChild(div)
 
     var div = document.createElement('div')
-        div.className = 'modal-card-header'
-        div.innerText = 'Scorefördelning'
+    div.className = 'modal-card-header'
+    div.innerText = 'Scorefördelning'
     modal.appendChild(div)
 
     var bar_chart = document.createElement('canvas')
         bar_chart.id = 'bar-chart'
     modal.appendChild(bar_chart)
 
-    // var z = { 'Eagle-': 1, Birdie: 2, Par: 4, Bogey: 3, DBogey: 2, 'TBogey+': 0 }
-
-    var c1 = new Chart(bar_chart, {
+    var score_dist_chart = new Chart(bar_chart, {
         type: 'bar',
+        plugins: [ChartDataLabels],
         data: {
+            labels: Object.keys(score_dist),
             datasets: [{
-                data: score_dist,
+                data: Object.values(score_dist),
                 backgroundColor: [
                     "#0b5c38",
                     "#50bd61",
@@ -190,7 +197,7 @@ function scorecardModal(player) {
                     "#03b7f5",
                     "#01688c",
                     "#003446"
-                ],
+                ]
             }]
         },
         options: {
@@ -200,28 +207,40 @@ function scorecardModal(player) {
                 },
                 tooltip: {
                     enabled: false
-                }
+                },
+                datalabels: {
+                    align: 'end',
+                    anchor: 'start',
+                    labels: {
+                        value: {
+                            color: '#eee'
+                        }
+                    },
+                    font: {
+                        size: 16,
+                        weight: 'bold'
+                    }
+                },
             },
             scales: {
                 y: {
+                    drawBorder: false,
+                    grid: {
+                        display: false
+                    },
+                    ticks: {
+                        display: false
+                    }
                 },
                 x: {
                     grid: {
+                        borderColor: '#555',
                         display: false
                     }
                 }
             }
         }
     })
-
-    var div = document.createElement('div')
-        div.className = 'modal-card-header'
-        div.innerText = 'Scoreutveckling'
-    modal.appendChild(div)
-
-    // var line_chart = document.createElement('canvas')
-    //     line_chart.id = 'line-chart'
-    // modal.appendChild(bar_chart)
 
     // Events
     modal.addEventListener('click', function (e) {
