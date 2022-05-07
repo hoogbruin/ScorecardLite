@@ -175,7 +175,7 @@ function scorecardModal(player) {
     // summary.appendChild(div)
 
     var div = document.createElement('div')
-    div.className = 'modal-card-header'
+    div.className = 'paragraph-heading'
     div.innerText = 'Scorefördelning'
     modal.appendChild(div)
 
@@ -225,20 +225,17 @@ function scorecardModal(player) {
             scales: {
                 y: {
                     grid: {
-                        drawBorder: false,
-                        border: 0,
-                        display: false,
-                        // drawBorder: false,
+                        drawTicks: false
                     },
                     ticks: {
-                        display: false
+                        display: false,
+                        stepSize: 1
                     }
                 },
                 x: {
                     grid: {
-
                         borderColor: '#555',
-                        display: false
+                        display: false,
                     },
                     ticks: {
                         font: {

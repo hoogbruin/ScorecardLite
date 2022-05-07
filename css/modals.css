@@ -207,6 +207,13 @@
     color: white;
     background-color: #003446;
 }
+.paragraph-heading {
+    margin: 4rem 0 2rem 0;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
 
 /************************************************************** Menu modal */
 #menu-modal {
