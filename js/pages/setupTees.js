@@ -35,8 +35,8 @@ function setupTees() {
                 label.innerText = tee.name
 
                 var div = document.createElement('div')
-                div.appendChild(radio)
                 div.appendChild(label)
+                div.appendChild(radio)
                 tee_list.appendChild(div)
 
             }

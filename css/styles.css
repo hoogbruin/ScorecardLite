@@ -25,7 +25,6 @@ body {
 
 /*********************************************** Base layout */
 .header {
-    /* flex: 3; */
     height: 12.5%;
     display: flex;
     justify-content: center;
@@ -41,7 +40,6 @@ body {
     border-bottom: 2px solid #555;
 }
 .content {
-    /* flex: 18; */
     height: 75%;
 
     margin: 0 0.5rem;
@@ -49,8 +47,8 @@ body {
     font-size: 1.25rem;
 }
 .footer {
-    /* flex: 3; */
     height: 12.5%;
+
     display: flex;
     justify-content: space-between;
 
@@ -61,16 +59,14 @@ body {
 
 /*************************************************** courseView */
 .course-item {
-    height: calc(100vh/12);
+    height: calc(100% / 9);
     
     display: flex;                                                              
-    /* align-items: center; */
     
     padding: 0 0.5em;
     border-bottom: 1px dotted #555;
 }
 .course-item > label {
-    /* width: 100%; */
     display: flex;
     align-items: center;
     flex: 1;
@@ -78,16 +74,14 @@ body {
 
 /*************************************************** playersView */
 .player-item {
-    height: calc(100vh/12);
+    height: calc(100% / 9);
 
     display: flex;
-    /* align-items: center; */
 
     padding: 0 0.5em;
     border-bottom: 1px dotted #555;
 }
 .player-item > label {                                                              /* Så här skall det se ut*/
-    /* width: 100%; */
     display: flex;
     align-items: center;
     flex: 1;
@@ -154,7 +148,8 @@ body {
 }
 .tee-list > div {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    /* align-items: center; */
 }
 
 /* Perfect ************************************************** homeView */
@@ -194,7 +189,7 @@ body {
 
 /************************** ************************* User list item */
 .user_item {
-    height: calc(100vh/12);
+    height: calc(100% / 9);
     
     display: flex;
     align-items: center;
@@ -243,6 +238,9 @@ input[type=radio], input[type=checkbox] {
     width: 1em;
 
     align-self: center;
+}
+.tee-item input[type=radio] {
+    margin: 0;
 }
 
 /*************************************************** newPlayerView */
