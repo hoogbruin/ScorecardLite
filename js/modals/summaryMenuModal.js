@@ -8,7 +8,7 @@ function summaryMenuModal() {
     // Redigera
     var btn = document.createElement('button')
     btn.className = 'btn-modal-menu-item'
-    btn.innerText = 'Redigera Scorekort'
+    btn.innerText = 'Redigera'
     btn.addEventListener('click', function() {
         holeView(1)
     })
@@ -17,7 +17,7 @@ function summaryMenuModal() {
     // Radera
     var btn = document.createElement('button')
     btn.className = 'btn-modal-menu-item'
-    btn.innerText = 'Radera Scorekort'
+    btn.innerText = 'Radera'
     btn.addEventListener('click', function() {
         if(confirm('Är du säker?')) {
             deleteScorecard(scorecard)
@@ -29,7 +29,7 @@ function summaryMenuModal() {
     // Mina Scorekort
     var btn = document.createElement('button')
     btn.className = 'btn-modal-menu-item'
-    btn.innerText = 'Mina Scorekort'
+    btn.innerText = 'Scorekort'
     btn.addEventListener('click', function() {
         scorecardList()
     })

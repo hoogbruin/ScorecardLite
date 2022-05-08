@@ -8,7 +8,7 @@ function homeMenuModal() {
     // Mina Scorekort
     var btn = document.createElement('button')
     btn.className = 'btn-modal-menu-item'
-    btn.innerText = 'Mina Scorekort'
+    btn.innerText = 'Scorekort'
     btn.addEventListener('click', function() {
         scorecardList()
     })
@@ -17,7 +17,7 @@ function homeMenuModal() {
     // Hantera Spelare
     var btn = document.createElement('button')
     btn.className = 'btn-modal-menu-item'
-    btn.innerText = 'Hantera Spelare'
+    btn.innerText = 'Spelare'
     btn.addEventListener('click', function() {
         userList()
     })
