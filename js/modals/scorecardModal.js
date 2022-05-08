@@ -174,10 +174,10 @@ function scorecardModal(player) {
     // div.innerText = 'Brutto Slag, Netto Slag, Tot Poäng, Hcp-resultat, Justerad bruttoscore '
     // summary.appendChild(div)
 
-    var div = document.createElement('div')
-    div.className = 'paragraph-heading'
-    div.innerText = 'Scorefördelning'
-    modal.appendChild(div)
+    // var div = document.createElement('div')
+    // div.className = 'paragraph-heading'
+    // div.innerText = 'Scorefördelning'
+    // modal.appendChild(div)
 
     var bar_chart = document.createElement('canvas')
     bar_chart.id = 'bar-chart'
