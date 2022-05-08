@@ -38,7 +38,7 @@ function homeMenuModal() {
     // Meny
     var btn = document.createElement('button')
     btn.className = 'btn-modal-menu-item'
-    btn.innerHTML = '<i class="bi bi-list" style="font-size:2.5rem"></i>'
+    btn.innerHTML = '<i class="bi bi-chevron-down" style="font-size:2.5rem"></i>'
     btn.addEventListener('click', function() {
         app.removeChild(modal)
     })

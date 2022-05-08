@@ -1,4 +1,4 @@
-function summaryPage(callback) {
+function summaryPage() {
     
     // Header
     var header = document.createElement('div')
@@ -75,15 +75,8 @@ function summaryPage(callback) {
 
     // Footer
     var footer = document.createElement('div')
-    footer.className = 'footer'
-
-    var btn_edit = document.createElement('button')
-    btn_edit.type = 'button'
-    btn_edit.className = 'btn-menu-item'
-    btn_edit.innerHTML = '<i class="bi bi-pencil"></i>'
-    btn_edit.addEventListener('click', function () {
-        holeView(1)
-    })
+    footer.className = 'footer single-btn'
+    footer.id = 'summary-footer'
 
     var btn_menu = document.createElement('button')
     btn_menu.type = 'button'
@@ -93,18 +86,16 @@ function summaryPage(callback) {
         summaryMenuModal()
     })
 
-    var btn_exit = document.createElement('button')
-    btn_exit.type = 'button'
-    btn_exit.className = 'btn-menu-item'
-    btn_exit.innerHTML = '<i class="bi bi-box-arrow-right"></i>'
-    btn_exit.addEventListener('click', function () {
-        // startPage()
-        callback()
-    })
+    // var btn_exit = document.createElement('button')
+    // btn_exit.type = 'button'
+    // btn_exit.className = 'btn-menu-item'
+    // btn_exit.innerHTML = '<i class="bi bi-house"></i>'
+    // btn_exit.addEventListener('click', function () {
+    //     // startPage()
+    //     callback()
+    // })
 
-    footer.appendChild(btn_edit)
     footer.appendChild(btn_menu)
-    footer.appendChild(btn_exit)
 
     // Koppla samman
     var app = document.getElementById('app')

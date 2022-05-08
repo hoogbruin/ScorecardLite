@@ -169,6 +169,7 @@ body {
     justify-content: center;
 }
 
+
 /*************************************************** Scorecard list item */
 .scorecard_item {
     height: calc(100vh/8);
@@ -262,10 +263,13 @@ input[type=radio], input[type=checkbox] {
     display: flex;
     flex-direction: column;
 }
-
+/* #summary-footer {
+    justify-content: flex-end;
+} */
 .summary-box {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
 
     padding: 0.5rem;
 
@@ -278,29 +282,18 @@ input[type=radio], input[type=checkbox] {
     border-bottom: none;
 }
 .summary-box-name {
-    text-align: center;
-    line-height: 2.5rem;
-    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    /* text-align: center; */
+    /* line-height: 2.5rem; */
+    font-size: 1.5rem;
     font-weight: bold;
     /* margin-bottom: 0.25rem; */
 }
-/* .summary-box-conditions {
-    display: flex;
-    flex-direction: row;
-
-    padding: 0.25em 0;
-    border-top: 1px dotted #555;
-    border-bottom: 1px dotted #555;
-    margin-bottom: 0.25em;
-}
-.summary-box-conditions > div {
-    flex: 1;
-}
-.summary-box-conditions > div:nth-of-type(2n+1){
-    font-weight: bold;
-} */
 .summary-box-calculations {
-    flex: 1;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -312,49 +305,20 @@ input[type=radio], input[type=checkbox] {
     flex-direction: column;
     align-items: center;
 
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 .summary-box-calculations > div > div:last-of-type {
     flex: 1;
     display: flex;
     align-items: center;
 
-    font-size: 2rem;
+    font-size: 2.75rem;
+    /* font-weight: bold; */
 }
 
 
 
-/* 
-.summary-box-div1 {
-    display: flex;
-    flex-direction: column;
-}
-.summary-box-div1 > div:first-of-type{
-    font-weight: bold;
-}
-.summary-box-div1 > div {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 0.25rem;
-}
-.summary-box-div1 > div > div {
-    flex: 1;
-}
-*/
-/* .summary-box-div2, .summary-box-div3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
-    font-weight: bold;
-} */
-/* .summary-box-div2 > div:last-of-type, .summary-box-div3 > div:last-of-type{
-    flex: 1;
-    display: flex;
-    align-items: center;
-
-    font-size: 2rem;
-} */
 
 /*Perfect  ************************************************** holeView */
 #hole-header {
