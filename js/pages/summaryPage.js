@@ -58,10 +58,32 @@ function summaryPage() {
             div3.appendChild(div)
 
             var div = document.createElement('div')
-            var tee = course.tees.find(t => t.name == player.tee)
-            var cr = tee[player.gender].course_rating
-            var sr = tee[player.gender].slope_rating
-            div.innerText = calculateHcpResult(cr, sr, course.par, player.shcp, player.total_stableford, pcc = 0)
+            div.innerText = '-'    
+
+            console.log(player.score.length)
+
+            if(player.score.length >= 9) {
+                var tee = course.tees.find(t => t.name == player.tee)    
+                div.innerText = calculateHcpResult(player, course, tee)
+            }
+
+            // function calculateHcpResult(player, course, tee, pcc = 0) {
+            //     var unplayed_holes = 18 - player.scores.lenght
+            //     var points = player.total_stableford + unplayed_holes * 2
+
+            //     if(unplayed_holes > 4)
+            //         points -= 1
+  
+            //     var result = (113 / tee[player.gender].slope_rating) * (course.par + player.shcp - (points - 36) - tee[player.gender].course_rating - pcc)
+            //     // var result = (113 / slope_rating) * (par + shcp - (points - 36) - course_rating - pcc)
+            //     return result.toFixed(1)
+            // }
+
+
+            // var tee = course.tees.find(t => t.name == player.tee)
+            // var cr = tee[player.gender].course_rating
+            // var sr = tee[player.gender].slope_rating
+            // div.innerText = calculateHcpResult(cr, sr, course.par, player.shcp, player.total_stableford, pcc = 0)
             div3.appendChild(div)
         box_calc.appendChild(div3)
         

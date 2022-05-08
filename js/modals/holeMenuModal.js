@@ -8,7 +8,7 @@ function holeMenuModal() {
     // Avsluta rundan
     var btn = document.createElement('button')
     btn.className = 'btn-modal-menu-item'
-    btn.innerText = 'Avsluta Rundan'
+    btn.innerText = 'Avsluta'
     btn.addEventListener('click', function() {
         summaryPage()
     })
