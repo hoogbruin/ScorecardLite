@@ -5,7 +5,7 @@ function summaryPage() {
     header.className = 'header'
     header.id = 'summary-header'
     var course_name = document.createElement('div')
-    course_name.innerText = course.name
+    course_name.innerText = course.club + ' - ' + course.name
     var date = document.createElement('div')
     date.innerText = new Date(scorecard.date).toLocaleDateString()
     header.appendChild(course_name)
@@ -59,8 +59,6 @@ function summaryPage() {
 
             var div = document.createElement('div')
             div.innerText = '-'    
-
-            console.log(player.score.length)
 
             if(player.score.length >= 9) {
                 var tee = course.tees.find(t => t.name == player.tee)    

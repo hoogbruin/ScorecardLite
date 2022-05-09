@@ -1,6 +1,6 @@
-function getCourse(name) {
-    return Courses.find(c => c.name == name)
-}
+// function getCourse(name) {
+//     return Courses.find(c => c.name == name)
+// }
 
 function getHoleScore(player, holescore) {
 }

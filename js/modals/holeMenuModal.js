@@ -10,6 +10,7 @@ function holeMenuModal() {
     btn.className = 'btn-modal-menu-item'
     btn.innerText = 'Avsluta'
     btn.addEventListener('click', function() {
+        saveScorecard(scorecard)
         summaryPage()
     })
     modal.appendChild(btn)

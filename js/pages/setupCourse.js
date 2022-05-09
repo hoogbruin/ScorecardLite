@@ -22,7 +22,7 @@ function setupCourse() {
 
         var label = document.createElement('label')
         label.setAttribute('for', course.name)
-        label.innerText = course.name
+        label.innerText = course.club + ' - ' + course.name
 
         course_item.appendChild(radio)
         course_item.appendChild(label)
@@ -55,6 +55,7 @@ function setupCourse() {
         course = Courses.find(c => c.name == selected_course)
         
         scorecard.course_id = course.id
+        scorecard.club_name = course.club
         scorecard.course_name = course.name
 
         setupPlayers()

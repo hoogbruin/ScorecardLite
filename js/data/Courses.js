@@ -1,7 +1,8 @@
 var Courses = [
     {
-        "id"   : 1651512730119, 
-        "name" : "Österlens GK - Djupadal",
+        "id"   : 1651512730119,
+        "club" : "Österlens GK",
+        "name" : "Djupadal",
         "par"  : 71,
         "tees" : [
             {
@@ -51,10 +52,11 @@ var Courses = [
         ]
     },
     {
-        "id"   : 1651512745343,
-        "name" : "Österlens GK - Lilla Vik",
-        "par"  : 72,
-        "tees" : [
+        // "id"   : 1651512745343,
+        "club"  : "Österlens GK",
+        "name": "Lilla Vik",
+        "par"   : 72,
+        "tees"  : [
             {
                 "name" : "58",
                 "male" : {"slope_rating" : 131, "course_rating" : 71.0}
@@ -101,10 +103,11 @@ var Courses = [
         ]
     },
     {
-        "id"   : 1651512755991,
-        "name" : "Tegelberga GK - Gamla Banan",
-        "par"  : 71,
-        "tees" : [
+        "id"    : 1651512755991,
+        "club"  : "Tegelberga GK",
+        "name": "Gamla Banan",
+        "par"   : 71,
+        "tees"  : [
             {
                 "name" : "60",
                 "male" : {"slope_rating" : 132, "course_rating" : 72.8}
@@ -156,7 +159,8 @@ var Courses = [
     },
     {
         "id"   : 1651512762023,
-        "name" : "Tegelberga GK - Pay & Play",
+        "club" : "Tegelberga GK",
+        "name" : "Pay & Play",
         "par"  : 70,
         "tees" : [
             {
@@ -203,7 +207,8 @@ var Courses = [
     },
     {
         "id"   : 1651555354677,
-        "name" : "Bokskogen - Gamla Banan",
+        "club" : "Bokskogen",
+        "name" : "Gamla Banan",
         "par"  : 71,
         "tees" : [
             {
@@ -257,10 +262,11 @@ var Courses = [
         ]
     },
     {
-        "id"   : 1651555481268,
-        "name" : "Bokskogen - Kungsbanan",
-        "par"  : 69,
-        "tees" : [
+        "id"    : 1651555481268,
+        "club"  : "Bokskogen",
+        "name": "Kungsbanan",
+        "par"   : 69,
+        "tees"  : [
             {
                 "name" : "55",
                 "male" : {"slope_rating" : 131, "course_rating" : 70.1},

@@ -1,11 +1,10 @@
-var baseUsers = [
+var default_users = [
     {   
         "id" : 1651091227943,
         "fname" : "Nils-Jakob",
         "lname" : "Olsson",
         "gender" : "male",
         "hcp": 10.8,
-        "image": "phil.png"
     },
     {
         "id" : 1651092227943,

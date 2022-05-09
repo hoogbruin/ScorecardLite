@@ -159,7 +159,7 @@ function holeView(hole_number) {
     btn_menu.className = 'btn-menu-item'
     btn_menu.innerHTML = '<i class="bi bi-list"></i>'
     btn_menu.addEventListener('click', function() {
-        saveScorecard(scorecard)                    // Onödig?
+        // saveScorecard(scorecard)                    // Onödig?
         holeMenuModal()
     })
 
@@ -173,10 +173,11 @@ function holeView(hole_number) {
         
     }
     btn_next.addEventListener('click', function() {
+        saveScorecard(scorecard)
         if(hole.number + 1 > number_of_holes) {
             summaryPage()
         } else {
-            saveScorecard(scorecard)
+            
             holeView(hole.number + 1)
         }
     })

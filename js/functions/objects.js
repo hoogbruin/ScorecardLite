@@ -9,6 +9,7 @@ function User(id) {
 function Scorecard(date) {
     this.date = date
     this.course_id
+    this.club_name
     this.course_name
     this.players = []
 }

@@ -19,9 +19,11 @@ function summaryMenuModal() {
     btn.className = 'btn-modal-menu-item'
     btn.innerText = 'Radera'
     btn.addEventListener('click', function() {
+        console.log(scorecard.date)
         if(confirm('Är du säker?')) {
+            
             deleteScorecard(scorecard)
-            startPage()
+            scorecardList()
         }
     })
     modal.appendChild(btn)

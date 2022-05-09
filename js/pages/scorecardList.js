@@ -20,7 +20,7 @@ function scorecardList() {
             scorecard_item.id = scorecards[i].date
             
             var div = document.createElement('div')
-            div.innerText = scorecards[i].course_name
+            div.innerText = scorecards[i].club_name + ' - ' + scorecards[i].course_name
             scorecard_item.appendChild(div)
 
             var div = document.createElement('div')

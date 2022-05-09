@@ -39,7 +39,7 @@ function userList() {
 
     // Footer
     var footer = document.createElement('div')
-    footer.className = 'footer single-btn'
+    footer.className = 'footer'
 
     var btn_cancel = document.createElement('button')
     btn_cancel.type = 'button'
@@ -50,6 +50,17 @@ function userList() {
         startPage()
     })
     footer.appendChild(btn_cancel)
+
+    var btn_add_user = document.createElement('button')
+    btn_add_user.type = 'button'
+    btn_add_user.className = 'btn-menu-item'
+    btn_add_user.innerHTML = '<i class="bi bi-person-plus"></i>'
+    btn_add_user.addEventListener('click', function () {
+        editPlayer(function() {
+            userList()
+        })
+    })
+    footer.appendChild(btn_add_user)
 
     // Koppla samman
     var app = document.getElementById('app')

@@ -5,7 +5,7 @@ function getUsers() {
     if(localStorage.hasOwnProperty('Users'))
         users = JSON.parse(localStorage.getItem('Users'))
     else
-        users = baseUsers
+        users = default_users
         localStorage.setItem('Users', JSON.stringify(users))
 
     return users
@@ -112,5 +112,16 @@ function getScorecards() {
 }
 
 function deleteScorecard(scorecard) {
-    alert(scorecard.date)
+    if(localStorage.hasOwnProperty('Scorecards')) {
+        var scorecards = JSON.parse(localStorage.getItem('Scorecards'))
+        var existing = scorecards.find(s => s.date == scorecard.date)
+        var index = scorecards.indexOf(existing)
+
+        if(index > -1) {
+            scorecards.splice(index, 1)
+            localStorage.setItem('Scorecards', JSON.stringify(scorecards))
+            
+            alert('Scorecard deleted: ' + existing.date)
+        }
+    }
 }
