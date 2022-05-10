@@ -135,7 +135,7 @@ function editPlayer(callback, player = null) {
     })
     footer.appendChild(btn_save)
 
-    document.getElementById('app').addEventListener('resize', function() {
+    document.body.addEventListener('resize', function() {
         document.documentElement.style.setProperty('overflow', 'auto')
         const metaViewport = document.querySelector('meta[name=viewport]')
         metaViewport.setAttribute('content', 'height=' + initialHeight + 'px, width=device-width, initial-scale=1.0')
